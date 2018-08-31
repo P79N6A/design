@@ -1,0 +1,17 @@
+{
+    "name": "alibaba",
+    "version": "0.0.1",
+    "description": "",
+    "keywords": [
+        "fusion design system"
+    ],
+    "license": "MIT",
+    "author": "leiling.cp <leiling.cp@alibaba-inc.com>",
+    "scripts": {
+        "publish": "sh ./bin/publish.sh"
+    },
+    "devDependencies": {
+    },
+    "dependencies": {
+    }
+}
