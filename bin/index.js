@@ -11,9 +11,18 @@ const srcDir = path.join(__dirname, '../src');
 const buildDir = path.join(__dirname, '../build');
 
 function replaceCont(filePath, fileCont) {
-    fileCont = fileCont.replace(/<link(.*)href=\"\.([^\"]*)\"/g, `<link$1href="${baseUrl}$2"`);
-    fileCont = fileCont.replace(/src=\"\.([^\"]*)\"/g, `<src="${baseUrl}$1"`);
-    fileCont = fileCont.replace(/url\(\"\.([^\"]*)\"\)/g, `url("${baseUrl}$1")`);
+    fileCont = fileCont.replace(/<link(.*)href=\"\.([^\"]*)\"/g, function (match, p1, p2, offset, string) {
+        const relative = path.relative(srcDir, path.join(filePath, p2));
+        return `<link${p1}href="${baseUrl}/${relative}"`;
+    });
+    fileCont = fileCont.replace(/src=\"\.([^\"]*)\"/g, function (match, p1, offset, string) {
+        const relative = path.relative(srcDir, path.join(filePath, p1));
+        return `src="${baseUrl}/${relative}"`;
+    });
+    fileCont = fileCont.replace(/url\(\"([^\"]*)\"\)/g, function(match, p1, offset, string) {
+        const relative = path.relative(srcDir, path.join(filePath, p1));
+        return `url("${baseUrl}/${relative}")`;
+    });
 
     return fileCont;
 }
