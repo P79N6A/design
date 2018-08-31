@@ -4,6 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const glob = require('glob');
 const mkdirp = require('mkdirp');
+const child_process = require('child_process');
 const PKG = require('../package.json');
 
 const baseUrl = `//g.alicdn.com/fusion-site/alibaba/${PKG.version}`;
@@ -48,8 +49,15 @@ glob('**/*.*', {
     cwd: srcDir
 }, (err, files) => {
     files.forEach(file => {
-        let fileCont = new Buffer(fs.readFileSync(path.join(srcDir, file), 'utf8')).toString();
-        fileCont = replaceCont(path.join(srcDir, file), fileCont);
-        writeFileSync(path.join(buildDir, file), fileCont);
+        if (['.html', '.js', '.css'].indexOf(path.extname(file)) >= 0) {
+            let fileCont = new Buffer(fs.readFileSync(path.join(srcDir, file), 'utf8')).toString();
+            fileCont = replaceCont(path.join(srcDir, file), fileCont);
+            writeFileSync(path.join(buildDir, file), fileCont);
+        } else {
+            mkdirp(path.dirname(path.join(buildDir, file)), function (err) {
+                if (err) return;
+                child_process.spawnSync('cp', ['-fr', path.join(srcDir, file), path.join(buildDir, file)]);
+            });
+        }
     });
 });
