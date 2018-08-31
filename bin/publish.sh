@@ -10,7 +10,8 @@ if [ ! -d "$BUILD_DIR" ]; then
   mkdir $BUILD_DIR
 fi
 
-zip -j -o -m $BASE_DIR/alibaba-fusion-design.zip $BUILD_DIR/**/*.html
+cd $BUILD_DIR
+zip -o -m $BASE_DIR/alibaba-fusion-design.zip *.html */*.html
 
 echo "Push zip to server."
 echo "------------------------"

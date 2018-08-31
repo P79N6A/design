@@ -1,17 +1,18 @@
 {
-    "name": "alibaba",
-    "version": "0.0.1",
-    "description": "",
-    "keywords": [
-        "fusion design system"
-    ],
-    "license": "MIT",
-    "author": "leiling.cp <leiling.cp@alibaba-inc.com>",
-    "scripts": {
-        "publish": "sh ./bin/publish.sh"
-    },
-    "devDependencies": {
-    },
-    "dependencies": {
-    }
+  "name": "alibaba",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "fusion design system"
+  ],
+  "license": "MIT",
+  "author": "leiling.cp <leiling.cp@alibaba-inc.com>",
+  "scripts": {
+    "publish": "node ./bin/index.js && sh ./bin/publish.sh"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "glob": "^7.1.3",
+    "mkdirp": "^0.5.1"
+  }
 }
