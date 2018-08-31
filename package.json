@@ -1,6 +1,6 @@
 {
   "name": "alibaba",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "keywords": [
     "fusion design system"
@@ -8,6 +8,7 @@
   "license": "MIT",
   "author": "leiling.cp <leiling.cp@alibaba-inc.com>",
   "scripts": {
+    "build": "node ./bin/index.js",
     "publish": "node ./bin/index.js && sh ./bin/publish.sh"
   },
   "devDependencies": {},
