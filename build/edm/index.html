@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>EDM</title>
+  <link rel="stylesheet" href="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/assets/css/_reset.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/assets/css/common.css">
+  <link rel="stylesheet" href="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="top-bar">原fusion官网已迁移:<a href="http://www.fusion.design/">点击前往</a></div>
+
+    <div class="layout-header">
+      <div class="logo">
+        <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/assets/img/logo.png" alt="">
+      </div>
+
+      <div class="menu">
+        <i class="iconfont icon-menu"></i>
+        <ul class="nav flex">
+          <li class="active">
+            <a href="../brand/index.html">品牌</a>
+          </li>
+          <li>
+            <a href="../guidelines/index.html">设计指导</a>
+          </li>
+          <li>
+            <a href="../library/index.html">资料库</a>
+          </li>
+        </ul>
+        <input class="menu-search" type="search">
+        <i class="iconfont icon-search"></i>
+      </div>
+
+    </div>
+
+    <div class="wrap">
+      <div class="layout-aside">
+        <div>
+          <div class="expand-wrap">
+
+            <ul class="nav">
+              <li class="title">品牌故事</li>
+              <li><a href="../mission/index.html">愿景</a></li>
+              <li><a href="../target/index.html">目标用户</a></li>
+              <li><a href="../personal/index.html">品牌个性</a></li>
+              <li>
+              <a href="../keywords/index.html">关键词</a>
+              </li>
+              <li>
+                <a href="../principles/index.html">设计原则</a>
+              </li>
+              <li class="title">品牌调性</li>
+              <li><a href="../product/index.html">产品</a></li>
+              <li class="active"><a href="../edm/index.html">邮件</a></li>
+              <li><a href="../article/index.html">文章</a></li>
+            </ul>
+          </div>
+          <div class="un-expand-wrap">
+            <i class="iconfont icon-search"></i>
+            <i class="iconfont icon-category"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="layout-container">
+        <header>
+          <h1>EDM</h1>
+          <el-tabs v-model="activeName" @tab-click="handleTabClick">
+            <el-tab-pane label="策略" name="tab1"></el-tab-pane>
+            <el-tab-pane label="设计指导" name="tab2"></el-tab-pane>
+            <el-tab-pane label="设计" name="tab3"></el-tab-pane>
+          </el-tabs>
+        </header>
+         <transition name="el-fade-in-linear">
+          <div class="content" key="Strategy" v-if="activeName === 'tab1'">
+          <h1>策略: 邮件规划与发送策略</h1>
+          <p>
+           基于用户生命周期的全链路邮件规划
+           <br>单封邮件的发送策略
+           <br>各类邮件具体策略参考
+          </p>
+          <div class="subtitle">基于用户生命周期的全链路邮件规划</div>
+          <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/01.png" alt="">
+          </div>
+          
+          <div class="subtitle">Alibaba.com全链路邮件规划</div>
+          <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/02.png" alt="">
+          </div>
+          
+          <div class="subtitle">单封邮件的发送策略——时间选择参考</div>
+          <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/03.png" alt="">
+          </div>
+          <p>
+            单封邮件的发送策略——频次/对象选择
+            <br>细分人群，多种频次测试疲劳度阀值
+            <br><bold>未来Alibaba邮件发送策略将根据数据智能化判断</bold>
+      </p>
+          
+          <p>
+            各类邮件具体策略参考
+          </p>
+          <div class="item">
+              <div>
+                <div class="left">
+                   <div class="img-box">
+                    <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/04.png" alt="">
+                </div>
+                </div>
+                <div class="right">
+                  <p class="three"><a class="a3" href="https://www.sendwithus.com/resources/guide" target="_blank">
+                  https://www.sendwithus.com/resources/guide</a>
+                  <br><a class="a3" href="http://blog.getvero.com/guides/lifecycle-marketing" target="_blank">
+                  http://blog.getvero.com/guides/lifecycle-marketing</a>
+                  <br><a class="a3" href="https://www.sendwithus.com/resources/templates" target="_blank">
+                  https://www.sendwithus.com/resources/templates</a></p>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="content" key="Guidelines" v-if="activeName === 'tab2'">
+          <h1>内容: 邮件信息撰写规范</h1>
+          <p>
+           1. 发件人/发件邮箱
+           <br>2. 标题和预览文案
+           <br>3. 邮件内容
+          </p>
+          <div class="subtitle">1. 好的开始，是统一、专业的发件人/发件邮箱</div>
+          <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/05.png" alt="">
+          </div>
+          <div class="subtitle">2.清晰有趣的主题和邮件预览对于收件人点击和阅读至关重要</div>
+          <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/06.png" alt="">
+          </div>
+          <div class="subtitle">3.邮件内容格式统一</div>
+          <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/07.png" alt="">
+          </div>
+        </div>
+        <div class="content" key="Design" v-if="activeName === 'tab3'">
+          <h1>设计: 邮件设计特殊注意事项</h1>
+          <p>
+           1.快速获取所需要的信息
+           <br>2. 顺利阅读和操作邮件
+           <br>3. 对品牌身份有效识别
+          </p>
+          <div class="subtitle">1. 重要信息和核心行动点在打开邮件一瞬间就看到</div>
+          <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/08.png" alt="">
+          </div>
+          <div class="subtitle">2. 核心行动点在长邮件中建议重复出现。</div>
+          <div class="em">“重要的话要说三遍!!!”</div>
+          <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/09.png" alt="">
+          </div>
+          <div class="subtitle">2. 要做移动端适配，但做不到复杂响应，所以设计一定要尽量简单！</div>
+          <p>48%+ 的移动端打开率</p>
+          <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/10.png" alt="">
+          </div>
+          <p><bold>但是，</bold><br>除Apple邮件客户端，其他邮件端均不支持Responsive！</p>
+           <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/11.png" alt="">
+          </div>
+          <div class="subtitle">4. 视觉设计要考虑不支持CSS时的极端样式是否可行</div>
+          <p>不支持:<br>
+          视频格式、图层覆盖、PNG格式、阴影、圆角
+          <br><bold>各客户端CSS支持列表</bold>
+          </p>
+          <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/12.png" alt="">
+          </div>
+          <div class="subtitle">5. 邮件未正常展示时的三大补救</div>
+           <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/13.png" alt="">
+          </div>
+          <div class="subtitle">6. 统一的邮件模板及DPL使用（查看具体规范），保证全链路的一致的体验</div>
+           <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/14.png" alt="">
+          </div>
+          <h1>EDM效果监控指标</h1>
+          <div class="img-box">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/img/15.png" alt="">
+          </div>
+        </div>
+        </transition>
+        <div class="layout-footer">
+          <div>
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/assets/img/footer-01.png" alt="">
+            <img src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/assets/img/footer-02.png" alt="">
+          </div>
+          <br>
+          <p class="pfooter">本网站由阿里巴巴国际用户体验部 - B2B品牌组维护
+          我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系。</p>
+          <br>
+          <p class="pfooter2">© 1999-2018 Alibaba.com. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/assets/js/plugins/utils.js"></script>
+  <script src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/assets/js/plugins/jquery-3.3.1.min.js"></script>
+  <script src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/assets/js/common.js"></script>
+  <script src="//g.alicdn.com/fusion-site/alibaba/0.0.2/edm/index.html/index.js"></script>
+</body>
+
+</html>
