@@ -17,3 +17,4 @@ echo "Push zip to server."
 echo "------------------------"
 
 scp $BASE_DIR/alibaba-fusion-design.zip admin@47.75.26.71:/home/admin/site
+scp $BASE_DIR/alibaba-fusion-design.zip admin@39.105.26.61:/home/admin/site
