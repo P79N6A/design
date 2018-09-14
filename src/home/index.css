@@ -50,7 +50,8 @@ body {
     .layout-container .banner .left .handle {
       display: flex;
       justify-content: center;
-      margin: 0 0 80px 0; }
+      margin: 0 0 120px 0; 
+      padding-top: 60px;}
       .layout-container .banner .left .handle .see-more {
         padding: 0;
         margin-right: 5px; }
@@ -223,7 +224,7 @@ body {
     .layout-container .content > div:nth-child(even) {
       background: rgba(0, 0, 0, 0.8);
       background-size: 200px 200px;
-      background-image: linear-gradient(transparent 199px, rgba(255, 255, 255, 0.1) 199px, rgba(255, 255, 255, 0.1) 200px), linear-gradient(90deg, transparent 199px, rgba(255, 255, 255, 0.1) 199px, rgba(255, 255, 255, 0.1) 200px); }
+      background-image: linear-gradient(transparent 199px, rgba(255, 255, 255, 0.05) 199px, rgba(255, 255, 255, 0.05) 200px), linear-gradient(90deg, transparent 199px, rgba(255, 255, 255, 0.05) 199px, rgba(255, 255, 255, 0.05) 200px); }
       .layout-container .content > div:nth-child(even) h2,
       .layout-container .content > div:nth-child(even) p,
       .layout-container .content > div:nth-child(even) .item .right .count {
@@ -374,6 +375,47 @@ padding-bottom: 30px;
 padding-left: 4px;}
 
 .button{padding-top: 180px;}
+
 a:hover {
     color: #fff;
     text-decoration: underline;}
+
+.btn01{
+    border-radius: 80px;
+    border: 1.5px solid #ccc;
+    background-color: #fff0;
+    padding: 10px 42px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn01:hover {
+  background: #ffffff3b;
+}    
+
+.btn01 a:hover {
+  text-decoration: none;
+}   
+
+.btn02{
+    border-radius: 80px;
+    background-color: #000;
+    padding: 10px 42px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+    border:0px;
+}
+
+.btn02:hover {
+  background: #333;
+}    
+
+.btn02 a:hover {
+  text-decoration: none;
+}    
