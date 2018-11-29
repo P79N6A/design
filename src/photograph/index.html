@@ -5,20 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Photograph</title>
+  <title>图片</title>
   <link rel="stylesheet" href="../assets/css/_reset.css">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css">
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <link rel="stylesheet" href="../assets/css/common.css">
   <link rel="stylesheet" href="./index.css">
   <link rel="shortcut icon" href="../assets/img/favicon.ico" sizes="32x32" />
+  <link rel="stylesheet" href="../assets/css/docsearch.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 </head>
 
 <body>
-  <div id="app">
-    <div class="top-bar">原fusion官网已迁移:<a href="http://www.fusion.design/">点击前往</a></div>
+  <div id="app" v-cloak>
+    <div class="top-bar">{{ $t('原 fusion 官网已迁移:') }}<a href="http://www.fusion.design/" a target=”_blank>{{ $t("点击前往")
+        }}</a></div>
 
     <div class="layout-header">
       <div class="logo">
@@ -29,61 +32,66 @@
         <i class="iconfont icon-menu"></i>
         <ul class="nav flex">
           <li>
-            <a href="../brand/index.html">品牌</a>
+            <a href="../brand/index.html">{{ $t("品牌") }}</a>
           </li>
           <li class="active">
-            <a href="../color/index.html">设计指导</a>
+            <a href="../guidelines/index.html">{{ $t("设计指导") }}</a>
           </li>
           <li>
-            <a href="../library/index.html">资料库</a>
-          </li>
+            <a href="../library/index.html">{{ $t("资料库") }}</a></li>
         </ul>
         <input class="menu-search" type="search">
         <i class="iconfont icon-search"></i>
+        <div class="locale-switch" @click="switchLanguage">
+          <span :class="lang === 'en' ? 'active' : ''">En</span>
+          <i>/</i>
+          <span :class="lang === 'cn' ? 'active' : ''">中文</span>
+        </div>
       </div>
-
     </div>
-
     <div class="wrap">
       <div class="layout-aside">
         <div>
           <div class="expand-wrap">
 
             <ul class="nav">
-              <li class="title">设计语言</li>
-              <li><a href="../language/index.html">设计语言概述</a></li>
-              <li><a href="../element/index.html">元素概述</a></li>
-              <li><a href="../relationship/index.html">设计关系</a></li>
-              <li class="title">设计框架</li>
-              <li><a href="../what/index.html">什么是设计框架</a></li>
-              <li><a href="../how/index.html">怎样运用设计框架</a></li>
-              <li class="title">视觉规范</li>
+              <li class="title">{{ $t('设计语言') }}</li>
+              <li><a href="../language/index.html">{{ $t('设计语言概述') }}</a></li>
+              <li><a href="../element/index.html">{{ $t('元素概述') }}</a></li>
+              <li><a href="../relationship/index.html">{{ $t('设计关系') }}</a></li>
+              <li class="title">{{ $t('设计框架') }}</li>
+              <li><a href="../what/index.html">{{ $t('什么是设计框架') }}</a></li>
+              <li><a href="../how/index.html">{{ $t('怎样运用设计框架') }}</a></li>
+              <li class="title">{{ $t('视觉规范') }}</li>
               <li>
-                <a href="../color/index.html">色彩</a>
+                <a href="../token/index.html">{{ $t('Token规范') }}</a>
               </li>
               <li>
-                <a href="../grid/index.html">栅格</a>
+                <a href="../color/index.html">{{ $t('色彩') }}</a>
               </li>
               <li>
-                <a href="../spacing/index.html">间距</a>
+                <a href="../grid/index.html">{{ $t('栅格') }}</a>
               </li>
               <li>
-                <a href="../icon/index.html">图标</a>
+                <a href="../spacing/index.html">{{ $t('间距') }}</a>
               </li>
               <li>
-                <a href="../illustration/index.html">插画</a>
+                <a href="../icon/index.html">{{ $t('图标') }}</a>
               </li>
               <li>
-                 <a href="../typography/index.html">字体排版</a>
+                <a href="../illustration/index.html">{{ $t('插画') }}</a>
+              </li>
+              <li>
+                <a href="../typography/index.html">{{ $t('字体排版') }}</a>
               </li>
               <li class="active">
-                <a href="../photograph/index.html">图片</a>
+                <a href="../photograph/index.html">{{ $t('图片') }}</a>
               </li>
-              <li class="title">创意设计</li>
-              <li><a href="../text/index.html">语境</a></li>
-              <li><a href="../range/index.html">范围</a></li>
-              <li><a href="../method/index.html">方法 & 过程</a></li>
-              <li><a href="../manage/index.html">管理 & 用户感知验证</a></li>
+              <li class="title">{{ $t('创意设计') }}</li>
+              <li><a href="../text/index.html">{{ $t('语境') }}</a></li>
+              <li><a href="../range/index.html">{{ $t('范围') }}</a></li>
+              <li><a href="../method/index.html">{{ $t('方法 & 过程') }}</a></li>
+              <li><a href="../manage/index.html">{{ $t('管理 & 用户感知验证') }}</a></li>
             </ul>
           </div>
           <div class="un-expand-wrap">
@@ -95,18 +103,18 @@
 
       <div class="layout-container">
         <header>
-          <h1>图片</h1>
+          <h1>{{ $t('图片') }}</h1>
         </header>
         <div class="content">
           <p class="p3">
-            图片作为一种感性的表达，能与用户产生通感，适合传递情感，渲染氛围。在图片的选择上，我们考虑三个因素：
-            <br>1. 真实的用户
-            <br>2. 在真实的场景
-            <br>3. 使用真实的产品
+            {{ $t('图片作为一种感性的表达，能与用户产生共鸣，适合传递情感，渲染氛围。在图片的选择上，我们考虑三个因素：') }}
+            <br>{{ $t('1. 真实的用户') }}
+            <br>{{ $t('2. 在真实的场景') }}
+            <br>{{ $t('3. 使用真实的产品') }}
           </p>
-          <h1>真实的用户</h1>
+          <h1>{{ $t('真实的用户') }}</h1>
           <p>
-            使用真实的用户有助于帮助用户更加准确地定位自己是否为该产品受众，并且使用户能够相信：你了解我，了解我的现状，可以更好地和用户建立联系。
+            {{ $t('使用真实的用户有助于帮助用户更加准确地定位自己是否为该产品受众，并且使用户能够相信：你了解我，了解我的现状，可以更好地和用户建立联系。') }}
           </p>
           <div class="img-box">
             <img src="./img/01.png" alt="">
@@ -114,9 +122,9 @@
           <div class="img-box02">
             <img src="./img/02.png" alt="">
           </div>
-          <h1>在真实的场景</h1>
+          <h1>{{ $t('在真实的场景') }}</h1>
           <p>
-            使用真实的场景有助于帮助用户更加准确地定位产品功能的范围，使用户更好地了解在何种情况下使用该产品。
+            {{ $t('使用真实的场景有助于帮助用户更加准确地定位产品功能的范围，使用户更好地了解在何种情况下使用该产品。') }}
           </p>
           <div class="img-box">
             <img src="./img/03.png" alt="">
@@ -124,7 +132,7 @@
           <div class="img-box02">
             <img src="./img/04.png" alt="">
           </div>
-          <h1>真实的产品</h1>
+          <h1>{{ $t('真实的产品') }}</h1>
           <div class="img-box">
             <img src="./img/05.png" alt="">
           </div>
@@ -135,16 +143,18 @@
             <img src="../assets/img/footer-02.png" alt="">
           </div>
           <br>
-          <p class="pfooter">本网站由阿里巴巴国际用户体验部 - B2B品牌组维护
-          我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系。</p>
+          <p class="pfooter">{{ $t('本网站由阿里巴巴国际用户体验部 - B2B品牌组维护') }}
+            {{ $t('我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系。') }}</p>
           <br>
           <p>© 1999-2018 Alibaba.com. All rights reserved.</p>
         </div>
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
   <script src="../assets/js/plugins/utils.js"></script>
   <script src="../assets/js/plugins/jquery-3.3.1.min.js"></script>
+  <script src="./locale.js"></script>
   <script src="../assets/js/common.js"></script>
   <script src="./index.js"></script>
 </body>

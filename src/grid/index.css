@@ -131,7 +131,8 @@
 .img-box {
   margin-bottom: 60px; }
   .img-box img {
-    max-width: 100%; }
+    max-width: 100%; 
+    padding-bottom: 60px;}
 
 .p1 {
   color: #333; }
