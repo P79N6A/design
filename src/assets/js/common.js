@@ -184,7 +184,7 @@ $(function() {
         apiKey: '10ccb292caf1f598900a539ee6f74f44',
         indexName: 'fusion_design',
         inputSelector: '.menu-search',
-        debug: true, // Set debug to true if you want to inspect the dropdown
+        debug: true,
       })
 
       document.title = i18n.t(document.title)
