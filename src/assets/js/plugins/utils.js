@@ -1,5 +1,5 @@
 const util = {
-  //固定块
+  
   fixbar: function(options) {
     var ELEM = 'layui-fixbar',
       TOP_BAR = 'layui-fixbar-top',
@@ -10,7 +10,7 @@ const util = {
 
     options = $.extend(
       {
-        showHeight: 200, //出现TOP的滚动条高度临界值
+        showHeight: 200,
       },
       options
     )
@@ -21,7 +21,7 @@ const util = {
       ? 'background-color:' + options.bgcolor
       : ''
 
-    var icon = [options.bar1, options.bar2, '&#xe604;'], //图标：信息、问号、TOP
+    var icon = [options.bar1, options.bar2, '&#xe604;'], 
       elem = $(
         [
           '<ul class="' + ELEM + '">',
@@ -44,11 +44,7 @@ const util = {
               icon[1] +
               '</li>'
             : '',
-          // options.help
-          //   ? '<li class="iconfont icon-help" lay-type="help" style="' +
-          //     options.bgcolor +
-          //     '"></li>'
-          //   : '',
+          
           '</ul>',
         ].join('')
       ),
@@ -66,7 +62,7 @@ const util = {
     typeof options.css === 'object' && elem.css(options.css)
     body.append(elem), scroll()
 
-    //bar点击事件
+    
     elem.find('li').on('click', function() {
       var othis = $(this),
         type = othis.attr('lay-type')
@@ -81,7 +77,7 @@ const util = {
       options.click && options.click.call(this, type)
     })
 
-    //Top显示控制
+    
     dom.on('scroll', function() {
       clearTimeout(timer)
       timer = setTimeout(function() {
@@ -90,7 +86,7 @@ const util = {
     })
   },
 
-  //倒计时
+  
   countdown: function(endTime, serverTime, callback) {
     var that = this,
       type = typeof serverTime === 'function',
@@ -100,10 +96,10 @@ const util = {
       ).getTime(),
       count = end - now,
       time = [
-        Math.floor(count / (1000 * 60 * 60 * 24)), //天
-        Math.floor(count / (1000 * 60 * 60)) % 24, //时
-        Math.floor(count / (1000 * 60)) % 60, //分
-        Math.floor(count / 1000) % 60, //秒
+        Math.floor(count / (1000 * 60 * 60 * 24)), 
+        Math.floor(count / (1000 * 60 * 60)) % 24, 
+        Math.floor(count / (1000 * 60)) % 60, 
+        Math.floor(count / 1000) % 60, 
       ]
 
     if (type) callback = serverTime
@@ -118,20 +114,19 @@ const util = {
     return timer
   },
 
-  //某个时间在当前时间的多久前
   timeAgo: function(time, onlyDate) {
     var that = this,
       arr = [[], []],
       stamp = new Date().getTime() - new Date(time).getTime()
 
-    //返回具体日期
+    
     if (stamp > 1000 * 60 * 60 * 24 * 8) {
       stamp = new Date(time)
       arr[0][0] = that.digit(stamp.getFullYear(), 4)
       arr[0][1] = that.digit(stamp.getMonth() + 1)
       arr[0][2] = that.digit(stamp.getDate())
 
-      //是否输出时间
+      
       if (!onlyDate) {
         arr[1][0] = that.digit(stamp.getHours())
         arr[1][1] = that.digit(stamp.getMinutes())
@@ -140,13 +135,13 @@ const util = {
       return arr[0].join('-') + ' ' + arr[1].join(':')
     }
 
-    //30天以内，返回“多久前”
+    
     if (stamp >= 1000 * 60 * 60 * 24) {
       return ((stamp / 1000 / 60 / 60 / 24) | 0) + '天前'
     } else if (stamp >= 1000 * 60 * 60) {
       return ((stamp / 1000 / 60 / 60) | 0) + '小时前'
     } else if (stamp >= 1000 * 60 * 2) {
-      //2分钟以内为：刚刚
+      
       return ((stamp / 1000 / 60) | 0) + '分钟前'
     } else if (stamp < 0) {
       return '未来'
@@ -155,7 +150,7 @@ const util = {
     }
   },
 
-  //数字前置补零
+  
   digit: function(num, length) {
     var str = ''
     num = String(num)
@@ -166,7 +161,7 @@ const util = {
     return num < Math.pow(10, length) ? str + (num | 0) : num
   },
 
-  //转化为日期格式字符
+  
   toDateString: function(time, format) {
     var that = this,
       date = new Date(time || new Date()),
@@ -192,7 +187,7 @@ const util = {
       .replace(/ss/g, hms[2])
   },
 
-  //防 xss 攻击
+  
   escape: function(html) {
     return String(html || '')
       .replace(/&(?!#?[a-zA-Z0-9]+;)/g, '&amp;')
