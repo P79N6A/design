@@ -21,6 +21,13 @@ function replaceCont(filePath, fileCont) {
     });
     fileCont = fileCont.replace(/src="([^"]*)"/g, function (match, p1, offset, string) {
         const relative = path.relative(srcDir, path.resolve(path.dirname(filePath), p1));
+
+        if (p1.indexOf('`./img/') === 0) {
+            const addr = '`' + baseUrl +'/img/'; 
+            const str = p1.replace('`./img/', addr);
+            return `src="${str}"`;
+        }
+
         if (p1.indexOf('.') === 0) {
             if (p1[p1.length - 1] === '/') {
                 return `src="${baseUrl}/${relative}/"`;
