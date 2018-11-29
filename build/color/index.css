@@ -15,7 +15,7 @@
     text-align: left;
     background: #ebebeb;
     padding: 0 120px;
-    background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.10/color/img/banner.jpg");
+    background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.11/color/img/banner.jpg");
     background-size: cover; }
     .layout-container header .download {
       position: absolute;
@@ -194,7 +194,7 @@
         align-self: flex-start; }
 
 .img-box {
-  margin-bottom: 60px; }
+   }
   .img-box img {
     max-width: 100%;
     margin-bottom: 80px; }

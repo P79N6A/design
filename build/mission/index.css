@@ -15,7 +15,7 @@
     text-align: left;
     background: #ebebeb;
     padding: 0 120px;
-    background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.10/mission/img/banner.png");
+    background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.11/mission/img/banner.png");
     background-size: cover; 
     height:219px;}
     .layout-container header .download {
@@ -77,7 +77,7 @@
     .content {
       padding: 50px 20px; } }
   .content p {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     letter-spacing:0.4px; }
     .content p a {
       color: #4a90e2; }
@@ -132,11 +132,14 @@
     background: #f4f4f4;
     margin-bottom: 60px; }
 
-.img-box {
-  margin-bottom: 80px;
-  margin-top:20px; }
-  .img-box img {
-    max-width: 100%; }
+.img-box{;
+    padding-bottom:40px;
+}    
+
+.img-box img {
+    max-width: 100%;
+    transform: scale(0.6);
+    transform-origin: left;}
 
 .p1 {
   color: #333; }
