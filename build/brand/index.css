@@ -15,9 +15,8 @@
     text-align: left;
     background: #4D52B6;
     padding: 0 120px;
-    /*background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.10/brand/img/banner.png");*/
-    background-size: cover; 
-    height:616px;}
+    /*background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.11/brand/img/banner.png");*/
+    background-size: cover; }
     .layout-container header .download {
       position: absolute;
       top: 50%;
@@ -133,15 +132,15 @@
     background: #f4f4f4;
     margin-bottom: 60px; }
 
-.img-box {
-  margin-bottom: 80px; }
-  .img-box img {
-    max-width: 100%; }
-    
-.img-box02 {
-    margin-bottom: 80px;
-    padding-top:100px;
+.img-box{;
+    padding-top:60px;
+    padding-bottom: 30px;
 }    
+
+.img-box img {
+    max-width: 100%;
+    transform: scale(0.75);
+    transform-origin: 0 0;}   
 
 .p1 {
   color: #333; }
@@ -153,11 +152,10 @@
   margin-bottom: 60px !important; }
 
 .p4 {
-  font-family:"Futura";
   color:#fff;
-  font-size:18px;
-  line-height:1.618;
-  letter-spacing: 2px;
+  font-size:16px;
+  line-height:1.5;
+  padding-right: 100px;
   }
   
   margin-bottom: 60px !important; }
