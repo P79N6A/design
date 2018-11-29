@@ -44,11 +44,11 @@ const util = {
               icon[1] +
               '</li>'
             : '',
-          options.help
-            ? '<li class="iconfont icon-help" lay-type="help" style="' +
-              options.bgcolor +
-              '"></li>'
-            : '',
+          // options.help
+          //   ? '<li class="iconfont icon-help" lay-type="help" style="' +
+          //     options.bgcolor +
+          //     '"></li>'
+          //   : '',
           '</ul>',
         ].join('')
       ),

@@ -5,20 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BRNAD</title>
+  <title>品牌</title>
   <link rel="stylesheet" href="../assets/css/_reset.css">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css">
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <link rel="stylesheet" href="../assets/css/common.css">
   <link rel="stylesheet" href="./index.css">
   <link rel="shortcut icon" href="../assets/img/favicon.ico" sizes="32x32" />
+  <link rel="stylesheet" href="../assets/css/docsearch.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 </head>
 
 <body>
-  <div id="app">
-    <div class="top-bar">原fusion官网已迁移:<a href="http://www.fusion.design/">点击前往</a></div>
+  <div id="app" v-cloak>
+    <div class="top-bar">{{ $t('原 fusion 官网已迁移:') }}<a href="http://www.fusion.design/" a target=”_blank>{{ $t("点击前往")
+        }}</a></div>
 
     <div class="layout-header">
       <div class="logo">
@@ -29,19 +32,22 @@
         <i class="iconfont icon-menu"></i>
         <ul class="nav flex">
           <li class="active">
-            <a href="../brand/index.html">品牌</a>
+            <a href="../brand/index.html">{{ $t("品牌") }}</a>
           </li>
           <li>
-            <a href="../guidelines/index.html">设计指导</a>
+            <a href="../guidelines/index.html">{{ $t("设计指导") }}</a>
           </li>
           <li>
-            <a href="../library/index.html">资料库</a>
-          </li>
+            <a href="../library/index.html">{{ $t("资料库") }}</a></li>
         </ul>
         <input class="menu-search" type="search">
         <i class="iconfont icon-search"></i>
+        <div class="locale-switch" @click="switchLanguage">
+          <span :class="lang === 'en' ? 'active' : ''">En</span>
+          <i>/</i>
+          <span :class="lang === 'cn' ? 'active' : ''">中文</span>
+        </div>
       </div>
-
     </div>
 
     <div class="wrap">
@@ -50,20 +56,20 @@
           <div class="expand-wrap">
 
             <ul class="nav">
-              <li class="title">品牌故事</li>
-              <li><a href="../mission/index.html">愿景</a></li>
-              <li><a href="../target/index.html">目标用户</a></li>
-              <li><a href="../personal/index.html">品牌个性</a></li>
+              <li class="title">{{ $t('品牌故事') }}</li>
+              <li><a href="../mission/index.html">{{ $t('愿景') }}</a></li>
+              <li><a href="../target/index.html">{{ $t('目标用户') }}</a></li>
+              <li><a href="../personal/index.html">{{ $t('品牌个性') }}</a></li>
               <li>
-              <a href="../keywords/index.html">关键词</a>
+                <a href="../keywords/index.html">{{ $t('关键词') }}</a>
               </li>
               <li>
-                <a href="../principles/index.html">设计原则</a>
+                <a href="../principles/index.html">{{ $t('设计原则') }}</a>
               </li>
-              <li class="title">品牌调性</li>
-              <li><a href="../product/index.html">产品</a></li>
-              <li><a href="../edm/index.html">邮件</a></li>
-              <li><a href="../article/index.html">文章</a></li>
+              <li class="title">{{ $t('品牌调性') }}</li>
+              <li><a href="../product/index.html">{{ $t('产品') }}</a></li>
+              <li><a href="../edm/index.html">{{ $t('邮件') }}</a></li>
+              <li><a href="../article/index.html">{{ $t('文章') }}</a></li>
             </ul>
           </div>
           <div class="un-expand-wrap">
@@ -75,25 +81,26 @@
 
       <div class="layout-container">
         <header>
-          <h1>品牌</h1>
-          <p class="p4">通过品牌了解我们的愿景及服务对象，帮助你在设计的时候更好的进行判断和选择，
-          <br>并以同样的性格特质向用户呈现。</p>
-          <div class="img-box02">
-            <img src="./img/00.png" alt="">
+          <h1>{{ $t('品牌') }}</h1>
+          <p class="p4">{{ $t('通过品牌了解我们的愿景及服务对象，帮助你在设计的时候更好地进行判断和选择，并以同样的性格特质向用户呈现。') }}</p>
+          <div class="img-box">
+            <img :src="`./img/00-${lang}.png`" alt="">
           </div>
         </header>
         <div class="content">
-        <h1>我们的愿景和目标用户</h1>
-          <p>通过这个章节，了解我们改变世界的愿景，并且了解我们的用户，他们来自世界各地，拥有不同的背景和认知习惯。 
-          <a href="../mission/index.html">了解更多</a>
+          <h1>{{ $t('愿景和目标用户') }}</h1>
+          <p>{{ $t('通过这个章节，了解我们改变世界的愿景，并且了解我们的用户，他们来自世界各地，拥有不同的背景和认知习惯。') }}
+            <a href="../mission/index.html">{{ $t('了解更多') }}</a>
           </p>
-          
-        <h1>关键词和设计原则</h1>
-          <p>通过这个章节，了解我们最核心的理念，在进行任何一种类型的工作时，成为选择的筹码。<a href="../keywords/index.html">了解更多</a>
+
+          <h1>{{ $t('关键词和设计原则') }}</h1>
+          <p>{{ $t('通过这个章节，了解我们最核心的理念，在进行任何一种类型的工作时，懂得该坚持什么放弃什么。') }}
+            <a href="../keywords/index.html">{{ $t('了解更多') }}</a>
           </p>
-          
-          <h1>品牌调性</h1>
-          <p>同样的内容，不同的腔调会表达出不同的含义，通过这个章节，您可以了解到我们如何传递自己的声音。<a href="../product/index.html">了解更多</a>
+
+          <h1>{{ $t('品牌调性') }}</h1>
+          <p>{{ $t('同样的内容，不同的腔调会表达出不同的含义，通过这个章节，您可以了解到我们如何传递自己的声音。') }}
+            <a href="../product/index.html">{{ $t('了解更多') }}</a>
           </p>
         </div>
         <div class="layout-footer">
@@ -102,16 +109,18 @@
             <img src="../assets/img/footer-02.png" alt="">
           </div>
           <br>
-          <p class="pfooter">本网站由阿里巴巴国际用户体验部 - B2B品牌组维护
-          我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系。</p>
+          <p class="pfooter">{{ $t('本网站由阿里巴巴国际用户体验部 - B2B品牌组维护') }}
+            {{ $t('我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系。') }}</p>
           <br>
           <p class="pfooter2">© 1999-2018 Alibaba.com. All rights reserved.</p>
         </div>
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
   <script src="../assets/js/plugins/utils.js"></script>
   <script src="../assets/js/plugins/jquery-3.3.1.min.js"></script>
+  <script src="./locale.js"></script>
   <script src="../assets/js/common.js"></script>
   <script src="./index.js"></script>
 </body>

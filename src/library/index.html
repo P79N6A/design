@@ -5,20 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Library</title>
+  <title>资料库</title>
   <link rel="stylesheet" href="../assets/css/_reset.css">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css">
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <link rel="stylesheet" href="../assets/css/common.css">
   <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="../assets/css/docsearch.css">
   <link rel="shortcut icon" href="../assets/img/favicon.ico" sizes="32x32" />
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 </head>
 
 <body>
-  <div id="app">
-    <div class="top-bar">原fusion官网已迁移:<a href="http://www.fusion.design/">点击前往</a></div>
+  <div id="app" v-cloak>
+    <div class="top-bar">{{ $t('原 fusion 官网已迁移:') }}<a href="http://www.fusion.design/" a target=”_blank>{{ $t("点击前往")
+        }}</a></div>
 
     <div class="layout-header">
       <div class="logo">
@@ -28,37 +31,37 @@
       <div class="menu">
         <i class="iconfont icon-menu"></i>
         <ul class="nav flex">
+          <li>
+            <a href="../brand/index.html">{{ $t("品牌") }}</a>
+          </li>
+          <li>
+            <a href="../guidelines/index.html">{{ $t("设计指导") }}</a>
+          </li>
           <li class="active">
-            <a href="../brand/index.html">品牌</a>
-          </li>
-          <li>
-            <a href="../guidelines/index.html">设计指导</a>
-          </li>
-          <li>
-            <a href="../library/index.html">资料库</a>
-          </li>
+            <a href="../library/index.html">{{ $t("资料库") }}</a></li>
         </ul>
         <input class="menu-search" type="search">
         <i class="iconfont icon-search"></i>
+        <div class="locale-switch" @click="switchLanguage">
+          <span :class="lang === 'en' ? 'active' : ''">En</span>
+          <i>/</i>
+          <span :class="lang === 'cn' ? 'active' : ''">中文</span>
+        </div>
       </div>
-
     </div>
 
     <div class="wrap">
       <div class="layout-aside">
         <div>
           <div class="expand-wrap">
-
             <ul class="nav">
-              <li class="title">DPL</li>
-            
-              <li class="title">体验数据</li>
-
-              <li class="title">词汇库</li>
-
-              <li class="title">工具</li>
-            </ul>
-          </div>
+              <li class="title">{{ $t('资料库') }}</li>
+              <li><a href="../design/index.html">{{ $t('设计模式库') }}</a></li>
+              <li><a href="../database/index.html">{{ $t('体验数据库') }}</a></li>
+              <li><a href="../thinking/index.html">{{ $t('设计思维') }}</a></li>
+               <li><a href="../glossary/index.html">{{ $t('词汇库') }}</a></li>
+              </ui> 
+            </div>
           <div class="un-expand-wrap">
             <i class="iconfont icon-search"></i>
             <i class="iconfont icon-category"></i>
@@ -68,13 +71,42 @@
 
       <div class="layout-container">
         <header>
-          <h1>资料库</h1>
-          <p class="p4">即将上线, 敬请期待</p>
-          
+          <h1>{{ $t('资料库') }}</h1>
+          <p>{{ $t('资料库沉淀了Alibaba.com设计师历年的产出，他们融入了对于B类用户的长期服务得来的经验，以及科学化的实验对人类基础视觉体验的了解：') }}</p>
+          <br>
+          <p>{{ $t('设计模式库是一套完整的设计系统，使用它你可以组成完整的功能页面，执行系统功能；') }}</p>
+          <p>{{ $t('体验数据库是通过眼动实验沉淀的一手数据，指导不同类型浏览模式的设计；') }}</p>
+          <p>{{ $t('设计思维 — 具体项目的设计师分享；') }}</p>
+          <p>{{ $t('词汇库 — B类行业的专业术语；') }}</p>
+          <br>
+          <br>
+          <p>{{ $t('查找你所需要的内容，为用户创造更好的用户体验。') }}</p>
         </header>
         <div class="content">
-        <p>
-        如有任何疑问或者帮助，可联系yanzuo.zp@alibaba-inc.com</p>
+          <div class="item item-1">
+            <h3>{{ $t('设计模式库') }}</h3>
+            <p>{{ $t('一套完整的设计系统，使用它你可以组成完整的功能页面，执行系统功能') }}</p>
+            <a href="../design/index.html">{{ $t('了解更多') }} >></a>
+            <div class="image"></div>
+          </div>
+          <div class="item item-2">
+            <h3>{{ $t('体验数据库') }}</h3>
+            <p>{{ $t('通过眼动实验沉淀的一手数据，指导不同类型浏览模式的设计') }}</p>
+            <a href="../database/index.html">{{ $t('了解更多') }} >></a>
+            <div class="image"></div>
+          </div>
+          <div class="item item-3">
+            <h3>{{ $t('设计思维') }}</h3>
+            <p>{{ $t('具体项目的设计师分享') }}</p>
+            <a href="../thinking/index.html">{{ $t('了解更多') }} >></a>
+            <div class="image"></div>
+          </div>
+          <div class="item item-4">
+            <h3>{{ $t('词汇库') }}</h3>
+            <p>{{ $t('B类行业的专业术语') }}</p>
+            <a href="../glossary/index.html">{{ $t('了解更多') }} >></a>
+            <div class="image"></div>
+          </div>
         </div>
         <div class="layout-footer">
           <div>
@@ -82,16 +114,18 @@
             <img src="../assets/img/footer-02.png" alt="">
           </div>
           <br>
-          <p class="pfooter">本网站由阿里巴巴国际用户体验部 - B2B品牌组维护
-          我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系。</p>
+          <p class="pfooter">{{ $t('本网站由阿里巴巴国际用户体验部 - B2B品牌组维护') }}
+            {{ $t('我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系。') }}</p>
           <br>
           <p class="pfooter2">© 1999-2018 Alibaba.com. All rights reserved.</p>
         </div>
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
   <script src="../assets/js/plugins/utils.js"></script>
   <script src="../assets/js/plugins/jquery-3.3.1.min.js"></script>
+  <script src="./locale.js"></script>
   <script src="../assets/js/common.js"></script>
   <script src="./index.js"></script>
 </body>
