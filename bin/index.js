@@ -23,7 +23,8 @@ function replaceCont(filePath, fileCont) {
         const relative = path.relative(srcDir, path.resolve(path.dirname(filePath), p1));
 
         if (p1.indexOf('`./img/') === 0) {
-            const addr = '`' + baseUrl +'/img/'; 
+            const pathAddr = path.relative(srcDir, path.resolve(path.dirname(filePath)));
+            const addr = '`' + baseUrl + '/' + pathAddr+ '/img/'; 
             const str = p1.replace('`./img/', addr);
             return `src="${str}"`;
         }
