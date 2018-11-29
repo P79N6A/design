@@ -12,7 +12,7 @@ $(function() {
       200 <= o && !e ? (e = !0) : o < 200 && e && (e = !1),
         n[e ? 'hide' : 'show'](),
         (i.toggleClass('reverse', e).find('.logo img')[0].src =
-          './assets/img/' + (e ? 'alibaba-logo.png' : 'logo.png'))
+        e ? '//g.alicdn.com/fusion-site/alibaba/0.0.13/assets/img/alibaba-logo.png' : '//g.alicdn.com/fusion-site/alibaba/0.0.13/assets/img/logo.png')
     }),
     util.fixbar({
       help: !0,
