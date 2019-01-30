@@ -8,7 +8,7 @@
   "license": "MIT",
   "author": "leiling.cp <leiling.cp@alibaba-inc.com>",
   "scripts": {
-    "build": "node --version && node --max-old-space-size=20480 ./bin/index.js",
+    "build": "node --version && node --max-old-space-size=4096 ./bin/index.js",
     "publish": "node ./bin/index.js && sh ./bin/publish.sh"
   },
   "devDependencies": {},
