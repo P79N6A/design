@@ -1,22 +1,16 @@
 var messages = {
-  体验设计指南: 'Experience design guide',
-  一套符合B类场景的设计体系: 'A design system that conforms to B type scenario',
-  查看更多: 'To view more',
-  品牌概览: 'An overview of the brand',
-  '通过品牌了解我们的愿景及服务对象，帮助你在设计的时候更好的进行判断和选择，并以同样的性格特质向用户呈现。':
-    'Understanding our vision and service target through the brand helps you better judge and choose when designing and present to users with the same personality traits.',
-  品牌调性: 'Brand essence',
-  '在这里了解我们以何种语调向用户传递我们的声音。':
-    'Find out what tone of voice we deliver to our users.',
-  视觉指南: 'Visual guide',
-  '在这里了解我们可以使用的设计元素，这些元素符合整个品牌的定义，并且经过设计实验的验证，可以安心的被使用。':
-    'Here, we learn about the design elements that we can use. These elements conform to the definition of the whole brand and can be used safely after being verified by design experiments.',
-  多媒体指南: 'Multimedia guide',
-  '不同载体及形式的设计指南，包括VR、3D。':
-    'Design guidelines for different carriers and forms, including VR and 3D.',
-  设计资料库: 'Design database',
-  '在这里，可以看到历史积累的各项用户体验数据及资料，并下载辅助设计的工具。':
-    'Here, you can see all kinds of user experience data and materials accumulated in history, and download the tools of auxiliary design.',
-  '本网站由阿里巴巴国际用户体验部 - B2B品牌组维护 我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系。':
-    'This website is maintained by the alibaba international user experience department-b2b brand group and we are committed to helping small and medium-sized buyers and sellers around the world by enhancing the experience. If you have any Suggestions, please feel free to contact us.',
-}
+'定义': 'Definition',
+'选择器提供了一个简单的方法来从一个预定义集合中选取单个值。': 'The selector provides an easy way to pick a single value from a predefined collection.',
+'样式与交互': 'Style & Interaction',
+'滑块控件(Sliders，简称滑块)可以让我们通过在连续或间断的区间内滑动锚点来选择一个合适的数值。区间最小值放在左边，对应的，最大值放在右边。滑块(Sliders)可以在滑动条的左右两端设定图标来反映数值的强度。这种交互特性使得它在设置诸如音量、亮度、色彩饱和度等需要反映强度等级的选项时成为一种极好的选择。': 
+'Sliders (Sliders, for short) allow us to choose an appropriate value by sliding the anchor point in a continuous or intermittent interval. The minimum value of the interval is placed on the left, and the corresponding value is placed on the right. Sliders can set icons on the left and right ends of the slider to reflect the strength of the value. This interactive feature makes it an excellent choice when setting options such as volume, brightness, color saturation, etc. that need to reflect the intensity level.',
+'1. 带有可编辑数值的滑块': '1. Editable SlidePicker',
+'用于使用者需要设定精确数值的设置项，可以通过点触缩略图、文本框来进行编辑': 'For the user to set the exact value of the setting items, you can edit by tapping the thumbnail, text box',
+'在不要求精准数值的场景下用户使用『连续滑块』可得到更灵活便捷的操作；在用户需要精确数值时，可与『数字输入框』搭配使用': 
+'Users can use the "continuous slider" to get more flexible and convenient operation in scenes that do not require precise values. When users need precise values, they can be used with "digital input box".',
+'2. 间续滑块': '2. Discrete SlidePicker',
+'间续滑块会恰好咬合到在滑动条上平均分布的间续标记(tick mark)上。在要求精准、以客观设定为主的设置项中使用间续滑块，让使用者做出更有意义的调整。应当对每个间续标记(tick mark)设定一定的等级区间进行分割，使得其调整效果对于使用者来说显而易见。这些生成区间的值应当是预先设定好的，使用者不可对其进行编辑。': 
+'The intermittent slider will just snap to the evenly distributed tick mark on the slider. Use the continuous slider in the settings that require precision and objective settings to allow the user to make more meaningful adjustments. A certain level interval should be set for each tick mark so that the adjustment effect is obvious to the user. The values of these generation intervals should be pre-set and cannot be edited by the user.',
+'3. 区间选择滑块': '3. Optional Section SlidePicker ',
+
+};

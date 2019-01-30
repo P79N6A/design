@@ -1,6 +1,6 @@
 var messages = {
-'在ICBU，我们经常没有协作资源来生成每一个界面，横幅和交互。 如有疑问，请遵循这些重要提示，以帮助您更好地协作。': 
-'At ICBU, each interface, banner and interaction is generated often without any collaborative resources. If you shall have any questions, follow these important tips for better collaboration.',
+'请遵循这些重要提示，以帮助您更好地产出产品文案。': 
+'Please follow these important tips to help you make a better product text.',
 '不要想的太大': 'No Need to Think Too Big',
 '你用来表达你的观点的词越少越好。': 'It would be better to express your opinion with fewer words.',
 '争取简单': 'Simplicity Preferred',
@@ -16,9 +16,9 @@ var messages = {
 '当有疑问时，请检查你的内容': 'Please Check Your Contents for Any Questions',
 '语法和词汇测试：': 'Grammar and vocabulary test:',
 '简单测试：': 'Easy Test:',
-'人体测试：': 'Human Body Test:',
-'无所不包的人类测试：请向我们的一位出色的内容策略师寻求建议。我们通常在PRS提交后的7天内作出回应。': 
-'An all-encompassing human test: please seek advice from one of our outstanding content strategists. Usually we make a response within 7 days after PRS is submitted.',
+'人工测试：': 'Human Body Test:',
+'请向我们的一位出色的内容策略师寻求建议。我们通常在PRS提交后的7天内作出回应。': 
+'Please seek advice from one of our outstanding content strategists. Usually we make a response within 7 days after PRS is submitted.',
 '有几种方法可以确认UX内容的质量。': 'Several methods are available for you to determine the quality of UX contents.',
 
 }

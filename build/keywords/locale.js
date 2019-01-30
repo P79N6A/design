@@ -7,7 +7,7 @@ var messages = {
 '符合多语言的浏览习惯；': 'Support browsing habits of various languages;',
 '在元素的选择上考虑。': 'Give due consideration to the selection of elements.',
 '信赖': 'Trust',
-'那么如何在网站体现信任，对于B类网站而言，最重要的莫过于专业性，我们需要用户通过看到的，读到的，用到的，来相信这个平台有足够的能力能够顺利推进生意：': 
+'如何在网站体现信任，对于B类网站而言，最重要的莫过于专业性，我们需要用户通过看到的，读到的，用到的，来相信这个平台有足够的能力能够顺利推进生意：': 
 'How can a sense of trust be provided on a website? The most important thing for a Class B website is not come across as overly professional. We want our users to believe that this platform is capable of promoting business successfully, and we achieve that through the things they see, read, and use:',
 '随时能够回应客户的问题；': 'Able to respond to customers’ questions any time;',
 '有充分的能力解决纠纷；': 'Possess strong capability to resolve disputes;',

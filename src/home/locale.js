@@ -11,9 +11,9 @@ var messages = {
   '视觉指南': 'VISUAL GUIDELINES',
   '在这里了解我们可以使用的设计元素，这些元素符合整个品牌的定义，并且经过设计实验的验证，可以安心的被使用。':
     'Understand the design elements that we can use. These elements are in line with the definition of the brand and have been thoroughly verified through design experiments, they can be used without worry.',
-  '多媒体指南': 'MULTIMEDIA',
-  '不同载体及形式的设计指南，包括VR、3D。':
-  'Guide for designing through different mediums and forms, including VR and 3D.',
+  '动效指南': 'Animation',
+  '基于最简单、能解决问题的原则来设计动效。':
+  'Design dynamics based on the simplest, problem-solving principles.',
   '设计资料库': 'LIBRARY',
   '在这里，可以看到历史积累的各项用户体验数据及资料，并下载辅助设计的工具。':
   'Here, you can access all kinds of user experience data and material accumulated over time and download various CAD tools.',

@@ -16,7 +16,7 @@
     background: #ebebeb;
     padding: 0 120px;
     background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.14/relationship/img/banner.png");
-    background-size: cover; 
+    background-size: cover;
     height:219px;}
     .layout-container header .download {
       position: absolute;
@@ -69,7 +69,7 @@
     background: #dcdcdc; }
 
 .content {
-  padding: 80px 220px 60px 120px; }
+  padding: 80px 120px 60px 120px; }
   @media (max-width: 991px) {
     .content {
       padding: 50px 60px; } }
@@ -87,14 +87,14 @@
     color: #666666;
     line-height: 18px;
     font-weight: normal; }
-    
+
   .content h5 {
     font-size: 16px;
     color: #000;
     line-height: 40px;
-    font-weight:600; 
+    font-weight:600;
     letter-spacing:0.2px;}
-    
+
   .content .gray-wrap {
     background: #f4f4f4;
     padding: 40px 44px;
@@ -172,4 +172,4 @@ li.active {
       margin-right: 60px;}
 a:hover {
     color: #fff;
-    text-decoration: underline;}              
+    text-decoration: underline;}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PC端测试</title>
+    <link rel="stylesheet" href="../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../assets/css/docsearch.css" />
+    <script src="../assets/js/plugins/vue.min.js"></script>
+    <script src="../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="3">
+        <header>
+          <h1>{{ $t("PC端测试") }}</h1>
+          <el-tabs v-model="activeName" @tab-click="handleTabClick">
+            <el-tab-pane :label="$t('测试背景')" name="tab1"></el-tab-pane>
+            <el-tab-pane :label="$t('测试下载')" name="tab2"></el-tab-pane>
+          </el-tabs>
+        </header>
+
+        <transition name="el-fade-in-linear">
+          <div class="content" key="1" v-if="activeName === 'tab1'">
+            <h1>PC端-基于用户偏好与心智模型的设计研究</h1>
+            <p>
+              通过开展用户研究实验，对实验参与者进行访谈、偏好分析、眼动及手势分析等实验手段，获得参与者的认知、行为、偏好数据，通过统计学分析方法估计目标用户的整体偏好和行为方式，得出指导设计师进行交互设计和视觉设计的设计守则
+            </p>
+            <div class="img-box"><img src="./img/02.png" alt="" /></div>
+
+            <h1>无线端设计实验内容框架</h1>
+            <div class="img-box"><img src="./img/02.png" alt="" /></div>
+          </div>
+          <div class="content" key="2" v-if="activeName === 'tab2'">
+            <div class="download-box">
+              <div class="download-box-title">List改版测试</div>
+              <div class="download-box-subtitle">
+                测试结果：确定卡片样式、通道浏览方式
+              </div>
+              <a class="download-box-btn" href="#">
+                <span>Download</span> <i class="iconfont icon-download"></i>
+              </a>
+            </div>
+            <div class="download-box">
+              <div class="download-box-title">产品图片测试</div>
+              <div class="download-box-subtitle">
+                测试结果：运营模块排版方式的测试结果，已开发成运营组件
+              </div>
+              <a class="download-box-btn" href="#">
+                <span>Download</span> <i class="iconfont icon-download"></i>
+              </a>
+            </div>
+            <div class="download-box">
+              <div class="download-box-title">运营导航测试</div>
+              <div class="download-box-subtitle">
+                测试结果：首页类目文字位置、图片展示形式测试结果，已应用到首页改版的类目模块
+              </div>
+              <a class="download-box-btn" href="#">
+                <span>Download</span> <i class="iconfont icon-download"></i>
+              </a>
+            </div>
+            <div class="download-box">
+              <div class="download-box-title">Banner测试</div>
+              <div class="download-box-subtitle">
+                测试结果：首页类目文字位置、图片展示形式测试结果，已应用到首页改版的类目模块
+              </div>
+              <a class="download-box-btn" href="#">
+                <span>Download</span> <i class="iconfont icon-download"></i>
+              </a>
+            </div>
+          </div>
+        </transition>
+      </layout-page>
+    </div>
+    <script src="../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../assets/js/plugins/utils.js"></script>
+    <script src="../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="./index.js"></script>
+    <script src="../assets/js/common.js"></script>
+  </body>
+</html>

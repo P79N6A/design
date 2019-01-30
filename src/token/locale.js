@@ -1,5 +1,5 @@
 var messages = {
-'Token简介': 'Token Introduction',
+'简介': 'Introduction',
 '随着B2B业务的逐渐发展，业务演进到 “平台化、垂直市场、采购市场” 阶段时，UI 也面对了更多的问题和挑战：“周期性业务的品牌更新”，“不同品牌的多种垂直业务同期构建”，“众多相似的后台系统构建”，“跨业务/部门的设计、前端协作问题”。': 
 'With the gradual development of B2B services and the evolution of the business to the stage of “platformization, vertical market, and procurement market”, UI has also faced more problems and challenges: “Brand renewal of cyclical business”, “more than different brands” "Vertical business concurrent construction", "many similar back-end system construction", "cross-business/department design, front-end collaboration issues."',
 '于是我们通过在前端与设计师之间构建出一套“翻译”方式，来解决设计师内部协作的一致性问题，解决一群设计师与工程师如何规模化的生产各种业务的问题，这就是Design Token。Design Token 通过将设计构建UI样式时使用的基本元素（色彩、圆角、字体、距离、投影、线条粗细……）Token化，将品牌与模式解耦；': 

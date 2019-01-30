@@ -15,7 +15,7 @@
     text-align: left;
     background: #ebebeb;
     padding: 0 120px;
-    background-image: url("./img/banner.png");
+    background: url(./img/banner.gif) no-repeat 50%;
     background-size: cover;
     height: 219px; }
     .layout-container header .download {

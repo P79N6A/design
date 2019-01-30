@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>无线端测试</title>
+    <link rel="stylesheet" href="../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../assets/css/docsearch.css" />
+    <script src="../assets/js/plugins/vue.min.js"></script>
+    <script src="../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="3">
+        <header>
+          <h1>{{ $t("无线端测试") }}</h1>
+          <el-tabs v-model="activeName" @tab-click="handleTabClick">
+            <el-tab-pane :label="$t('测试背景')" name="tab1"></el-tab-pane>
+            <el-tab-pane :label="$t('测试下载')" name="tab2"></el-tab-pane>
+          </el-tabs>
+        </header>
+
+        <transition name="el-fade-in-linear">
+          <div class="content" key="1" v-if="activeName === 'tab1'">
+            <h1>移动端-基于用户偏好与心智模型的设计研究</h1>
+            <p>
+              随着大屏幕手机、平板电脑性能和技术的不断提升，移动设备成为用户每天使用频率最高的电子产品，使用移动设备购物的比例也在飞速增长，但针对移动端的用户体验研究还比较少。一方面，互联网产品的信息内容和功能越来越复杂，尤其是平台型电子商务网站，用户对商品信息内容和交互流程的认知负担更重。另一方面，AE、alibaba.com面向海外各国用户，不同国家地区的用户信息浏览习惯和视觉偏好可能存在一定的差异。
+            </p>
+            <p>
+              基于以上情况，我们需要用更严谨的方式来验证用户接受移动端信息的最佳形式（页面布局、信息密度、导航、banner、信息内容、交互方式等），通过研究结论来指导具体的设计工作，并且解决跨设备的交互以及跨文化的认知问题。
+            </p>
+            <p>
+              通过研究得出不同尺寸屏幕（如电脑屏，平板屏，手机屏）适合的页面布局、信息密度、信息内容、信息交互方式。对用户来说最少认知负担，最高搜索效率的信息呈现形式是什么，对用户来说第一印象最好，主观上喜好的呈现形式是什么。通过实验找出不同国家、地区用户因文化差异导致的对信息内容呈现的认知及喜好差异。
+            </p>
+            <div class="img-box"><img src="./img/02.png" alt="" /></div>
+            <h1>无线端设计实验内容框架</h1>
+            <p>
+              交互：将基于用户行为，研究“功能点”、“信息反馈”的规律。针对用户交互行为的实验将模拟用户的购物行为，通过行为分析及眼动数据的分析，观察有无导航、路径、动作上的偏误。并在研究设备支持的前提下，研究新型交互方式：3Dtouch，完善新触发器的设计规则。
+            </p>
+            <p>
+              视觉：从组织逻辑和信息传递两个角度出发进行研究，前者将通过研究通用组块的布局，归纳得出通用组块中元素的组合排列逻辑。后者则将关注信息传递的三种特性，即特异性、优先度和丰富度。。
+            </p>
+            <div class="img-box"><img src="./img/02.png" alt="" /></div>
+          </div>
+          <div class="content" key="2" v-if="activeName === 'tab2'">
+            <div class="download-box">
+              <div class="download-box-title">类目交互形式测试</div>
+              <div class="download-box-subtitle">
+                测试结果：类目的数量、交互方式的测试结果已开发上线
+              </div>
+              <a class="download-box-btn" href="#">
+                <span>Download</span> <i class="iconfont icon-download"></i>
+              </a>
+            </div>
+            <div class="download-box">
+              <div class="download-box-title">APP运营组件测试</div>
+              <div class="download-box-subtitle">
+                测试结果：运营模块排版方式的测试结果，已开发成运营组件
+              </div>
+              <a class="download-box-btn" href="#">
+                <span>Download</span> <i class="iconfont icon-download"></i>
+              </a>
+            </div>
+            <div class="download-box">
+              <div class="download-box-title">APP首页类目模块测试</div>
+              <div class="download-box-subtitle">
+                测试结果：首页类目文字位置、图片展示形式测试结果，已应用到首页改版的类目模块
+              </div>
+              <a class="download-box-btn" href="#">
+                <span>Download</span> <i class="iconfont icon-download"></i>
+              </a>
+            </div>
+            <div class="download-box">
+              <div class="download-box-title">APP-Banner测试</div>
+              <div class="download-box-subtitle">
+                测试结果：首页类目文字位置、图片展示形式测试结果，已应用到首页改版的类目模块
+              </div>
+              <a class="download-box-btn" href="#">
+                <span>Download</span> <i class="iconfont icon-download"></i>
+              </a>
+            </div>
+            <div class="download-box">
+              <div class="download-box-title">APP详情页模版测试</div>
+              <div class="download-box-subtitle">
+                测试结果：行业化的详情页测试结果已应用到APP详情页的模板优化项目中
+              </div>
+              <a class="download-box-btn" href="#">
+                <span>Download</span> <i class="iconfont icon-download"></i>
+              </a>
+            </div>
+            <div class="download-box">
+              <div class="download-box-title">APP橱窗测试</div>
+              <div class="download-box-subtitle">
+                测试结果：服装的橱窗图片数量、展示逻辑等测试结果，已优化上线
+              </div>
+              <a class="download-box-btn" href="#">
+                <span>Download</span> <i class="iconfont icon-download"></i>
+              </a>
+            </div>
+          </div>
+        </transition>
+      </layout-page>
+    </div>
+    <script src="../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../assets/js/plugins/utils.js"></script>
+    <script src="../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="./index.js"></script>
+    <script src="../assets/js/common.js"></script>
+  </body>
+</html>

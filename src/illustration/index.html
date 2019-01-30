@@ -1,197 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>插画</title>
+    <link rel="stylesheet" href="../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../assets/css/docsearch.css" />
+    <script src="../assets/js/plugins/vue.min.js"></script>
+    <script src="../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../assets/js/plugins/element-ui.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>插画</title>
-  <link rel="stylesheet" href="../assets/css/_reset.css">
-  <link rel="stylesheet" href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css">
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-  <link rel="stylesheet" href="../assets/css/common.css">
-  <link rel="stylesheet" href="./index.css">
-  <link rel="shortcut icon" href="../assets/img/favicon.ico" sizes="32x32" />
-  <link rel="stylesheet" href="../assets/css/docsearch.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
-  <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-</head>
-
-<body>
-  <div id="app" v-cloak>
-    <div class="top-bar">{{ $t('原 fusion 官网已迁移:') }}<a href="http://www.fusion.design/" a target=”_blank>{{ $t("点击前往")
-        }}</a></div>
-
-    <div class="layout-header">
-      <div class="logo">
-        <img src="../assets/img/logo.png" alt="">
-      </div>
-
-      <div class="menu">
-        <i class="iconfont icon-menu"></i>
-        <ul class="nav flex">
-          <li>
-            <a href="../brand/index.html">{{ $t("品牌") }}</a>
-          </li>
-          <li class="active">
-            <a href="../guidelines/index.html">{{ $t("设计指导") }}</a>
-          </li>
-          <li>
-            <a href="../library/index.html">{{ $t("资料库") }}</a></li>
-        </ul>
-        <input class="menu-search" type="search">
-        <i class="iconfont icon-search"></i>
-        <div class="locale-switch" @click="switchLanguage">
-          <span :class="lang === 'en' ? 'active' : ''">En</span>
-          <i>/</i>
-          <span :class="lang === 'cn' ? 'active' : ''">中文</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="wrap">
-      <div class="layout-aside">
-        <div>
-          <div class="expand-wrap">
-
-            <ul class="nav">
-              <li class="title">{{ $t('设计语言') }}</li>
-              <li><a href="../language/index.html">{{ $t('设计语言概述') }}</a></li>
-              <li><a href="../element/index.html">{{ $t('元素概述') }}</a></li>
-              <li><a href="../relationship/index.html">{{ $t('设计关系') }}</a></li>
-              <li class="title">{{ $t('设计框架') }}</li>
-              <li><a href="../what/index.html">{{ $t('什么是设计框架') }}</a></li>
-              <li><a href="../how/index.html">{{ $t('怎样运用设计框架') }}</a></li>
-              <li class="title">{{ $t('视觉规范') }}</li>
-              <li>
-                <a href="../token/index.html">{{ $t('Token规范') }}</a>
-              </li>
-              <li>
-                <a href="../color/index.html">{{ $t('色彩') }}</a>
-              </li>
-              <li>
-                <a href="../grid/index.html">{{ $t('栅格') }}</a>
-              </li>
-              <li>
-                <a href="../spacing/index.html">{{ $t('间距') }}</a>
-              </li>
-              <li>
-                <a href="../icon/index.html">{{ $t('图标') }}</a>
-              </li>
-              <li class="active">
-                <a href="../illustration/index.html">{{ $t('插画') }}</a>
-              </li>
-              <li>
-                <a href="../typography/index.html">{{ $t('字体排版') }}</a>
-              </li>
-              <li>
-                <a href="../photograph/index.html">{{ $t('图片') }}</a>
-              </li>
-              <li class="title">{{ $t('创意设计') }}</li>
-              <li><a href="../text/index.html">{{ $t('语境') }}</a></li>
-              <li><a href="../range/index.html">{{ $t('范围') }}</a></li>
-              <li><a href="../method/index.html">{{ $t('方法 & 过程') }}</a></li>
-              <li><a href="../manage/index.html">{{ $t('管理 & 用户感知验证') }}</a></li>
-            </ul>
-          </div>
-          <div class="un-expand-wrap">
-            <i class="iconfont icon-search"></i>
-            <i class="iconfont icon-category"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="layout-container">
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
         <header>
-          <h1>{{ $t('插画') }}</h1>
+          <h1>{{ $t("插画") }}</h1>
+          <div class="download hvr-sweep-to-top">
+            <a download="icbu插画素材库V3.5" href="./icbu插画素材库V3.5.sketch">
+              <span>Sketch</span>
+              <span>
+                <i class="el-icon-download"></i>
+                <span class="download-tip">{{ $t("下载") }}</span>
+              </span>
+            </a>
+          </div>
         </header>
         <div class="content">
-          <h1>{{ $t('插画设计主旨') }}</h1>
-          <p>{{ $t('1.延续阿里巴巴logo的笑脸，服务全球买卖家') }}
-            <br>{{ $t('2.融合主站偏国外与一达通偏国内两块服务的本心') }}
-          </p>
-          <div class="img-box">
-            <img :src="`./img/01-${lang}.png`" alt="">
-          </div>
-          <h1>{{ $t('角色体系树状图') }}</h1>
+          <h2>{{ $t("插画设计主旨") }}</h2>
           <p>
-            <bold>{{ $t('一级品牌人物') }}</bold>
-            <br>{{ $t('主品牌角色，表征Alibaba自身形象，代表典型买卖家客户形象，人物均具有鲜明的个性特征，统一规范和标准，是其它各级角色绘制的基本参考和模版。') }}
+            {{ $t("· 结合主站品牌升级需要和toB国际化场景，完善与优化针对图形类素材在多媒体设计应用中的细节问题，针对3.0版本中的问题、及建议进行细化升级，在项目组的共同努力下，升级了3.5版本；") }}
+            <br>
+            {{ $t("· To B 提炼：针对toB场景进行探索，对平台功能和服务链路场景插画拓展应用的尝试（推进中）；") }}
+            <br>
+            {{ $t("· 未来探索：增加人物情感表达，尝试制作表情包，尝试3D化摸索，完善应用，探索插画素材工具化量产和自动搭建的落地，扩大量产和应用效能。增加人物情感表达，尝试制作表情包，尝试3D化摸索，完善应用，探索插画素材工具化量产和自动搭建的落地，扩大量产和应用效能；") }}
           </p>
-          <div class="img-box">
-            <img src="./img/02.png" alt="">
+          <div class="img-box" style="max-width: 500px">
+            <img src="./img/01.png" alt="" />
+          </div>
+          <h2>{{ $t("角色体系树状图") }}</h2>
+          <p>
+            <bold>{{ $t("一级品牌人物") }}</bold><br>
+            {{ $t("主品牌角色，表征Alibaba自身形象，代表典型买卖家客户形象，人物均具有鲜明的个性特征，统一规范和标准，是其它各级角色绘制的基本参考和模版。") }}
+          </p>
+          <div class="img-list">
+            <div class="img-box"><img src="./img/02.png" alt="" /></div>
+            <div class="img-box"><img src="./img/03.png" alt="" /></div>
+            <div class="img-box"><img src="./img/04.png" alt="" /></div>
+            <div class="img-box"><img src="./img/05.png" alt="" /></div>
           </div>
           <p>
-            <bold>{{ $t('二级辅助角色') }}</bold>
-            <br>{{ $t('在主品牌角色的基础上，结合场景应用和故事演绎的需要，衍生出来的辅助角色，个性特征较弱，相对品牌属性偏少，用于运营和故事表达等场景。') }}
+            <bold>{{ $t("二级辅助角色") }}</bold><br>
+            {{ $t("在主品牌角色的基础上，结合场景应用和故事演绎的需要，进行衍生的辅助角色，个性特征较弱，相对品牌属性偏少，使用运营和故事表征等场景。") }}
           </p>
-          <div class="img-box">
-            <img src="./img/03.png" alt="">
+          <div class="img-list">
+            <div class="img-box"><img src="./img/06.png" alt="" /></div>
+            <div class="img-box"><img src="./img/07.png" alt="" /></div>
+            <div class="img-box"><img src="./img/08.png" alt="" /></div>
+            <div class="img-box"><img src="./img/09.png" alt="" /></div>
+            <div class="img-box"><img src="./img/10.png" alt="" /></div>
+            <div class="img-box"><img src="./img/11.png" alt="" /></div>
+            <div class="img-box"><img src="./img/12.png" alt="" /></div>
+            <div class="img-box"><img src="./img/13.png" alt="" /></div>
           </div>
           <p>
-            <bold>{{ $t('三级次要角色') }}</bold>
-            <br>{{ $t('除特别场景或应用需要，结合规范标准所衍生的功能性角色人物等，无品牌属性。') }}
+            <bold>{{ $t("三级次要角色") }}</bold><br>
+            {{ $t("除特别场景或应用需要，结合规范标准所衍生的功能性角色人物等，无品牌属性（人物形象可以自己组合并添加，如，跟单员小萍、张兰）。") }}
           </p>
-          <div class="img-box">
-            <img src="./img/04.png" alt="">
+          <div class="img-list">
+            <div class="img-box"><img src="./img/14.png" alt="" /></div>
           </div>
-          <h1>{{ $t('主角色介绍') }}</h1>
-          <div class="img-box">
-            <img :src="`./img/05-${lang}.png`" alt="">
-          </div>
-          <h1>{{ $t('辅助元素展示') }}</h1>
-          <div class="img-box">
-            <img src="./img/06.png" alt="">
-          </div>
-          <h1>{{ $t('角色场景组合') }}</h1>
-          <p>{{ $t('产品页面应用') }}</p>
-          <div class="img-box">
-            <img src="./img/07.png" alt="">
-          </div>
-          <p>{{ $t('人物场景应用') }}</p>
-          <div class="img-box">
-            <img src="./img/08.png" alt="">
-          </div>
-          <h1>{{ $t('元素组合规则') }}</h1>
+          <h2>{{ $t("主角色介绍") }}</h2>
           <p>
-            <bold>{{ $t('层次构成') }}</bold>
-            <br>{{ $t('以橙色阶梯色为主的表意元素组合作为前景，吸引用户的注意力') }}
-            <br>{{ $t('以冷灰色阶梯色的环境元素组合作为后景，丰富画面，增加表现力和氛围') }}
+            {{ $t("Aliman - 代表人物，优化整体线条与面部表情，更健康的体型体现阿里整体特色，年轻具有活力，更干练同时表现工作人员的专业化。") }}
           </p>
-          <div class="img-box">
-            <img :src="`./img/09-${lang}.png`" alt="">
-          </div>
-          <p>{{ $t('画幅小于等于80dp') }}
-            <br>{{ $t('每一层的元素是数量控制，去除融合元素') }}</p>
-          <div class="img-box">
-            <img src="./img/10.png" alt="">
-          </div>
-          <p>{{ $t('画幅在150dp左右') }}</p>
-          <div class="img-box">
-            <img src="./img/11.png" alt="">
-          </div>
+          <div class="img-box"><img src="./img/17.png" alt="" /></div>
+          <p>
+            {{ $t("Anna - 客服人员，优化线条，更柔和的线条表达，体现女性特色，表达温柔和善的气质。") }}
+          </p>
+          <div class="img-box"><img src="./img/18.png" alt="" /></div>
+          <p>{{ $t("Tony - 美国黑人买家，优化配色，同时增加不同人种的特性表达。") }}</p>
+          <div class="img-box"><img src="./img/19.png" alt="" /></div>
+          <p>
+            {{ $t("老张 - 中国卖家，通过人物体型与面部表达，体现中国卖家（企业家）更朴实稳重的特点。") }}
+          </p>
+          <div class="img-box"><img src="./img/20.png" alt="" /></div>
+          <h2>{{ $t("辅助元素展示") }}</h2>
+          <p>
+            {{ $t("页面元素可用于插画场景搭建，如空页面等，有人物配合时应优先选用蓝色。") }}
+          </p>
+          <div class="img-box"><img src="./img/21.png" alt="" /></div>
+          <p>
+            {{ $t("特定场景，如无人物配合仅有元素做为画面主体时则优先选用橙色元素。") }}
+          </p>
+          <div class="img-box"><img src="./img/22.png" alt="" /></div>
+          <h2>{{ $t("角色场景组合") }}</h2>
+          <p>{{ $t("产品页面应用") }}</p>
+          <div class="img-box"><img :src="`./img/23-${lang}.png`" alt="" /></div>
+          <p>{{ $t("人物场景应用") }}</p>
+          <div class="img-box"><img :src="`./img/24-${lang}.png`" alt="" /></div>
+          <h2>{{ $t("元素组合规则") }}</h2>
+          <p>{{ $t("层次构成") }}</p>
+          <div class="img-box"><img :src="`./img/25-${lang}.png`" alt="" /></div>
+          <p>{{ $t("设备与画幅适配") }}</p>
+          <div class="img-box"><img :src="`./img/26-${lang}.png`" alt="" /></div>
+          <div class="img-box"><img :src="`./img/28-${lang}.png`" alt="" /></div>
         </div>
-        <div class="layout-footer">
-          <div>
-            <img src="../assets/img/footer-01.png" alt="">
-            <img src="../assets/img/footer-02.png" alt="">
-          </div>
-          <br>
-          <p class="pfooter">{{ $t('本网站由阿里巴巴国际用户体验部 - B2B品牌组维护') }}
-            {{ $t('我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系。') }}</p>
-          <br>
-          <p>© 1999-2018 Alibaba.com. All rights reserved.</p>
-        </div>
-      </div>
+      </layout-page>
     </div>
-  </div>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-  <script src="../assets/js/plugins/utils.js"></script>
-  <script src="../assets/js/plugins/jquery-3.3.1.min.js"></script>
-  <script src="./locale.js"></script>
-  <script src="../assets/js/common.js"></script>
-  <script src="./index.js"></script>
-</body>
-
+    <script src="../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../assets/js/plugins/utils.js"></script>
+    <script src="../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
 </html>

@@ -15,15 +15,13 @@
   margin-left: 244px;
 }
 .layout-container header {
-  padding: 0px 120px 80px;
   background: #2f2f2f;
 }
 .layout-container header p {
   font-size: 16px;
   color: #ffffff;
   text-align: left;
-  line-height: 24px;
-  padding-bottom: 16px;
+  line-height: 1.5;
 }
 .layout-container header .download {
   position: absolute;
@@ -129,6 +127,7 @@
   text-align: left;
   line-height: 32px;
   padding: 0;
+  font-weight: 500;
 }
 
 .content .item p {
@@ -193,4 +192,31 @@ a:hover {
   color: #fff;
   text-decoration: underline;
 }
-li.active{text-decoration: underline;}
+li.active {
+  text-decoration: underline;
+}
+.content {
+  padding: 0;
+}
+
+@media (max-width: 991px) {
+  .content {
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    padding: 0;
+  }
+}
+.layout-container {
+  color: #000000;
+  background-color: #1c1c1c
+}
+
+.soon {    
+  font-size: 14px;
+  color: #ffffff;
+  text-align: left;
+  line-height: 30px;
+  }

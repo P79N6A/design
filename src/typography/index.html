@@ -1,315 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>字体排版</title>
+    <link rel="stylesheet" href="../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./config.css" />
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../assets/css/docsearch.css" />
+    <script src="../assets/js/plugins/vue.min.js"></script>
+    <script src="../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../assets/js/plugins/element-ui.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>字体排版</title>
-  <link rel="stylesheet" href="../assets/css/_reset.css">
-  <link rel="stylesheet" href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css">
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-  <link rel="stylesheet" href="../assets/css/common.css">
-  <link rel="stylesheet" href="./index.css">
-  <link rel="shortcut icon" href="../assets/img/favicon.ico" sizes="32x32" />
-  <link rel="stylesheet" href="../assets/css/docsearch.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
-  <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-</head>
-
-<body>
-  <div id="app" v-cloak>
-    <div class="top-bar">{{ $t('原 fusion 官网已迁移:') }}<a href="http://www.fusion.design/" a target=”_blank>{{ $t("点击前往")
-        }}</a></div>
-
-    <div class="layout-header">
-      <div class="logo">
-        <img src="../assets/img/logo.png" alt="">
-      </div>
-
-      <div class="menu">
-        <i class="iconfont icon-menu"></i>
-        <ul class="nav flex">
-          <li>
-            <a href="../brand/index.html">{{ $t("品牌") }}</a>
-          </li>
-          <li class="active">
-            <a href="../guidelines/index.html">{{ $t("设计指导") }}</a>
-          </li>
-          <li>
-            <a href="../library/index.html">{{ $t("资料库") }}</a></li>
-        </ul>
-        <input class="menu-search" type="search">
-        <i class="iconfont icon-search"></i>
-        <div class="locale-switch" @click="switchLanguage">
-          <span :class="lang === 'en' ? 'active' : ''">En</span>
-          <i>/</i>
-          <span :class="lang === 'cn' ? 'active' : ''">中文</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="wrap">
-      <div class="layout-aside">
-        <div>
-          <div class="expand-wrap">
-
-            <ul class="nav">
-              <li class="title">{{ $t('设计语言') }}</li>
-              <li><a href="../language/index.html">{{ $t('设计语言概述') }}</a></li>
-              <li><a href="../element/index.html">{{ $t('元素概述') }}</a></li>
-              <li><a href="../relationship/index.html">{{ $t('设计关系') }}</a></li>
-              <li class="title">{{ $t('设计框架') }}</li>
-              <li><a href="../what/index.html">{{ $t('什么是设计框架') }}</a></li>
-              <li><a href="../how/index.html">{{ $t('怎样运用设计框架') }}</a></li>
-              <li class="title">{{ $t('视觉规范') }}</li>
-              <li>
-                <a href="../token/index.html">{{ $t('Token规范') }}</a>
-              </li>
-              <li>
-                <a href="../color/index.html">{{ $t('色彩') }}</a>
-              </li>
-              <li>
-                <a href="../grid/index.html">{{ $t('栅格') }}</a>
-              </li>
-              <li>
-                <a href="../spacing/index.html">{{ $t('间距') }}</a>
-              </li>
-              <li>
-                <a href="../icon/index.html">{{ $t('图标') }}</a>
-              </li>
-              <li>
-                <a href="../illustration/index.html">{{ $t('插画') }}</a>
-              </li>
-              <li class="active">
-                <a href="../typography/index.html">{{ $t('字体排版') }}</a>
-              </li>
-              <li>
-                <a href="../photograph/index.html">{{ $t('图片') }}</a>
-              </li>
-              <li class="title">{{ $t('创意设计') }}</li>
-              <li><a href="../text/index.html">{{ $t('语境') }}</a></li>
-              <li><a href="../range/index.html">{{ $t('范围') }}</a></li>
-              <li><a href="../method/index.html">{{ $t('方法 & 过程') }}</a></li>
-              <li><a href="../manage/index.html">{{ $t('管理 & 用户感知验证') }}</a></li>
-            </ul>
-          </div>
-          <div class="un-expand-wrap">
-            <i class="iconfont icon-search"></i>
-            <i class="iconfont icon-category"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="layout-container">
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
         <header>
-          <h1>{{ $t('字体排版') }}</h1>
+          <h1>{{ $t("字体") }}</h1>
         </header>
         <div class="content">
-          <h1>{{ $t('字体: OPEN SANS') }}</h1>
           <p>
-            {{ $t('阿里巴巴使用Open Sans，因为它是用于正文的最佳网络字体之一，它的“视觉噪音”非常低，没有突兀的纹理，暗斑或渲染问题。Open Sans是一个非常清晰并且平衡的字体。') }}
-            <br>{{ $t('此外，虽然Open Sans可能不一定是最适合您网站的字体，但在可读性和清晰度方面，它表现的非常好，因此它能如此受欢迎是有因可循的。') }}
+            {{
+              $t(
+                "字体是UI设计中最基本的构成之一。字体系统的建立主要解决的是内容可读性以及信息的表达，同时选择不同的字体传达不同的设计风格。通过定义字体的使用规则在设计上达到统一性和整体性，从而在阅读的舒适性上达到平衡。"
+              )
+            }}
           </p>
-          <div class="item">
-            <h1>{{ $t('系统字体') }}</h1>
-            <p>
-              {{ $t('我们对大多数页面使用Sans-serif字体。') }}
-            </p>
+          <h2>{{ $t("字体家族") }}</h2>
+          <p>
+            {{
+              $t(
+                "有购买版权字体的企业通过购买的字体库或者免费的字体间进行选择使用。使用免费字体前根据系统区分macor windows，如果用户使用的是mac系统可以优先使用mac默认字体渲染；如果使用的是windows，字体兼容性选择顺序："
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="`./img/01-${lang}.png`" alt="" />
+          </div>
+          <h2>{{ $t("行宽") }}</h2>
+          <p>
+            {{
+              $t(
+                "行宽/行长：是指一行字的长度。计算行宽的简单方法，使用RobertBringhurst的方法：行宽=字号x30。如果定义网站的基础字号为12，那么最适宜基础行宽为：14(字号)x30=360(行宽)。较适宜的宽度为40-70个字符。从生理结构分析，人在阅读文字的时候，理解并传递到大脑的信息是有限的。用户在阅读时，目光左右上下巡视、扫描和阅读，这意味着阅读要求大量的眼球运动。行宽越长，眼睛移动的距离太长太多。宽度较大，眼动位移较大，读者阅读换行时容易串行。行宽越短，眼睛阅读折行的次数太多。行数较多，眼动跳跃次数多，读者阅读行时会感觉到文字不连续。"
+              )
+            }}
+          </p>
+          <h2>{{ $t("行高") }}</h2>
+          <p>
+            {{
+              $t(
+                "行距/行高：Photoshop里为从一行文字的底部到另一行文字底部的间距。但在前端代码实现上，行距会自动平均分配到文字上下端，因此这里说的行距/行高为每行字体占用的高度空间(如下图)。行间距：从一行文字的底部到另一行文字顶部的间距。 行距(行高) = 字号+ 行间距例如：字号24，行距/行高为32，根据web页面平均分配原则，行距就是从文字的顶端上移4到文字底部下移4的距离。"
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="`./img/02-${lang}.png`" alt="" />
+          </div>
+          <p>
+            {{ $t("行高（少文本）=字号+6， 行高（多文本）=字号+8") }} <br />
+            <br />
+            {{
+              $t(
+                "多文本段落：文字行数>3，宽度>2倍段落总高。两个条件满足的情况下，文字内容不受周边区块影响。"
+              )
+            }}
+            <br />
+            {{
+              $t(
+                "少文本段落：文字行数≤3，或者宽度≤2倍段落总高。文字内容受周边区块影响。"
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="`./img/03-${lang}.png`" alt="" />
+          </div>
+          <div id="config-app">
             <div>
-              <div class="left">
-                <h3>OS</h3>
-                <h5>Windows</h5>
-                <h5>MacOS & iOS</h5>
-                <h5 class="mac">Chrome OS & Android</h5>
-                <h5>Ubuntu</h5>
-                <h5>OxygenOS</h5>
-                <h5>firefox OS</h5>
-              </div>
-              <div class="right">
-                <h3>Font family</h3>
-                <h6>Segoe UI</h6>
-                <h6 class="three">SF UI Text
-                  <br>SF UI Display
-                  <br>Helvetica Neue (fallback)</h6>
-                <h6>Chrome OS & Android</h6>
-                <h6>Ubuntu</h6>
-                <h6>OxygenOS</h6>
-                <h6>firefox OS</h6>
+              <div class="config-stage" id="config-stage">
+                <div class="config-demo" id="config-demo">
+                  <div class="config-section">
+                    <h3 class="head">{{ $t("字体类型") }}</h3>
+                    <div class="body">
+                      <div class="font-demo">
+                        <div class="label">
+                          family<br /><span>{{ $t("字体") }}</span>
+                        </div>
+                        <div class="box">
+                          Open Sans, "Helvetica Neue", Helvetica, Tahoma, Arial,
+                          "PingFang SC", "Microsoft YaHei"
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="config-section">
+                    <h3 class="head">{{ $t("字体尺寸") }}</h3>
+                    <div class="body">
+                      <div class="font-demo">
+                        <div class="label">
+                          Display-3<br /><span
+                            >{{ $t("运营标题") }}-{{ $t("大") }}</span
+                          ><br /><span>56</span>
+                        </div>
+                        <div class="box font-demo-size-display-3">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Display-2<br /><span
+                            >{{ $t("运营标题") }}-{{ $t("中") }}</span
+                          ><br /><span>48</span>
+                        </div>
+                        <div class="box font-demo-size-display-2">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Display-1<br /><span
+                            >{{ $t("运营标题") }}-{{ $t("小") }}</span
+                          ><br /><span>36</span>
+                        </div>
+                        <div class="box font-demo-size-display-1">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Headline<br /><span
+                            >{{ $t("标题") }}-{{ $t("大") }}</span
+                          ><br /><span>24</span>
+                        </div>
+                        <div class="box font-demo-size-headline">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Title<br /><span>{{ $t("标题") }}-{{ $t("中") }}</span
+                          ><br /><span>20</span>
+                        </div>
+                        <div class="box font-demo-size-title">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Subhead<br /><span
+                            >{{ $t("标题") }}-{{ $t("小") }}</span
+                          ><br /><span>16</span>
+                        </div>
+                        <div class="box font-demo-size-subhead">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Body-2<br /><span>{{ $t("正文-强调") }}</span
+                          ><br /><span>14</span>
+                        </div>
+                        <div class="box font-demo-size-body-2">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Body-1<br /><span>{{ $t("正文-常规") }}</span
+                          ><br /><span>12</span>
+                        </div>
+                        <div class="box font-demo-size-body-1">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Caption<br /><span>{{ $t("水印文本") }}</span
+                          ><br /><span>10</span>
+                        </div>
+                        <div class="box font-demo-size-caption">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="config-section">
+                    <h3 class="head">{{ $t("字体粗细") }}</h3>
+                    <div class="body">
+                      <div class="font-demo">
+                        <div class="label">
+                          Light<br /><span>{{ $t("细体") }}</span
+                          ><br /><span>lighter</span>
+                        </div>
+                        <div class="box font-demo-weight-1">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Regular<br /><span>{{ $t("常规") }}</span
+                          ><br /><span>normal</span>
+                        </div>
+                        <div class="box font-demo-weight-2">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Bold<br /><span>{{ $t("粗体") }}</span
+                          ><br /><span>bold</span>
+                        </div>
+                        <div class="box font-demo-weight-3">
+                          Hello, {{ $t("世界") }}!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="config-section">
+                    <h3 class="head">{{ $t("字体行高") }}</h3>
+                    <div class="body">
+                      <div class="font-demo">
+                        <div class="label">
+                          Lineheight-1<br /><span>{{ $t("密集") }}</span
+                          ><br /><span>1.3</span>
+                        </div>
+                        <div class="box font-demo-lineheight-1">
+                          <p>
+                            Hello, {{ $t("世界") }}!<br />Hello,
+                            {{ $t("世界") }}!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Lineheight-2<br /><span>{{ $t("常规") }}</span
+                          ><br /><span>1.5</span>
+                        </div>
+                        <div class="box font-demo-lineheight-2">
+                          <p>
+                            Hello, {{ $t("世界") }}!<br />Hello,
+                            {{ $t("世界") }}!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Lineheight-3<br /><span>{{ $t("宽松") }}</span
+                          ><br /><span>1.7</span>
+                        </div>
+                        <div class="box font-demo-lineheight-3">
+                          <p>
+                            Hello, {{ $t("世界") }}!<br />Hello,
+                            {{ $t("世界") }}!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="img-box">
-              <img src="./img/01.png" alt="">
-            </div>
-          </div>
-          <div class="item">
-            <h1>{{ $t('字号单位') }}</h1>
-            <p>
-              {{ $t('以下单位用于表示Android、iOS和Web上的字体大小。') }}
-            </p>
-            <div class="img-box">
-              <img src="./img/02.png" alt="">
-            </div>
-            <h4>{{ $t('转换示例') }}</h4>
-            <div class="img-box">
-              <img src="./img/03.png" alt="">
-            </div>
-          </div>
-          <div class="item">
-            <h1>{{ $t('用法') }}</h1>
-            <p>
-              {{ $t('保持并坚持排版规范，可确保在浏览页面时，UI元素更加清晰且易于识别。选择文本的大小、样式和布局可以保持内容和UI达到一致性。') }}
-              <div>
-                <div class="left">
-                  <h1 class="head01">{{ $t('Heading01') }}</h1>
-                </div>
-                <div class="right">
-                  <h6 class="title01"><bold>{{ $t('基本属性') }}</bold></h6>
-                  <h6 class="three01">Font size: 24px / 1.5rem
-                    <br>Font weight: 600 / Semibold
-                    <br>Character spacing: 0.4
-                    <br>Color: #333</h6>
-                  <h6 class="title01"><bold>{{ $t('界面属性') }}</bold></h6>
-                  <h6 class="three01">Line height: 1.25</h6>
-                  <h6 class="title01"><bold>{{ $t('用法') }}</bold></h6>
-                  <h6 class="three01">{{ $t('主要标题，每页只使用一次。') }}</h6>
-                </div>
-              </div>
-
-              <div>
-                <div class="left01">
-                  <h1 class="head02">{{ $t('Heading02') }}</h1>
-                </div>
-                <div class="right">
-                  <h6 class="title01"><bold>{{ $t('基本属性') }}</bold></h6>
-                  <h6 class="three01">Font size: 18px / 1.125rem
-                    <br>Font weight: 500 / Medium
-                    <br>Character spacing: 0.4
-                    <br>Color: #333</h6>
-                  <h6 class="title01"><bold>{{ $t('界面属性') }}</bold></h6>
-                  <h6 class="three01">Line height: 1.25px</h6>
-                  <h6 class="title01"><bold>{{ $t('用法') }}</bold></h6>
-                  <h6 class="three01">{{ $t('卡片内标题') }}</h6>
-                </div>
-              </div>
-
-              <div>
-                <div class="left02">
-                  <h1 class="head03">{{ $t('Heading03') }}</h1>
-                </div>
-                <div class="right">
-                  <h6 class="title01"><bold>{{ $t('基本属性') }}</bold></h6>
-                  <h6 class="three01">Font size: 14px / 0.875rem
-                    <br>Font weight: 500 / Medium
-                    <br>Character spacing: 0.4
-                    <br>Color: #333</h6>
-                  <h6 class="title01"><bold>{{ $t('界面属性') }}</bold></h6>
-                  <h6 class="three01">Line height: 1.25px</h6>
-                  <h6 class="title01"><bold>{{ $t('用法') }}</bold></h6>
-                  <h6 class="three01">{{ $t('低级别标题') }}</h6>
-                </div>
-              </div>
-
-              <div>
-                <div class="left03">
-                  <h1 class="head04">{{ $t('Paragraph01') }}</h1>
-                </div>
-                <div class="right">
-                  <h6 class="title01"><bold>{{ $t('基本属性') }}</bold></h6>
-                  <h6 class="three01">Font size: 14px / 0.875rem
-                    <br>Font weight: 400 / Regular
-                    <br>Character spacing: 0.2
-                    <br>Color: #333</h6>
-                  <h6 class="title01"><bold>{{ $t('界面属性') }}</bold></h6>
-                  <h6 class="three01">Line height: 1.5</h6>
-                  <h6 class="title01"><bold>{{ $t('用法') }}</bold></h6>
-                  <h6 class="three01">{{ $t('正文段落内容') }}</h6>
-                </div>
-              </div>
-
-              <div>
-                <div class="left04">
-                  <h1 class="head05"><bold>{{ $t('Paragraph02') }}</bold></h1>
-                </div>
-                <div class="right">
-                  <h6 class="title01"><bold>{{ $t('基本属性') }}</bold></h6>
-                  <h6 class="three01">Font size: 12px / 0.75rem
-                    <br>Font weight: 400 / Regular
-                    <br>Character spacing: 0.2
-                    <br>Color: #666</h6>
-                  <h6 class="title01"><bold>{{ $t('界面属性') }}</bold></h6>
-                  <h6 class="three01">Line height: 1.5</h6>
-                  <h6 class="title01"><bold>{{ $t('用法') }}</bold></h6>
-                  <h6 class="three01">{{ $t('三级标题正文') }}</h6>
-                </div>
-              </div>
-
-              <div>
-                <div class="left05">
-                  <h1 class="head06">{{ $t('Caption / Button') }}</h1>
-                </div>
-                <div class="right">
-                  <h6 class="title01"><bold>{{ $t('基本属性') }}</bold></h6>
-                  <h6 class="three01">Font size: 12px / 0.75rem
-                    <br>Font weight: 500 / Medium
-                    <br>Character spacing: 0.2
-                    <br>Color: #999/#333</h6>
-                  <h6 class="title01"><bold>{{ $t('界面属性') }}</bold></h6>
-                  <h6 class="three01">Line height: 1.25</h6>
-                  <h6 class="title01"><bold>{{ $t('用法') }}</bold></h6>
-                  <h6 class="three01">{{ $t('注释或者按键') }}</h6>
-                </div>
-              </div>
-
-              <div>
-                <div class="left06">
-                  <h1 class="paragraph">{{ $t('Footnote') }}</h1>
-                </div>
-                <div class="right">
-                  <h6 class="title01"><bold>{{ $t('基本属性') }}</bold></h6>
-                  <h6 class="three01">Font size: 12px / 0.75rem
-                    <br>Font weight: 400 / Regular
-                    <br>Character spacing: 0.2
-                    <br>Color: #333/#fff</h6>
-                  <h6 class="title01"><bold>{{ $t('界面属性') }}</bold></h6>
-                  <h6 class="three01">Line height: 1.25</h6>
-                  <h6 class="title01"><bold>{{ $t('用法') }}</bold></h6>
-                  <h6 class="three01">{{ $t('只用于标签') }}</h6>
-                </div>
-              </div>
-          </div>
-          <div class="length">
-            <h1>{{ $t('行长') }}</h1>
-            <p>
-              {{ $t('设置良好的阅读环境来适合读者。过宽的文本难以阅读，使人们难以集中注意力。虽然没有正确的方法来测量文本的完美宽度，但一个好的文本宽度应该是每行60到100个字符，包括间距。设置最佳线长会将内容分解为易于理解的信息。用户也可以控制布局宽度，这意味着不能总是固定行长。因此，在正常情况下，理想的线长是使用响应式设计来预测不同的环境。') }}
-            </p>
-            <p>
-              <bold>{{ $t('建议行长：60-80个字符') }}</bold>
-            </p>
           </div>
         </div>
-
-        <div class="layout-footer">
-          <div>
-            <img src="../assets/img/footer-01.png" alt="">
-            <img src="../assets/img/footer-02.png" alt="">
-          </div>
-          <br>
-          <p class="pfooter">{{ $t('本网站由阿里巴巴国际用户体验部 - B2B品牌组维护') }}
-            {{ $t('我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系。') }}</p>
-          <br>
-          <p>© 1999-2018 Alibaba.com. All rights reserved.</p>
-        </div>
-      </div>
+      </layout-page>
     </div>
-  </div>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-  <script src="../assets/js/plugins/utils.js"></script>
-  <script src="../assets/js/plugins/jquery-3.3.1.min.js"></script>
-  <script src="./locale.js"></script>
-  <script src="../assets/js/common.js"></script>
-  <script src="./index.js"></script>
-</body>
-
+    <script src="../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../assets/js/plugins/utils.js"></script>
+    <script src="../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
 </html>

@@ -1,133 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>色彩</title>
+    <link rel="stylesheet" href="../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" sizes="32x32" />
+    <link rel="stylesheet" href="../assets/css/docsearch.css" />
+    <script src="../assets/js/plugins/vue.min.js"></script>
+    <script src="../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../assets/js/plugins/element-ui.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>色彩</title>
-  <link rel="stylesheet" href="../assets/css/_reset.css">
-  <link rel="stylesheet" href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css">
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-  <link rel="stylesheet" href="../assets/css/common.css">
-  <link rel="stylesheet" href="./index.css">
-  <link rel="shortcut icon" href="../assets/img/favicon.ico" sizes="32x32" />
-  <link rel="stylesheet" href="../assets/css/docsearch.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
-  <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-</head>
-
-<body>
-  <div id="app" v-cloak>
-    <div class="top-bar">{{ $t('原 fusion 官网已迁移:') }}<a href="http://www.fusion.design/" a target=”_blank>{{ $t("点击前往")
-        }}</a></div>
-
-    <div class="layout-header">
-      <div class="logo">
-        <img src="../assets/img/logo.png" alt="">
-      </div>
-
-      <div class="menu">
-        <i class="iconfont icon-menu"></i>
-        <ul class="nav flex">
-          <li>
-            <a href="../brand/index.html">{{ $t("品牌") }}</a>
-          </li>
-          <li class="active">
-            <a href="../guidelines/index.html">{{ $t("设计指导") }}</a>
-          </li>
-          <li>
-            <a href="../library/index.html">{{ $t("资料库") }}</a></li>
-        </ul>
-        <input class="menu-search" type="search">
-        <i class="iconfont icon-search"></i>
-        <div class="locale-switch" @click="switchLanguage">
-          <span :class="lang === 'en' ? 'active' : ''">En</span>
-          <i>/</i>
-          <span :class="lang === 'cn' ? 'active' : ''">中文</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="wrap">
-      <div class="layout-aside">
-        <div>
-          <div class="expand-wrap">
-            <ul class="nav">
-              <li class="title">{{ $t('设计语言') }}</li>
-              <li><a href="../language/index.html">{{ $t('设计语言概述') }}</a></li>
-              <li><a href="../element/index.html">{{ $t('元素概述') }}</a></li>
-              <li><a href="../relationship/index.html">{{ $t('设计关系') }}</a></li>
-              <li class="title">{{ $t('设计框架') }}</li>
-              <li><a href="../what/index.html">{{ $t('什么是设计框架') }}</a></li>
-              <li><a href="../how/index.html">{{ $t('怎样运用设计框架') }}</a></li>
-              <li class="title">{{ $t('视觉规范') }}</li>
-              <li>
-                <a href="../token/index.html">{{ $t('Token规范') }}</a>
-              </li>
-              <li class="active">
-                <a href="../color/index.html">{{ $t('色彩') }}</a>
-              </li>
-              <li>
-                <a href="../grid/index.html">{{ $t('栅格') }}</a>
-              </li>
-              <li>
-                <a href="../spacing/index.html">{{ $t('间距') }}</a>
-              </li>
-              <li>
-                <a href="../icon/index.html">{{ $t('图标') }}</a>
-              </li>
-              <li>
-                <a href="../illustration/index.html">{{ $t('插画') }}</a>
-              </li>
-              <li>
-                <a href="../typography/index.html">{{ $t('字体排版') }}</a>
-              </li>
-              <li>
-                <a href="../photograph/index.html">{{ $t('图片') }}</a>
-              </li>
-              <li class="title">{{ $t('创意设计') }}</li>
-              <li><a href="../text/index.html">{{ $t('语境') }}</a></li>
-              <li><a href="../range/index.html">{{ $t('范围') }}</a></li>
-              <li><a href="../method/index.html">{{ $t('方法 & 过程') }}</a></li>
-              <li><a href="../manage/index.html">{{ $t('管理 & 用户感知验证') }}</a></li>
-            </ul>
-          </div>
-          <div class="un-expand-wrap">
-            <i class="iconfont icon-search"></i>
-            <i class="iconfont icon-category"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="layout-container">
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
         <header>
-          <h1>{{ $t('色彩') }}</h1>
+          <h1>{{ $t("色彩") }}</h1>
           <el-tabs v-model="activeName" @tab-click="handleTabClick">
             <el-tab-pane :label="$t('颜色概览')" name="tab1"></el-tab-pane>
             <el-tab-pane :label="$t('渐变色')" name="tab2"></el-tab-pane>
           </el-tabs>
         </header>
         <transition name="el-fade-in-linear">
-          <div id="colorOverview" class="content" key="colorOverview" v-if="activeName === 'tab1'">
-            <p class="p3">
-              {{ $t('色彩对于网站的整体定位、风格、用户最初的感受都起着至关重要的作用，色彩不仅能给用户带来感官上的刺激，同时在实际网站设计中，能让信息层级更明确、更能把握页面的可读性。alibaba.com的品牌色，从色彩饱和度、一致性、可读性、颜色场景分类等维度，对颜色进行了定义。') }}
+          <div
+            id="colorOverview"
+            class="content"
+            key="colorOverview"
+            v-if="activeName === 'tab1'"
+          >
+            <p>
+              {{
+                $t(
+                  "色彩对于网站的整体定位、风格、用户最初的感受都起着至关重要的作用，色彩不仅能给用户带来感官上的刺激，同时在实际网站设计中，能让信息层级更明确、更能把握页面的可读性。alibaba.com的品牌色，从色彩饱和度、一致性、可读性、颜色场景分类等维度，对颜色进行了定义。"
+                )
+              }}
             </p>
-            <div class="item" v-for="(item, index) of colorOverview" :key="index">
+            <div
+              class="item"
+              v-for="(item, index) of colorOverview"
+              :key="index"
+            >
               <div class="title">
                 {{ item.title }}
                 <span class="subtitle">{{ item.subtitle }}</span>
               </div>
               <ul>
                 <li v-for="(i, index) of item.list" :key="index">
-                  <div class="fill" :style="{
-                          background: i.color,
-                        }">
-                    <span class="copy" :style="{
-                            color: (item.list.length - 1 - index) > 2 && '#fff',
-                          }"
-                      @click="copyColor(i.color)">Copy</span>
+                  <div
+                    class="fill"
+                    :style="{
+                              background: i.color,
+                            }"
+                  >
+                    <span
+                      class="copy"
+                      :style="{
+                                color: (item.list.length - 1 - index) > 2 && '#fff',
+                              }"
+                      @click="copyColor(i.color)"
+                      >Copy</span
+                    >
                   </div>
                   <div class="name">{{ `${item.title}-${index}` }}</div>
                   <div class="color">{{ i.color }}</div>
@@ -136,15 +77,36 @@
               </ul>
             </div>
           </div>
-          <div id="promotionColors" class="content" key="promotionColors" v-else-if="activeName === 'tab2'">
-            <p class="p3">{{ $t('渐变色在颜色的使用上，并不是指具体使用什么颜色，而是从色彩本身的描述角度出发将渐变大致分为色相之间的渐变、明度之间的渐变、饱和度之间渐变、综合渐变，渐变色最常使用的是综合渐变。') }}
-              <br>{{ $t('在众多的渐变方式中，我们用双色渐变和明度渐变，来制定我们推荐的渐变色板。') }}
-              <br>{{ $t('渐变角度：对角渐变（45度角），这样的渐变更加自然。') }}</p>
+          <div
+            id="promotionColors"
+            class="content"
+            key="promotionColors"
+            v-else-if="activeName === 'tab2'"
+          >
+            <p>
+              {{
+                $t(
+                  "渐变色在颜色的使用上，并不是指具体使用什么颜色，而是从色彩本身的描述角度出发将渐变大致分为色相之间的渐变、明度之间的渐变、饱和度之间渐变、综合渐变，渐变色最常使用的是综合渐变。"
+                )
+              }}
+              <br />{{
+                $t(
+                  "在众多的渐变方式中，我们用双色渐变和明度渐变，来制定我们推荐的渐变色板。"
+                )
+              }}
+              <br />{{
+                $t("渐变角度：对角渐变（45度角），这样的渐变更加自然。")
+              }}
+            </p>
             <div class="img-box">
-              <img :src="`./img/01-${lang}.png`" alt="">
+              <img :src="`./img/01-${lang}.png`" alt="" />
             </div>
-            <h1>{{ $t('行业渐变色推荐') }}</h1>
-            <div class="item" v-for="(item, index) of promotionColors" :key="index">
+            <h1>{{ $t("行业渐变色推荐") }}</h1>
+            <div
+              class="item"
+              v-for="(item, index) of promotionColors"
+              :key="index"
+            >
               <div class="title">
                 {{ item.title }}
                 <span class="subtitle">{{ item.subtitle }}</span>
@@ -154,36 +116,27 @@
                   <div class="name">
                     {{ `00${index + 1}`.slice(-3) }} {{ item.title }}
                   </div>
-                  <div class="fill" :style="{
-                          backgroundImage: `linear-gradient(45deg, ${i.from}, ${i.to})`,
-                      }"></div>
+                  <div
+                    class="fill"
+                    :style="{
+                              backgroundImage: `linear-gradient(45deg, ${i.from}, ${i.to})`,
+                          }"
+                  ></div>
                   <div class="color">{{ `${i.from} > ${i.to}` }}</div>
                 </li>
               </ul>
             </div>
           </div>
         </transition>
-        <div class="layout-footer">
-          <div class="footer-img">
-            <img src="../assets/img/footer-01.png" alt="">
-            <img src="../assets/img/footer-02.png" alt="">
-          </div>
-          <br>
-          <p class="pfooter">{{ $t('本网站由阿里巴巴国际用户体验部 - B2B品牌组维护') }}
-            {{ $t('我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系。') }}</p>
-          <br>
-          <p class="p1">© 1999-2018 Alibaba.com. All rights reserved.</p>
-        </div>
-      </div>
+      </layout-page>
     </div>
-  </div>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-  <script src="../assets/js/plugins/utils.js"></script>
-  <script src="../assets/js/plugins/jquery-3.3.1.min.js"></script>
-  <script src="./locale.js"></script>
-  <script src="../assets/js/common.js"></script>
-  <script src="./color.js"></script>
-  <script src="./index.js"></script>
-</body>
-
+    <script src="../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../assets/js/plugins/utils.js"></script>
+    <script src="../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="./color.js"></script>
+    <script src="./index.js"></script>
+    <script src="../assets/js/common.js"></script>
+  </body>
 </html>

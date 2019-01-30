@@ -11,4 +11,6 @@ var messages = {
 '使用真实的场景有助于帮助用户更加准确地定位产品功能的范围，使用户更好地了解在何种情况下使用该产品。': 
 'Employing actual scenarios helps users understand the scope of product functions and better understand the type of situations where the product can be used.',
 '真实的产品': 'The Real Products',
+'我们提供多个版权图片网站提供免费使用：': 'We offer multiple copyright photo websites for free to use:',
+'如果需要下载账号请联系：yihui.xieyh@alibaba-inc.com': 'If you need account for downloading, please email: yihui.xieyh@alibaba-inc.com',
 }
