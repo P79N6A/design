@@ -61,7 +61,7 @@ glob('**/*.*', {
 }, (err, files) => {
     files.forEach(file => {
         if (['.html', '.js', '.css'].indexOf(path.extname(file)) >= 0) {
-            let fileCont = new Buffer(fs.readFileSync(path.join(srcDir, file), 'utf8')).toString();
+            let fileCont = fs.readFileSync(path.join(srcDir, file), 'utf8').toString();
             fileCont = replaceCont(path.join(srcDir, file), fileCont);
             writeFileSync(path.join(buildDir, file), fileCont);
         } else {

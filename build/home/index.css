@@ -263,31 +263,31 @@ body {
   color: #ff7417 !important;
 }
 .layout-container .content > div:nth-child(1)::before {
-  background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.14/home/img/01.png");
+  background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.15/home/img/01.png");
 }
 .layout-container .content > div:nth-child(2) .count {
   color: #2b96ff !important;
 }
 .layout-container .content > div:nth-child(2)::before {
-  background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.14/home/img/02.png");
+  background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.15/home/img/02.png");
 }
 .layout-container .content > div:nth-child(3) .count {
   color: #7a78df !important;
 }
 .layout-container .content > div:nth-child(3)::before {
-  background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.14/home/img/03.png");
+  background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.15/home/img/03.png");
 }
 .layout-container .content > div:nth-child(4) .count {
   color: #02d86a !important;
 }
 .layout-container .content > div:nth-child(4)::before {
-  background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.14/home/img/04.png");
+  background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.15/home/img/04.png");
 }
 .layout-container .content > div:nth-child(5) .count {
   color: #111111 !important;
 }
 .layout-container .content > div:nth-child(5)::before {
-  background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.14/home/img/05.png");
+  background-image: url("//g.alicdn.com/fusion-site/alibaba/0.0.15/home/img/05.png");
 }
 .layout-container .content > div:nth-child(even) {
   background: rgba(0, 0, 0, 0.8);
