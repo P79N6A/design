@@ -36,5 +36,5 @@ var messages = {
 '元素组合规则': 'Element Combination Rule',
 '层次构成': 'Hierarchy',
 '设备与画幅适配': 'Equipment and frame adaptation',
-'下载': 'Download',
+'密码: JVN8': 'Download',
 }
