@@ -43,15 +43,13 @@
             <div class="subtitle">
               {{ $t("1. 基于用户生命周期的全链路邮件规划") }}
             </div>
-            <div class="img-box">
-              <img :src="`./img/01-${lang}.png`" alt="" />
+            <div class="img-box"><img :src="imageList['image1']" alt="" />
             </div>
 
             <div class="subtitle">
               {{ $t("2. 单封邮件的发送策略：时间选择参考") }}
             </div>
-            <div class="img-box">
-              <img :src="`./img/02-${lang}.png`" alt="" />
+            <div class="img-box"><img :src="imageList['image2']" alt="" />
             </div>
             <p>
               {{ $t("单封邮件的发送策略：频次/对象选择") }} <br />{{
@@ -67,7 +65,7 @@
             <div class="item">
               <div>
                 <div class="left">
-                  <div class="img-box"><img src="./img/04.png" alt="" /></div>
+                  <div class="img-box"><img src="https://img.alicdn.com/tfs/TB1b3RAESzqK1RjSZFjXXblCFXa-384-425.png" alt="" /></div>
                 </div>
                 <div class="right">
                   <p class="three">
@@ -109,17 +107,17 @@
               {{ $t("1. 好的开始，是统一、专业的发件人/发件邮箱") }}
             </div>
             <div class="img-box">
-              <img :src="`./img/05-${lang}.png`" alt="" />
+              <img :src="imageList['image3']" alt="" />
             </div>
             <div class="subtitle">
               {{ $t("2.清晰有趣的主题和邮件预览对于收件人点击和阅读至关重要") }}
             </div>
             <div class="img-box">
-              <img :src="`./img/06-${lang}.png`" alt="" />
+              <img :src="imageList['image4']" alt="" />
             </div>
             <div class="subtitle">{{ $t("3.邮件内容格式统一") }}</div>
             <div class="img-box">
-              <img :src="`./img/07-${lang}.png`" alt="" />
+              <img :src="imageList['image5']" alt="" />
             </div>
           </div>
           <div class="content" key="Design" v-if="activeName === 'tab3'">
@@ -133,12 +131,12 @@
             <div class="subtitle">
               {{ $t("1. 重要信息和核心行动点在打开邮件一瞬间就看到") }}
             </div>
-            <div class="img-box"><img src="./img/08.png" alt="" /></div>
+            <div class="img-box"><img src="https://img.alicdn.com/tfs/TB1Dl88EMHqK1RjSZFEXXcGMXXa-622-394.png" alt="" /></div>
             <div class="subtitle">
               {{ $t("2. 核心行动点在长邮件中建议重复出现。") }}
             </div>
             <div class="em">{{ $t("“重要的话要说三遍!!!”") }}</div>
-            <div class="img-box"><img src="./img/09.png" alt="" /></div>
+            <div class="img-box"><img src="https://img.alicdn.com/tfs/TB1DzFSESrqK1RjSZK9XXXyypXa-492-695.png" alt="" /></div>
             <div class="subtitle">
               {{
                 $t(
@@ -146,8 +144,8 @@
                 )
               }}
             </div>
-            <p>{{ $t("48%+ 的移动端打开率") }}</p>
-            <div class="img-box"><img src="./img/10.png" alt="" /></div>
+            <p>{{ $t("48% + 的移动端打开率") }}</p>
+            <div class="img-box"><img src="https://img.alicdn.com/tfs/TB1sL47EMHqK1RjSZJnXXbNLpXa-491-258.png" alt="" /></div>
             <p>
               <bold>{{ $t("但是，") }}</bold
               ><br />{{
@@ -155,7 +153,7 @@
               }}
             </p>
             <div class="img-box">
-              <img :src="`./img/11-${lang}.png`" alt="" />
+              <img :src="imageList['image6']" alt="" />
             </div>
             <div class="subtitle">
               {{ $t("4. 视觉设计要考虑不支持CSS时的极端样式是否可行") }}
@@ -166,13 +164,13 @@
               <bold>{{ $t("各客户端CSS支持列表") }}</bold>
             </p>
             <div class="img-box">
-              <img :src="`./img/12-${lang}.png`" alt="" />
+              <img :src="imageList['image7']" alt="" />
             </div>
             <div class="subtitle">
               {{ $t("5. 邮件未正常展示时的三大补救") }}
             </div>
             <div class="img-box">
-              <img :src="`./img/13-${lang}.png`" alt="" />
+              <img :src="imageList['image8']" alt="" />
             </div>
             <div class="subtitle">
               {{
@@ -181,10 +179,10 @@
                 )
               }}
             </div>
-            <div class="img-box"><img src="./img/14.png" alt="" /></div>
+            <div class="img-box"><img src="https://img.alicdn.com/tfs/TB1AD4YESzqK1RjSZPxXXc4tVXa-650-384.png" alt="" /></div>
             <h1>{{ $t("EDM效果监控指标") }}</h1>
             <div class="img-box">
-              <img :src="`./img/15-${lang}.png`" alt="" />
+              <img :src="imageList['image9']" alt="" />
             </div>
           </div>
         </transition>

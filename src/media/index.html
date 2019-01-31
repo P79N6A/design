@@ -75,7 +75,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/01-${lang}.png`" alt="" />
+            <img :src="imageList['image45']" alt="" />
           </div>
           <h2>{{ $t("达成目标") }}</h2>
           <p>
@@ -86,7 +86,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/02-${lang}.png`" alt="" />
+            <img :src="imageList['image46']" alt="" />
           </div>
           <h2>{{ $t("衡量标准") }}</h2>
           <p>
@@ -97,7 +97,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/03-${lang}.png`" alt="" />
+            <img :src="imageList['image47']" alt="" />
           </div>
           <h2>{{ $t("动效架构") }}</h2>
           <p>
@@ -108,7 +108,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/04-${lang}.png`" alt="" />
+            <img :src="imageList['image48']" alt="" />
           </div>
 
           <h2>{{ $t("时间") }}</h2>
@@ -121,7 +121,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/时间01-${lang}.gif`" alt="" />
+            <img :src="imageList['时间01']" alt="" />
             <span>{{
               $t(
                 "同样的位移长度、同样的运动缓动速率，在不同时间条件下，就产生了不同的感觉。1秒的时长干净利落，2秒的时长已经有些拖沓。"
@@ -137,7 +137,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/时间02-${lang}.gif`" alt="" /><span>
+            <img :src="imageList['时间02']" alt="" />
               {{
                 $t(
                   "同样的位移长度、时间，不同的缓动条件。除了Linear是一种直来直去的不带任何变化速率以外，其他的缓动都适合于元素的运动使用。更多缓动函数：easings.net/zh-cn#"
@@ -154,7 +154,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/时间03-${lang}.gif`" alt="" /><span>
+            <img :src="imageList['时间03']" alt="" /><span>
               {{
                 $t(
                   "每个元素对象出现的时间都是0.5秒，有延时的动画总长是1.5秒，每个元素的时间间隔是1帧（每秒30帧）。由于是依次出现，给人的感觉并不会觉得慢。"
@@ -173,7 +173,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/变化01-${lang}.gif`" alt="" />
+            <img :src="imageList['变化01']" alt="" />
             <span>{{
               $t(
                 "通常情况下，建议透明度的变化持续的时间不短于0.2秒，不超过0.5秒。"
@@ -189,7 +189,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/变化02-${lang}.gif`" alt="" /><span>
+            <img :src="imageList['变化02']" alt="" /><span>
               {{
                 $t(
                   "通常情况下，位置的变化持续的时间和位移的变化成正比，但不超过1秒，位置的变化也不宜过大。"
@@ -206,7 +206,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/变化03-${lang}.gif`" alt="" /><span>
+            <img :src="imageList['变化03']" alt="" /><span>
               {{
                 $t(
                   "通常情况下，缩放的变化持续的时间和缩放的变化成正比，但不超过1秒，缩放的变化也不宜过大。"
@@ -223,7 +223,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/变化04-${lang}.gif`" alt="" /><span>
+            <img :src="imageList['变化04']" alt="" /><span>
               {{
                 $t(
                   "通常情况下，旋转的变化持续的时间和旋转的变化成正比，但不超过1秒，旋转的变化也不宜过大。"
@@ -242,7 +242,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/关联01-${lang}.gif`" alt="" /><span>
+            <img :src="imageList['关联01']" alt="" /><span>
               {{
                 $t(
                   "在用户切换图片时，底部的图片位置锚点就说了了用户当前操作的结果和状态。让用户明确了所见即所得。"
@@ -259,7 +259,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/关联02-${lang}.gif`" alt="" /><span>
+            <img :src="imageList['关联02']" alt="" /><span>
               {{
                 $t(
                   "在触发后，子级从父级中有规律的出现和消失。对于用户的感知明确了动效的来源和终点。"
@@ -278,7 +278,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/空间01-${lang}.gif`" alt="" /><span>
+            <img :src="imageList['空间01']" alt="" /><span>
               {{
                 $t(
                   "在原先平面的空间中，通过阴影、蒙层来创造AB层之间的空间关系。"
@@ -295,7 +295,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/空间02-${lang}.gif`" alt="" /><span>
+            <img :src="imageList['空间02']" alt="" /><span>
               {{
                 $t(
                   "当前景界面被激活而覆盖背景画面，使用背景模糊加透明覆盖让背景虚焦，远离用户的焦点。突出了视觉的空间感。"
@@ -312,7 +312,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/空间03-${lang}.gif`" alt="" /><span>
+            <img :src="imageList['空间03']" alt="" /><span>
               {{
                 $t(
                   "在现实空间中，近景因为距离近而运动幅度大，而远景因为距离远而幅度小，让用户聚焦于重要操作和内容。"
@@ -329,7 +329,7 @@
             }}
           </p>
           <div class="img-box">
-            <img :src="`./img/空间04-${lang}.gif`" alt="" /><span>
+            <img :src="imageList['空间04']" alt="" /><span>
               {{
                 $t(
                   "将二维组件运用3D控件去实现真实的折叠翻转效果，让用户明确知道二维的表象下是三维的关系。"

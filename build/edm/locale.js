@@ -29,7 +29,7 @@ var messages = {
 '4. 视觉设计要考虑不支持CSS时的极端样式是否可行': '4. In visual design, it should be taken into consideration whether the extreme style is feasible when CSS is not supported',
 '不支持:': 'Not supported:',
 '视频格式、图层覆盖、PNG格式、阴影、圆角': 'Video format, layer overlay, PNG format, shadow, and round angel',
-'48%+ 的移动端打开率': 'More than 48% opening rate on mobile client',
+'48% + 的移动端打开率': 'More than 48% opening rate on mobile client',
 '各客户端CSS支持列表': 'CSS support list of various clients',
 '5. 邮件未正常展示时的三大补救': '5. Three remedies when the mail is displayed abnormally',
 '6. 统一的邮件模板及DPL使用（查看具体规范），保证全链路的一致的体验': '6. Uniform mail template and DPL use (see specific specifications for details) ensure a consistent experience on all links',

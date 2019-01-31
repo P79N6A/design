@@ -15,7 +15,7 @@
     text-align: left;
     background: #ebebeb;
     padding: 0 120px;
-    background-image: url("./img/banner.png");
+    background-image: url("https://img.alicdn.com/tfs/TB15B03ENTpK1RjSZFKXXa2wXXa-1670-240.png");
     background-size: cover;
     height: 219px; }
     .layout-container header .download {
@@ -77,7 +77,7 @@
     .content {
       padding: 50px 20px; } }
   .content p {
-    margin-bottom: 60px; }
+    margin-bottom: 40px; }
   .content h2 {}
   .content h4 {
     font-size: 20px;

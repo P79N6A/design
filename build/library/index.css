@@ -168,15 +168,15 @@
 }
 
 .content .item-2 .image {
-  background-image: url(./img/item-2.png);
+  background-image: url(https://img.alicdn.com/tfs/TB1hYuFENnaK1RjSZFtXXbC2VXa-3260-720.png);
 }
 
 .content .item-3 .image {
-  background-image: url(./img/item-3.png);
+  background-image: url(https://img.alicdn.com/tfs/TB1.2yhEFzqK1RjSZFCXXbbxVXa-3260-720.png);
 }
 
 .content .item-4 .image {
-  background-image: url(./img/item-4.png);
+  background-image: url(https://img.alicdn.com/tfs/TB1JNV6EPDpK1RjSZFrXXa78VXa-3260-720.png);
 }
 
 @media (max-width: 991px) {
