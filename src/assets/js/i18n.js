@@ -29,7 +29,7 @@ var commonMessage = {
   文章: "Article",
   设计语言: "Design Language",
   设计语言概述: "Overview",
-  元素概述: "Design Element",
+  设计元素: "Design Element",
   设计关系: "Relationship",
   设计框架: "Design Framework",
   设计框架概述: "Overview",
