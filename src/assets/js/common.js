@@ -456,7 +456,7 @@ Vue.component("top-bar", {
       default: "en"
     }
   },
-  template: /*html*/ `
+  template:  `
   <div class="top-bar">
     {{ $t(" ")}}
       <a href="http://www.fusion.design/" target="”_blank">
@@ -512,7 +512,7 @@ Vue.component("layout-header", {
           : "../index.html";
     }
   },
-  template: /*html*/ `
+  template:  `
     <div class="layout-header">
       <div class="logo"
         @click="handleLogoClick">
@@ -583,7 +583,7 @@ Vue.component("layout-aside", {
       });
     }
   },
-  template: /*html*/ `
+  template:  `
     <div class="layout-aside"
       :class="{
         'un-visible': !visible,
@@ -623,7 +623,7 @@ Vue.component("layout-footer", {
       default: "cn"
     }
   },
-  template: /*html*/ `
+  template: `
     <div class="layout-footer">
       <div>
         <img src="https://g.alicdn.com/fusion-site/alibaba/0.0.11/assets/img/footer-01.png" alt="" />
@@ -651,7 +651,7 @@ Vue.component("layout-page", {
       default: ""
     }
   },
-  template: /*html*/ `
+  template: `
     <div class='content-wrap'>
       <top-bar></top-bar>
       <layout-header :lang="lang" :active="active"></layout-header>
