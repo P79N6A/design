@@ -517,7 +517,7 @@ Vue.component("layout-header", {
       <div class="logo"
         @click="handleLogoClick">
         <img
-          src="https://g.alicdn.com/fusion-site/alibaba/0.0.11/assets/img/logo.png"
+          src="https://img.alicdn.com/tfs/TB1SKnuENTpK1RjSZFMXXbG_VXa-190-32.png"
           alt=""
         />
       </div>
@@ -626,8 +626,8 @@ Vue.component("layout-footer", {
   template: `
     <div class="layout-footer">
       <div>
-        <img src="https://g.alicdn.com/fusion-site/alibaba/0.0.11/assets/img/footer-01.png" alt="" />
-        <img src="https://g.alicdn.com/fusion-site/alibaba/0.0.11/assets/img/footer-02.png" alt="" />
+        <img src="https://img.alicdn.com/tfs/TB1FmzvEFzqK1RjSZFoXXbfcXXa-205-26.png" alt="" />
+        <img src="https://img.alicdn.com/tfs/TB1USTvEQPoK1RjSZKbXXX1IXXa-140-23.png" alt="" />
       </div>
       <br />
       <p class="pfooter">
@@ -729,7 +729,7 @@ var vm = new Vue({
         200 <= o && !e ? (e = true) : o < 200 && e && (e = false);
         n[e ? "hide" : "show"]();
         i.toggleClass("reverse", e).find(".logo img")[0].src =
-          "https://g.alicdn.com/fusion-site/alibaba/0.0.11/assets/img/" +
+          "https://g.alicdn.com/fusion-site/alibaba/0.0.16/assets/img/" +
           (e ? "alibaba-logo.png" : "logo.png");
       });
     })();
