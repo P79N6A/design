@@ -4,6 +4,7 @@
     "command": {
       "cmd": [
         "tnpm install",
+        "tnpm run build",
         "mv ./build $BUILD_DEST"
       ]
     }
