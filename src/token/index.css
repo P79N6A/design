@@ -18,7 +18,8 @@
   position: relative;
   text-align: left;
   padding: 0 120px;
-  background: url(https://img.alicdn.com/tfs/TB1BGJ5ESzqK1RjSZFHXXb3CpXa-1500-630.gif) no-repeat 50%;
+  background: url(https://img.alicdn.com/tfs/TB1BGJ5ESzqK1RjSZFHXXb3CpXa-1500-630.gif)
+    no-repeat 50%;
   background-size: cover;
   height: 219px;
 }

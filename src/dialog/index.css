@@ -19,7 +19,7 @@
   text-align: left;
   background: #000;
   padding: 0 120px;
-  background-image: url("https://img.alicdn.com/tfs/TB1GlOfEFzqK1RjSZSgXXcpAVXa-1670-240.png"); 
+  background-image: url("https://img.alicdn.com/tfs/TB1GlOfEFzqK1RjSZSgXXcpAVXa-1670-240.png");
   background-size: cover;
   height: 219px;
 }
@@ -252,8 +252,7 @@ a:hover {
   text-decoration: none;
 }
 
-.single{
+.single {
   padding-bottom: 30px;
   color: #666;
 }
-

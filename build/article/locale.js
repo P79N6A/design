@@ -15,7 +15,7 @@ var messages = {
 '需要注意的例子': 'Examples to keep in mind',
 '不建议使用标点符号或插入词来夸大（即感叹号！哎呀等）。': 
 'The use of punctuation or interjections for exaggeration (i.e. exclamation mark! Oops, etc.) are not advised.',
-'我们不为2C假期写作，我们的平台迎合了全球观众。我们更喜欢写“库存为假期”而不是“圣诞节库存”。': 
+'我们不为2C节日写作，我们的平台迎合了全球观众。我们更喜欢写“节日库存”而不是“圣诞节库存”。': 
 'We don’t write for 2C holidays, our platform is catered to global audiences. We prefer to write “Stock up for the holidays” instead of “Stock up for Christmas.”',
 '不要推动陈规定型的性别或种族条款来换取点击率。例如：她的厨房用品，黑人美国女孩的头发延长件。': 
 'Don’t propel stereotypical gender or racial terms in exchange for click rate. For example: Kitchen items for her, hair extension for Black American girls.',

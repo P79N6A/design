@@ -1,4 +1,3 @@
 var messages = {
-'一般': 'General',
-
-}
+  一般: "General"
+};

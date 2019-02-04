@@ -15,7 +15,7 @@ var commonMessage = {
   资料库: "LIBRARY",
   "本网站由阿里巴巴国际用户体验部 - B2B品牌组维护":
     "This website is maintained by alibaba international user experience department-b2b brand group",
-  "我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系: yanzuo.zp@alibaba-inc.com": 
+  "我们致力于通过提升体验来帮助全球中小买卖家。 如果您有任何建议，请随时与我们联系: yanzuo.zp@alibaba-inc.com":
     "We are committed to helping small and medium-sized traders around the world by enhancing the experience. If you have any suggestions, please feel free to contact us: yanzuo.zp@alibaba-inc.com",
   品牌故事: "Brand Story",
   愿景: "Vision",
@@ -84,7 +84,7 @@ var commonMessage = {
   概述: "Overview",
   卖家: "Sellers",
   买家: "Buyers",
-  对话框: "Dialog",
+  对话框: "Dialog"
 };
 
 var _extends =

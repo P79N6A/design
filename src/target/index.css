@@ -356,11 +356,15 @@ a:hover {
   color: #303030;
 }
 
-.three02{line-height: 22px !important;
-    padding-bottom: 20px;
-    color: #666 !important;
-    letter-spacing: 0.4px;}
-.head{font-size: 32px !important;
-    padding-top: 70px;
-    line-height: 1.5;
-    margin-bottom: 0px !important;}
+.three02 {
+  line-height: 22px !important;
+  padding-bottom: 20px;
+  color: #666 !important;
+  letter-spacing: 0.4px;
+}
+.head {
+  font-size: 32px !important;
+  padding-top: 70px;
+  line-height: 1.5;
+  margin-bottom: 0px !important;
+}

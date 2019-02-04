@@ -1,2 +1,1 @@
-var messages = {
-}
+var messages = {};
