@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>方法 & 过程</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="1">
+        <header>
+          <h1>{{ $t('方法 & 过程') }}</h1>
+        </header>
+        <div class="content">
+          <h1>{{ $t('线上B类展会视觉形式探索') }}</h1>
+          <h2>{{ $t('线下展会及线上展会特点') }}</h2>
+          <p>
+            {{
+              $t(
+                '国际化展会能为专业人士提供最新零售趋势和商业解决方案，在短时间内聚集大量专业买家卖家，买卖双方面对面交流，真实接触到产品，产品体验模式丰富，相对于线上场景，买家更有信任感。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image15']" alt="" />
+          </div>
+          <h2>{{ $t('线上展会视觉形式探索') }}</h2>
+          <p>
+            {{
+              $t(
+                '既然线上展会能让千万名无法亲临现场的专业买家和供应商参与进来，那么如何从设计的角度发力，让用户身临其境，提供最佳的用户体验，最大限度的发挥线上优势呢？'
+              )
+            }}
+          </p>
+
+          <h2>{{ $t('目前B类线上展会视觉形式') }}</h2>
+          <div class="img-box">
+            <img :src="imageList['image16']" alt="" />
+          </div>
+
+          <h2>{{ $t('2.5d 场景在UBM线上展会的应用') }}</h2>
+          <div class="subtitle">{{ $t('展会分析') }}</div>
+          <p>
+            <bold>{{ $t('行业属性') }}</bold> <br />{{
+              $t('涵盖了皮革/服装/面料/饰品/鞋包行业的综合型展销会。')
+            }}
+          </p>
+          <p>
+            <bold>{{ $t('目标人群') }}</bold> <br />{{
+              $t('从制造商到零售商等各类专业人群。')
+            }}
+          </p>
+          <p>
+            <bold>{{ $t('展会特点') }}</bold> <br />{{
+              $t(
+                '展会偏向展销性质，展位样式面积统一标准，保证最佳坪效比，固定标准的逛展路径。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image17']" alt="" />
+          </div>
+
+          <div class="subtitle">{{ $t('设计策略') }}</div>
+          <p>
+            <br />{{
+              $t(
+                '结合 2.5d 标准化搭建场景的优势，结合俯视视角的特点在线上搭建完整展会场景，模拟真实的线下场景和逛展体验，加强线上展会临场感，进而增强用户信任感，优化用户找商寻品效率，促进下单转化。'
+              )
+            }}
+          </p>
+
+          <div class="subtitle">{{ $t('设计解析') }}</div>
+          <p>
+            <bold>{{ $t('全局概览') }}</bold> <br />{{
+              $t(
+                '线上展会有五大行业近50个供应商，通过俯视的视角，让用户能快速概览展会全局，一屏内展示8～9个供应商，让用户能快速定位目标行业，提升效率，让用户感觉掌控全局。'
+              )
+            }}
+          </p>
+          <p>
+            <bold>{{ $t('路径导航') }}</bold> <br />{{
+              $t(
+                '区别以往货架式寻品体验，以主路径贯穿整个展会，引导用户按照设计的路线浏览页面，模拟线下展会逛展体验，提升临场感。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image18']" alt="" />
+          </div>
+          <p>
+            <bold>{{ $t('展位标准建立') }}</bold> <br />{{
+              $t(
+                '线下展会展位一般以1mx1m或者1mx2m的面积为标准，为了真实模拟现场情况，线上展会同样以 1x1 的单元格为基础建立一套标准的展位体系，还原真实线下场景，进一步增强场景代入感，标准化的展台场景和行业色更符合B类贸易专业性，同时赋予不同行业展台以不同颜色也能提升用户找商寻品效率。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1ivR8EFzqK1RjSZFoXXbfcXXa-522-171.png"
+              alt=""
+            />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image19']" alt="" />
+          </div>
+          <p>
+            <bold>{{ $t('页面展示') }}</bold>
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1Dxh.EIfpK1RjSZFOXXa6nFXa-517-523.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

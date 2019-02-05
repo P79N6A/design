@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>开关</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('开关') }}</h1>
+        </header>
+
+        <div class="content">
+          <h2>{{ $t('定义') }}</h2>
+          <p>{{ $t('提供了一个简单的方法进行是否选择。') }}</p>
+          <h2>{{ $t('规则') }}</h2>
+          <p>
+            {{ $t('如果两个相互排斥的选项，如“开”和“关”，可使用切换开关。') }}
+          </p>
+          <h2>{{ $t('样式与交互') }}</h2>
+          <p>
+            {{
+              $t(
+                '开/关切换器切换单个设置选项的状态。开关控制器中的选项，以及它所在的状态，应该用伴随的内联标签显示清楚。开关选择器具有和单选按钮一样的视觉属性。使用文本“开”和“关”滑动切换已经过时了。使用这里显示的开关选择器代替。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image72']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image73']" alt="" />
+          </div>
+          <h2>{{ $t('尺寸') }}</h2>
+          <div class="img-box">
+            <img :src="imageList['image74']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image75']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image76']" alt="" />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="./index.js"></script>
+    <script src="../../assets/js/common.js"></script>
+  </body>
+</html>

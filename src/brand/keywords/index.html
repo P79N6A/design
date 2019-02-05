@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>关键词</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="0">
+        <header>
+          <h1>{{ $t('关键词') }}</h1>
+        </header>
+        <div class="content">
+          <p>{{ $t('关键词与我们的服务和愿景密切相关。') }}</p>
+          <h1>{{ $t('国际') }}</h1>
+          <p>
+            {{
+              $t(
+                '阿里巴巴是一家国际公司。 我们希望在世界的每个角落实现我们的愿景，真正让您轻松在任何地方开展业务：'
+              )
+            }}
+            <br />{{ $t('使用国际通用设计；') }} <br />{{
+              $t('符合多语言的浏览习惯；')
+            }}
+            <br />{{ $t('在元素的选择上考虑。') }}
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1YfttEHPpK1RjSZFFXXa5PpXa-614-306.png"
+              alt=""
+            />
+          </div>
+          <h1>{{ $t('信赖') }}</h1>
+          <p>
+            {{
+              $t(
+                '如何在网站体现信任，对于B类网站而言，最重要的莫过于专业性，我们需要用户通过看到的，读到的，用到的，来相信这个平台有足够的能力能够顺利推进生意：'
+              )
+            }}
+            <br />{{ $t('随时能够回应客户的问题；') }} <br />{{
+              $t('有充分的能力解决纠纷；')
+            }}
+            <br />{{ $t('保障客户的资产和权益。') }}
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1hSNxEHrpK1RjSZTEXXcWAVXa-614-306.png"
+              alt=""
+            />
+          </div>
+          <h1>{{ $t('创新') }}</h1>
+          <p>
+            {{
+              $t(
+                '用户的场景以及使用的平台无时不发生着变化，只有关注变革才能立于现在：'
+              )
+            }}
+            <br />{{
+              $t('深入了解用户时刻发生的问题，不拘泥于满足当下的状态；')
+            }}
+            <br />{{ $t('致力于使用新的体验技术来解决现有问题；') }} <br />{{
+              $t('采纳行之有效的手段，使之成为规范的一部分，赋用到更多场景。')
+            }}
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB19fo3ECzqK1RjSZPcXXbTepXa-614-306.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

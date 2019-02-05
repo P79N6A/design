@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>数字输入框</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('数字输入框') }}</h1>
+        </header>
+
+        <div class="content">
+          <h2>{{ $t('定义') }}</h2>
+          <p>{{ $t('提供一种简单的方式来选择一定区间内的值。') }}</p>
+          <h2>{{ $t('样式与交互') }}</h2>
+          <p>
+            {{
+              $t(
+                '在提供规定数值当中进行单一选择并提供加减的操作，另一方面还可以通过点击数值进行键盘输入。通常情况会嵌入在表单的操作当中，交互内容可以根据环境不同而变化。'
+              )
+            }}
+          </p>
+          <br /><br />
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB19COfEFzqK1RjSZFCXXbbxVXa-177-40.png"
+              alt=""
+            />
+          </div>
+          <br /><br />
+          <div class="img-box">
+            <img :src="imageList['image77']" alt="" />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="./index.js"></script>
+    <script src="../../assets/js/common.js"></script>
+  </body>
+</html>

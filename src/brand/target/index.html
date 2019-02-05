@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>目标用户</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="0">
+        <header>
+          <h1>{{ $t('目标用户') }}</h1>
+          <el-tabs v-model="activeName" @tab-click="handleTabClick">
+            <el-tab-pane :label="$t('概述')" name="tab1"></el-tab-pane>
+            <el-tab-pane :label="$t('买家')" name="tab2"></el-tab-pane>
+            <el-tab-pane :label="$t('卖家')" name="tab3"></el-tab-pane>
+          </el-tabs>
+        </header>
+        <transition name="el-fade-in-linear">
+          <div
+            class="content summary-content"
+            key="1"
+            v-if="activeName === 'tab1'"
+          >
+            <p>
+              {{
+                $t(
+                  '目标客户是我们专注服务的对象，了解我们的客户以帮助你更加设身处地的思考，使得设计更加有针对性，最终帮助用户达成目标。'
+                )
+              }}<br />
+              {{
+                $t(
+                  'Alibaba.com作为一个一站式的平台，服务全球的买家及卖家，由于平台的B类特性，因此，我们平台的客户有着许多共同特质：'
+                )
+              }}<br />
+            </p>
+            <br />
+            <h2>{{ $t('B类特质') }}</h2>
+            <div class="summary-item">
+              <div class="left">{{ $t('1. 专业化') }}</div>
+            </div>
+            <div class="summary-item">
+              <div class="left">{{ $t('2. 重复购买') }}</div>
+              <div class="right">
+                {{
+                  $t(
+                    '与C类基于生活场景的多类目购买习惯不同，我们服务的用户会更加聚焦某些类目，且会重复购买。'
+                  )
+                }}
+              </div>
+            </div>
+            <div class="summary-item">
+              <div class="left">{{ $t('3. 参数化') }}</div>
+              <div class="right">
+                {{
+                  $t('用户会更加关注商品的各项数据。对于商品的参数更为敏感。')
+                }}
+              </div>
+            </div>
+            <div class="summary-item">
+              <div class="left">{{ $t('4. 定制化诉求') }}</div>
+              <div class="right">
+                {{ $t('不仅仅聚焦在现货，对于很多的商品有定制化的诉求。') }}
+              </div>
+            </div>
+            <div class="summary-item">
+              <div class="left">{{ $t('5. 主要隐私') }}</div>
+              <div class="right">
+                {{
+                  $t(
+                    '分享的意愿低，基于商业属性在意自己的各项隐私对卖家资⾦、交易信息、客户信息相关内容敏感。'
+                  )
+                }}
+              </div>
+            </div>
+            <div class="summary-item">
+              <div class="left">{{ $t('6. 大量采购') }}</div>
+            </div>
+            <div class="summary-item">
+              <div class="left">{{ $t('7. 多角色') }}</div>
+              <div class="right">
+                {{ $t('长链路中多角色共同参与决策及操作。') }}
+              </div>
+            </div>
+            <br /><br /><br />
+            <h2>{{ $t('国际化特质') }}</h2>
+            <div class="summary-item">
+              <div class="left">{{ $t('国家差异性') }}</div>
+              <div class="right">
+                {{ $t('我们的用户来自世界各地，有着不同的语言及文化背景。') }}
+              </div>
+            </div>
+            <br /><br /><br />
+            <p>
+              {{ $t('点击 ') }}<span>{{ $t(' 买家 ') }}</span
+              >{{ $t(' 或者 ') }}<span>{{ $t(' 卖家 ') }}</span
+              >{{ $t('，了解更为详细的内容。') }}
+            </p>
+          </div>
+          <div class="content" key="2" v-if="activeName === 'tab2'">
+            <h2>{{ $t('企业规模') }}</h2>
+            <p>
+              {{
+                $t(
+                  '我们按照企业每年的采购金额，将平台用户分为3种类型：中大型买家，中型买家，小型买家。'
+                )
+              }}
+            </p>
+            <div class="buy-item">
+              <div class="left">
+                <div class="left-title">{{ $t('中大型买家分布') }}</div>
+                <div class="left-text">
+                  {{ $t('· 快速崛起的线上零售商；') }}<br />
+                  {{ $t('· 中大型自有品牌零售商；') }}
+                </div>
+                <div class="left-text">
+                  {{ $t('· 批发零售多种经营商家；') }}<br />
+                  {{ $t('· 采购代理；') }}<br />
+                  {{ $t('· 典型分销商/渠道商/品牌代理商；') }}<br />
+                </div>
+              </div>
+              <div class="right">500K-5M</div>
+            </div>
+            <div class="buy-item">
+              <div class="left">
+                <div class="left-title">{{ $t('中型买家分布') }}</div>
+                <div class="left-text">
+                  {{ $t('· AMZ腰部卖家；') }}<br />
+                  {{ $t('· 线下零售杂货店；') }}<br />
+                  {{ $t('· 网红/KOL零售；') }}<br />
+                  {{ $t('· 线下零售服务一体店；') }}
+                </div>
+                <div class="left-text">
+                  {{ $t('· 小型线下分销商；') }}<br />
+                  {{ $t('· 批发市场的档口店铺；') }}<br />
+                  {{ $t('· 典型分销商/渠道商/品牌代理商；') }}
+                </div>
+              </div>
+              <div class="right">100-500K</div>
+            </div>
+            <div class="buy-item">
+              <div class="left">
+                <div class="left-title">{{ $t('小型买家') }}</div>
+                <div class="left-text">
+                  {{ $t('· 线上掘金的创业青年；') }}<br />
+                  {{ $t('· 微商；') }}<br />
+                  {{ $t('· 手工艺人，手工作坊；') }}<br />
+                  {{ $t('· 独立/个人设计师品牌；') }}
+                </div>
+                <div class="left-text">
+                  {{ $t('· 中国独立买手；') }}<br />
+                  {{ $t('· SOHO买手；') }}<br />
+                  {{ $t('· 刚起步的贸易商；') }}
+                </div>
+              </div>
+              <div class="right">＜100K</div>
+            </div>
+            <h2>{{ $t('角色分类') }}</h2>
+            <p>
+              {{
+                $t(
+                  '我们按照企业每年的采购金额，将平台用户分为3种类型：中大型买家，中型买家，小型买家'
+                )
+              }}
+            </p>
+            <div class="buy-item buy-item-2">
+              <div class="left-text">{{ $t('· 采购员；') }}</div>
+              <br />
+              <div class="left-text">{{ $t('· 采购代理；') }}</div>
+              <br />
+              <div class="left-text">{{ $t('· 个体零售商；') }}</div>
+            </div>
+            <h2>{{ $t('采购员 中大型') }}</h2>
+            <p>
+              {{
+                $t(
+                  '职员有10,000人，公司内部分技术部、市场部、销售部等多个部门，部门间职责、分工明确。Mark所在的市场部共有3-4名员工，主要负责不断发现市场上新产品/供应商，寻找未来商业机会，据此确定采购什么、应从何处采购、价格和船期等，待这些方面与合适的供应商谈妥之后，移交执行购买(purchasing)的部门。'
+                )
+              }}
+            </p>
+            <h2>{{ $t('采购代理 小型') }}</h2>
+            <p>
+              {{
+                $t(
+                  '公司成立于5年前，主要通过互联网在线采购的方式为其他公司提供采购服务，负责采购的各个环节，包括采购适销商品、验货、收货、送货等服务。它致力于为客户提供质量符合要求的产品，同时所提供的物资价格比其客户自己采购时低。目前员工4人，公司规模较小，无部门区分。'
+                )
+              }}
+            </p>
+            <h2>{{ $t('个体零售商 小型') }}</h2>
+            <p>
+              {{
+                $t(
+                  'Sophie的小店8个月前开张，一边在实体店里售卖，一边接待一些eBay的买家。小店新开，需要不断充实产品种类，以此来吸引买家，因此她每隔一个月就会进行一次采购，实现店铺的产品上新或是销量较好的一些产品的补货。她通常从Alibaba\AliExpress或是品牌清仓店进货。'
+                )
+              }}
+            </p>
+            <h2>{{ $t('买家故事') }}</h2>
+            <h3>{{ $t('Lilian / 为了创业梦而打拼的零售商') }}</h3>
+            <p>
+              {{
+                $t(
+                  'Lilian是芝加哥市某社区大学的招生主任，平时上班时间较灵活。Lilian热爱时尚尤其是各种有设计感的配饰。2年前在好友的鼓励下开始利用业余时间做形象设计，兼售配饰和假发。客源通过朋友和客户的口耳相传。她的个人Youtube频道目前有1万个订阅，还在Facebook上创建了个人工作室的粉丝页面，方便与客户互动。'
+                )
+              }}
+            </p>
+            <h3>{{ $t('Michael / 建立口碑做大做强的小型批发商') }}</h3>
+            <p>
+              {{
+                $t(
+                  'Michael在纽约市布鲁克林与人合伙经营一家美甲店，开业5年，6名员工。65%收入来自店内美甲服务，35%为美甲产品零售批发和美甲店家具批发。批发业务的客人多是美甲店店主。美甲店有Facebook粉丝页面做上新和促销的展示。销售通过朋友和客户的口耳相传。仓库距美甲店坐地铁需1小时。'
+                )
+              }}
+            </p>
+            <h3>{{ $t('Ronald / 走向多元化经营的中型批发商') }}</h3>
+            <p>
+              {{
+                $t(
+                  'Ronald是洛杉矶地区一家贸易公司的CEO和创始人，公司成立12年，员工10名，新加坡有分公司。主营打印办公耗材的进出口和批发业务。仓库与办公室在同一地点。'
+                )
+              }}
+            </p>
+          </div>
+          <div class="content" key="3" v-if="activeName === 'tab3'">
+            <div class="item">
+              <div>
+                <div class="left">
+                  <div class="img-box">
+                    <img
+                      src="https://img.alicdn.com/tfs/TB1jr0IENYaK1RjSZFnXXa80pXa-386-257.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="right">
+                  <p class="head">{{ $t('即将上线，敬请期待') }}</p>
+                  <p class="three02">
+                    <br />{{ $t('如有任何疑问，') }}<br />{{
+                      $t('可联系yanzuo.zp@alibaba-inc.com')
+                    }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

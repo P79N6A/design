@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>按钮</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('按钮') }}</h1>
+        </header>
+
+        <div class="content">
+          <h2>{{ $t('定义') }}</h2>
+          <p>
+            {{
+              $t(
+                '按钮是对用户的点击做出反应，并触发即时操作，每个按钮都有一个相对应的操作或流程。'
+              )
+            }}
+          </p>
+          <h2>{{ $t('构成') }}</h2>
+          <p>
+            {{ $t('· 边框：用于次级按钮与幽灵按钮') }}<br />
+            {{ $t('· 底色：来源于主品牌色') }}<br />
+            {{ $t('· 文字') }}<br />
+            {{ $t('· 图标') }}
+          </p>
+          <h2>{{ $t('规则') }}</h2>
+          <p>
+            {{
+              $t(
+                '· 标准按钮分为主要和次要，一个模块中(如浮层、表格、表单、页面等)只能有一个主要按钮,主引导用户的操作；其他的按钮皆为次要操作。'
+              )
+            }}<br />
+            {{ $t('· 主要按钮跟次要按钮组合时，主要按钮需放在最左边。') }}<br />
+            {{
+              $t(
+                '· 按钮上的文字应保持简洁，使用清楚明了的触发文字，例如：注册、下一步、下载。'
+              )
+            }}<br />
+            {{
+              $t(
+                '· 其他按钮样式有：文字、图标、标签、菜单按钮、悬浮按钮..等。'
+              )
+            }}<br />
+          </p>
+          <h2>{{ $t('尺寸和标注') }}</h2>
+          <h3>{{ $t('尺寸') }}</h3>
+          <p>
+            {{
+              $t(
+                '尺寸分为大号：高度S9，最小宽度S20；中号：高度S8，最小宽度S15；小号：高度S6，最小宽度S10'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image49']" alt="" />
+          </div>
+          <h3>{{ $t('按钮使用排列规则：') }}</h3>
+          <p>
+            {{ $t('通用Button与文字、图标等Button组合使用时，垂直居中对齐') }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image50']" alt="" />
+          </div>
+          <h3>{{ $t('按钮多语言排版规则：') }}</h3>
+          <p>{{ $t('多语言情况下的两行展示') }}</p>
+          <div class="img-box">
+            <img :src="imageList['image51']" alt="" />
+          </div>
+          <h2>{{ $t('分类与样式') }}</h2>
+          <p class="line">
+            {{
+              $t(
+                'Alibaba.com 对按钮分了五种类型：标准按钮、文本按钮、警示按钮、幽灵按钮、按钮组。按钮有Normal（默认）、Hover（悬停）、Disabled（禁用）三种交互状态。'
+              )
+            }}
+          </p>
+          <p class="line">
+            <b>{{ $t('标准按钮：') }}</b
+            >{{
+              $t(
+                '标准按钮分为主要和次要，一个模块中(如浮层、表格、表单、页面等)只能有一个主要按钮,主引导用户的操作；其他的按钮皆为次要操作。'
+              )
+            }}
+          </p>
+          <p class="line">
+            <b>{{ $t('文本按钮：') }}</b
+            >{{
+              $t(
+                '通常用于较不明显的强引导操作，比如卡片中内容信息较多，希望用户不受干扰浏览内容，用文本按钮有助于强调突出卡片的信息。'
+              )
+            }}
+          </p>
+          <p class="line">
+            <b>{{ $t('警示按钮：') }}</b
+            >{{
+              $t(
+                '取用功能色中的警示色，该按钮用于向用户提示即将发生的破坏性行为，如永久删除数据。'
+              )
+            }}
+          </p>
+          <p class="line">
+            <b>{{ $t('幽灵按钮：') }}</b
+            >{{ $t('常用在有色背景上，背景和边框都变为透明。') }}
+          </p>
+          <p class="line">
+            <b>{{ $t('按钮组：') }}</b
+            >{{
+              $t(
+                '按钮组就是指两个或两个以上的按钮排布在一起，显示多个相关操作。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image52']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image53']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image54']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image55']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image56']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image57']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image58']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image59']" alt="" />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>单选框</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('单选框') }}</h1>
+        </header>
+
+        <div class="content">
+          <h2>{{ $t('定义') }}</h2>
+          <p>
+            {{
+              $t('选择器提供了一个简单的方法来从一个预定义集合中选取单个值。')
+            }}
+          </p>
+          <h2>{{ $t('规则') }}</h2>
+          <p>
+            {{
+              $t('单选，若选项数大于 5 或需在表格中展现时，可使用下拉选择。')
+            }}
+          </p>
+          <h2>{{ $t('样式与交互') }}</h2>
+          <p>
+            {{
+              $t(
+                '单选按钮允许用户从一个数据集中选择单个选项。如果你觉得用户需要并排看到所有的可选项，使用单选按钮进行排他操作。此外，考虑使用下拉列表，相对于显示所有的选项占用更少的空间。'
+              )
+            }}
+          </p>
+          <div class="single">
+            {{
+              $t('单复选框在鼠标悬停、聚焦、激活、置灰以及置灰且聚焦时的状态。')
+            }}
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image78']" alt="" />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+  </body>
+</html>

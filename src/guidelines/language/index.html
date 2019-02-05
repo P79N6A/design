@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>设计语言概述</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="1">
+        <header>
+          <h1>{{ $t('设计语言概述') }}</h1>
+        </header>
+        <div class="content">
+          <p>
+            {{
+              $t(
+                '我们的设计语言是我们后续一切设计的世界观表达，我们向用户描绘的世界的构成和环境、以何种方式呈现给用户、'
+              )
+            }}
+            <br />{{
+              $t('最终以何种规则输出呈现给用户，都是设计语言所涉及的范畴。')
+            }}
+          </p>
+          <h1>{{ $t('拆解') }}</h1>
+          <p>
+            {{
+              $t(
+                '我们将“由具象到抽象，由现实向虚拟”的界面设计呈现的过程拆解为这两层：'
+              )
+            }}
+            <br />
+            <bold>{{ $t('物理环境层：') }}</bold
+            >{{
+              $t(
+                '更趋近现实，模拟线下环境，设计语言主要把控线下环境在怎样的环境中呈现。'
+              )
+            }}
+            <br />
+            <bold>{{ $t('抽象表达层：') }}</bold
+            >{{ $t('将物理层构建的世界以一致的规则呈现给用户。') }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image11']" alt="" />
+          </div>
+
+          <h1>{{ $t('分层') }}</h1>
+          <h2>{{ $t('物理环境层') }}</h2>
+          <p>
+            {{
+              $t(
+                '大家都知道我们目前的线上体验都是从线下真实场景中物化抽象而生，因此物理层是最趋近用户线下环境的。我们alibaba.com是一个B类电商平台，又通过服务好买家从而给卖家带来商机和收益，因此我们的物理层更多可能模拟的是B类买家的采购环境。当然场景和内容都是由我们商业策略决定，我们设计语言所需要考虑的是我们alibaba.com的物理世界环境是什么样的：更趋近高端的品牌店，还是接地气的地摊杂货，是窗明几净的明朗环境，还是灯红酒绿的黑暗环境？'
+              )
+            }}
+          </p>
+          <div class="img-box02">
+            <img
+              src="https://img.alicdn.com/tfs/TB1CR5pEOLaK1RjSZFxXXamPFXa-601-272.png"
+              alt=""
+            />
+          </div>
+          <h5>
+            {{
+              $t(
+                '在物理环境层中设计语言将定义我们Alibaba平台所处环境的：光源（冷暖、明暗、色彩）、秩序（信息密度、排列方式）、质感（内容的品质保证、精致感、一致性）。'
+              )
+            }}
+          </h5>
+          <h2>{{ $t('抽象表达层') }}</h2>
+          <p>
+            {{
+              $t(
+                '前面我们了解到物理层是一个三维世界，在抽象表达层我们同样强调Z轴的概念存在。但我们当然不是直接把物理层的3D世界照搬过来，而是以层的概念抽象。'
+              )
+            }}
+          </p>
+          <div class="img-box03">
+            <img
+              src="https://img.alicdn.com/tfs/TB14402EH2pK1RjSZFsXXaNlXXa-600-309.png"
+              alt=""
+            />
+          </div>
+          <p>
+            <bold>{{ $t('原因：') }}</bold
+            >{{
+              $t('受用户对于互联网的认知、我们的业务现状、品牌和设计框架影响。')
+            }}
+            <br />
+            <bold>{{ $t('手法：') }}</bold
+            >{{
+              $t(
+                '所有的元素抽象以层的概念输出，以对用户的优先级高低来决定其前后顺序。'
+              )
+            }}
+          </p>
+          <div class="img-box04">
+            <img :src="imageList['image12']" alt="" />
+          </div>
+
+          <p class="p5">
+            <bold>{{ $t('原则') }}</bold> <br />{{
+              $t('1. 以交互层的优先级为先，单个层的内容表达不可跨层呈现')
+            }}
+            <br />{{ $t('2. Z轴方向上离用户越接近优先级越高') }} <br />{{
+              $t('3. 同一水平线上的内容优先级一致')
+            }}
+            <br />{{ $t('4. 层为隐性概念') }}
+          </p>
+
+          <h1>{{ $t('规则') }}</h1>
+          <h2>{{ $t('物理层环境规则：光源、秩序、质感') }}</h2>
+          <p>
+            <bold>{{ $t('光源') }}</bold> <br />{{
+              $t(
+                '线光源决定我们平台基调，是后续所有设计元素明度、饱和度等等的前提'
+              )
+            }}
+            <br />{{ $t('所以我们会从角度、色彩、亮度这几个角度去细化定义。') }}
+          </p>
+          <div class="img-box02">
+            <img :src="imageList['image13']" alt="" />
+          </div>
+          <div class="img-box03">
+            <img :src="imageList['image14']" alt="" />
+          </div>
+          <p>
+            <bold>{{ $t('秩序') }}</bold> <br />{{
+              $t(
+                '秩序决定的是我们的平台传递的是诸如一个杂货市场、中档商铺还是高端精品店的用户感受，它规定了我们平台整体的信息密度&排布方式。'
+              )
+            }}
+          </p>
+          <div class="img-box03">
+            <img
+              src="https://img.alicdn.com/tfs/TB1KDWpENjaK1RjSZKzXXXVwXXa-600-287.png"
+              alt=""
+            />
+          </div>
+          <p>
+            <bold>{{ $t('质感') }}</bold> <br />{{
+              $t(
+                '质感更多的是在场景搭建中保障内容的品质感、精致感、一致性，在材质表达上可以是木质、塑料、大理石、纸质，使用时可以根据场景的实际情况合理选择。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1oE85ENTpK1RjSZFMXXbG_VXa-600-353.png"
+              alt=""
+            />
+          </div>
+
+          <h2>{{ $t('抽象表达层输出规则：位置、大小、距离、色彩') }}</h2>
+          <p>
+            <bold>{{ $t('位置') }}</bold> <br />{{
+              $t(
+                '元素在X/Y/Z轴的空间位置会导致设计呈现方式有不同的表达，如Z轴空间位置关系将导致设计呈现上的物体遮挡，突出卡片或画面之外的设计形式产生。'
+              )
+            }}
+          </p>
+          <div class="img-box03">
+            <img
+              src="https://img.alicdn.com/tfs/TB17ol7EQPoK1RjSZKbXXX1IXXa-604-458.png"
+              alt=""
+            />
+          </div>
+          <p>
+            <bold>{{ $t('大小') }}</bold> <br />{{
+              $t(
+                '大小直接受到元素所属位置与用户的距离的影响，遵循近大远小的原则，我们会发现，距离用户越近的元素越大，'
+              )
+            }}
+            <br />{{
+              $t(
+                '这直接影响我们的设计形式将从从前的卡片内模块变成更具冲击力的元素透出方式。'
+              )
+            }}
+          </p>
+          <div class="img-box03">
+            <img
+              src="https://img.alicdn.com/tfs/TB1PFhUESrqK1RjSZK9XXXyypXa-600-588.png"
+              alt=""
+            />
+          </div>
+          <p>
+            <bold>{{ $t('距离') }}</bold> <br />{{
+              $t(
+                '距离人近的物体清晰，距离人远的物体模糊，基于这一原理，我们设计上可以通过加大背景模糊营造空间感，也可通过加入色彩遮罩，降低图片透明度达到同样的效果。'
+              )
+            }}
+          </p>
+          <div class="img-box03">
+            <img
+              src="https://img.alicdn.com/tfs/TB1vg00ENTpK1RjSZFGXXcHqFXa-606-464.png"
+              alt=""
+            />
+          </div>
+          <p>
+            <bold>{{ $t('色彩') }}</bold> <br />
+            <bold>{{ $t('饱和度反差：') }}</bold
+            >{{
+              $t(
+                '前景的物体饱和度高，后景的物体饱和度低。两个颜色之间饱和度或明度数值相差越大，反差也就越大，反之亦然，看看具体的实例：如以下导航图，当前的人物图像明度较高，和低明度黑色背景形成高反差而容易先被注视。'
+              )
+            }}
+            <br />
+            <bold>{{ $t('色相反差：') }}</bold
+            >{{
+              $t(
+                '下图中主色调为蓝色，蓝色行动点和整体颜色一致，层级相对较弱，而绿色行动点和蓝色在色相上的反差使得层级变高。'
+              )
+            }}
+          </p>
+          <div class="img-box03">
+            <img
+              src="https://img.alicdn.com/tfs/TB1pbN7EQvoK1RjSZFDXXXY3pXa-601-229.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="../../assets/js/plugins/viewer.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>愿景</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="0">
+        <header>
+          <h1>{{ $t('愿景') }}</h1>
+        </header>
+        <div class="content">
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1ZktqEMDqK1RjSZSyXXaxEVXa-1039-147.png"
+              alt=""
+            />
+          </div>
+          <h5>{{ $t('我们的愿景') }}</h5>
+          <p>
+            {{
+              $t(
+                '作为阿里巴巴集团的一部分，我们的使命是让您在任何地方轻松开展业务。'
+              )
+            }}
+            <br />{{
+              $t(
+                '我们通过为供应商提供必要的工具来为全球用户提供他们的产品，并帮助买家快速高效地找到产品和代理商来实现这一目标。'
+              )
+            }}
+          </p>
+          <h5>{{ $t('一站式采购') }}</h5>
+          <p>
+            {{
+              $t(
+                '阿里巴巴为您带来数以百万计的40多个不同主要类别的产品，包括消费电子产品，机械和服装。这些产品的买家来自于200多个国家和地区，每天与平台上的供应商交换数十万条消息。'
+              )
+            }}
+          </p>
+          <h5>{{ $t('随时随地') }}</h5>
+          <p>
+            {{
+              $t(
+                '作为一个平台，我们将继续开发服务，帮助企业做更多的事情并发现新的机会。'
+              )
+            }}
+          </p>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

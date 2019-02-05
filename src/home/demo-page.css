@@ -30,7 +30,7 @@ hr {
 .demo textarea {
   -webkit-box-sizing: padding-box;
   box-sizing: padding-box;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 0.9em;
   height: 32px;
   padding: 6px 0px;
@@ -254,7 +254,7 @@ pre.prettyprint {
 
 #forkongithub a::before,
 #forkongithub a::after {
-  content: "";
+  content: '';
   width: 100%;
   display: block;
   position: absolute;

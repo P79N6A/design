@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>线条</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('线条') }}</h1>
+        </header>
+
+        <div class="content">
+          <h2>{{ $t('定义') }}</h2>
+          <p>
+            {{
+              $t(
+                '线是一个细长、轻量的元素，用于对列表和页面布局中的内容进行分组，以便让内容生成更好的视觉效果及空间感。'
+              )
+            }}
+          </p>
+          <h2>{{ $t('规则') }}</h2>
+          <p>{{ $t('界面设计中，线的宽度不超过3种。') }}</p>
+          <h2>{{ $t('样式') }}</h2>
+          <p>
+            {{
+              $t(
+                '使用的线条越粗，那么在页面中的视觉的感知度越强。线条样式分为实线和虚线。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image27']" alt="" />
+          </div>
+          <h2>{{ $t('线的颜色') }}</h2>
+          <p>{{ $t('线在颜色上的使用（各业务线根据实际情况增减颜色）') }}</p>
+          <div class="img-box">
+            <img :src="imageList['image28']" alt="" />
+          </div>
+          <p class="line">
+            <b>{{ $t('线的颜色层级') }}</b
+            ><br />{{
+              $t(
+                '元素在页面中的重要程度和可操作提示越强，则使用的颜色就应该越深。'
+              )
+            }}
+          </p>
+          <p class="line">
+            <b>{{ $t('浅线：') }}</b
+            >{{
+              $t(
+                '(静态层级)为视觉感知水平之下，用户浏览上不会被感知；用于区分段落或不可操作且弱化内容的元素线。'
+              )
+            }}
+          </p>
+          <p class="line">
+            <b>{{ $t('常规线：') }}</b
+            >{{
+              $t(
+                '(静态层级)为常规展示，视觉水平位置，能被用户看到，但不影响浏览路径的变化；一般用于不可操作的元件或元素线。'
+              )
+            }}
+          </p>
+          <p class="line">
+            <b>{{ $t('深线：') }}</b
+            >{{
+              $t(
+                '(行动层级)二级行动点边框为次强展示，应该被用户感知，也许会影响浏览路径的变化；一般用于可操作的主要元件线。'
+              )
+            }}
+          </p>
+          <p class="line">
+            <b>{{ $t('强调线：') }}</b
+            >{{
+              $t(
+                '(强调层级)为必然被看到，并且一定会影响浏览路径的变化；一般用于可操作的视觉主路径上的元件线。'
+              )
+            }}
+          </p>
+          <p class="line">
+            <b>{{ $t('链接线：') }}</b
+            >{{
+              $t(
+                '(强调层级)为必然被看到，并且一定会影响浏览路径的变化；一般用于可操作的视觉主路径上的元件线。'
+              )
+            }}
+          </p>
+          <div class="box-img">
+            <img :src="imageList['image29']" alt="" />
+          </div>
+          <br /><br />
+          <div class="box-img">
+            <img :src="imageList['image30']" alt="" />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+  </body>
+</html>

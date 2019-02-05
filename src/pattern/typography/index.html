@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>字体</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./config.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('字体') }}</h1>
+        </header>
+        <div class="content">
+          <p>
+            {{
+              $t(
+                '字体是UI设计中最基本的构成之一。字体系统的建立主要解决的是内容可读性以及信息的表达，同时选择不同的字体传达不同的设计风格。通过定义字体的使用规则在设计上达到统一性和整体性，从而在阅读的舒适性上达到平衡。'
+              )
+            }}
+          </p>
+          <h2>{{ $t('字体家族') }}</h2>
+          <p>
+            {{
+              $t(
+                '有购买版权字体的企业通过购买的字体库或者免费的字体间进行选择使用。使用免费字体前根据系统区分macor windows，如果用户使用的是mac系统可以优先使用mac默认字体渲染；如果使用的是windows，字体兼容性选择顺序：'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image22']" alt="" />
+          </div>
+          <h2>{{ $t('行宽') }}</h2>
+          <p>
+            {{
+              $t(
+                '行宽/行长：是指一行字的长度。计算行宽的简单方法，使用RobertBringhurst的方法：行宽=字号x30。如果定义网站的基础字号为12，那么最适宜基础行宽为：14(字号)x30=360(行宽)。较适宜的宽度为40-70个字符。从生理结构分析，人在阅读文字的时候，理解并传递到大脑的信息是有限的。用户在阅读时，目光左右上下巡视、扫描和阅读，这意味着阅读要求大量的眼球运动。行宽越长，眼睛移动的距离太长太多。宽度较大，眼动位移较大，读者阅读换行时容易串行。行宽越短，眼睛阅读折行的次数太多。行数较多，眼动跳跃次数多，读者阅读行时会感觉到文字不连续。'
+              )
+            }}
+          </p>
+          <h2>{{ $t('行高') }}</h2>
+          <p>
+            {{
+              $t(
+                '行距/行高：Photoshop里为从一行文字的底部到另一行文字底部的间距。但在前端代码实现上，行距会自动平均分配到文字上下端，因此这里说的行距/行高为每行字体占用的高度空间(如下图)。行间距：从一行文字的底部到另一行文字顶部的间距。 行距(行高) = 字号+ 行间距例如：字号24，行距/行高为32，根据web页面平均分配原则，行距就是从文字的顶端上移4到文字底部下移4的距离。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image23']" alt="" />
+          </div>
+          <p>
+            {{ $t('行高（少文本）=字号+6， 行高（多文本）=字号+8') }} <br />
+            <br />
+            {{
+              $t(
+                '多文本段落：文字行数>3，宽度>2倍段落总高。两个条件满足的情况下，文字内容不受周边区块影响。'
+              )
+            }}
+            <br />
+            {{
+              $t(
+                '少文本段落：文字行数≤3，或者宽度≤2倍段落总高。文字内容受周边区块影响。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image24']" alt="" />
+          </div>
+          <div id="config-app">
+            <div>
+              <div class="config-stage" id="config-stage">
+                <div class="config-demo" id="config-demo">
+                  <div class="config-section">
+                    <h3 class="head">{{ $t('字体类型') }}</h3>
+                    <div class="body">
+                      <div class="font-demo">
+                        <div class="label">
+                          family<br /><span>{{ $t('字体') }}</span>
+                        </div>
+                        <div class="box">
+                          Open Sans, "Helvetica Neue", Helvetica, Tahoma, Arial,
+                          "PingFang SC", "Microsoft YaHei"
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="config-section">
+                    <h3 class="head">{{ $t('字体尺寸') }}</h3>
+                    <div class="body">
+                      <div class="font-demo">
+                        <div class="label">
+                          Display-3<br /><span
+                            >{{ $t('运营标题') }}-{{ $t('大') }}</span
+                          ><br /><span>56</span>
+                        </div>
+                        <div class="box font-demo-size-display-3">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Display-2<br /><span
+                            >{{ $t('运营标题') }}-{{ $t('中') }}</span
+                          ><br /><span>48</span>
+                        </div>
+                        <div class="box font-demo-size-display-2">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Display-1<br /><span
+                            >{{ $t('运营标题') }}-{{ $t('小') }}</span
+                          ><br /><span>36</span>
+                        </div>
+                        <div class="box font-demo-size-display-1">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Headline<br /><span
+                            >{{ $t('标题') }}-{{ $t('大') }}</span
+                          ><br /><span>24</span>
+                        </div>
+                        <div class="box font-demo-size-headline">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Title<br /><span>{{ $t('标题') }}-{{ $t('中') }}</span
+                          ><br /><span>20</span>
+                        </div>
+                        <div class="box font-demo-size-title">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Subhead<br /><span
+                            >{{ $t('标题') }}-{{ $t('小') }}</span
+                          ><br /><span>16</span>
+                        </div>
+                        <div class="box font-demo-size-subhead">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Body-2<br /><span>{{ $t('正文-强调') }}</span
+                          ><br /><span>14</span>
+                        </div>
+                        <div class="box font-demo-size-body-2">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Body-1<br /><span>{{ $t('正文-常规') }}</span
+                          ><br /><span>12</span>
+                        </div>
+                        <div class="box font-demo-size-body-1">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Caption<br /><span>{{ $t('水印文本') }}</span
+                          ><br /><span>10</span>
+                        </div>
+                        <div class="box font-demo-size-caption">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="config-section">
+                    <h3 class="head">{{ $t('字体粗细') }}</h3>
+                    <div class="body">
+                      <div class="font-demo">
+                        <div class="label">
+                          Light<br /><span>{{ $t('细体') }}</span
+                          ><br /><span>lighter</span>
+                        </div>
+                        <div class="box font-demo-weight-1">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Regular<br /><span>{{ $t('常规') }}</span
+                          ><br /><span>normal</span>
+                        </div>
+                        <div class="box font-demo-weight-2">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Bold<br /><span>{{ $t('粗体') }}</span
+                          ><br /><span>bold</span>
+                        </div>
+                        <div class="box font-demo-weight-3">
+                          Hello, {{ $t('世界') }}!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="config-section">
+                    <h3 class="head">{{ $t('字体行高') }}</h3>
+                    <div class="body">
+                      <div class="font-demo">
+                        <div class="label">
+                          Lineheight-1<br /><span>{{ $t('密集') }}</span
+                          ><br /><span>1.3</span>
+                        </div>
+                        <div class="box font-demo-lineheight-1">
+                          <p>
+                            Hello, {{ $t('世界') }}!<br />Hello,
+                            {{ $t('世界') }}!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Lineheight-2<br /><span>{{ $t('常规') }}</span
+                          ><br /><span>1.5</span>
+                        </div>
+                        <div class="box font-demo-lineheight-2">
+                          <p>
+                            Hello, {{ $t('世界') }}!<br />Hello,
+                            {{ $t('世界') }}!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="font-demo">
+                        <div class="label">
+                          Lineheight-3<br /><span>{{ $t('宽松') }}</span
+                          ><br /><span>1.7</span>
+                        </div>
+                        <div class="box font-demo-lineheight-3">
+                          <p>
+                            Hello, {{ $t('世界') }}!<br />Hello,
+                            {{ $t('世界') }}!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

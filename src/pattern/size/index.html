@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>尺寸</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./config.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('尺寸') }}</h1>
+        </header>
+        <div class="content">
+          <p>
+            {{
+              $t(
+                '为控制UI设计中的尺寸多变性，我们对UI设计的实际距离做最小值的约束，便于保证全站产品风格的一致性'
+              )
+            }}
+          </p>
+          <h2>{{ $t('大小：S1=4') }}</h2>
+          <p>{{ $t('单位值为网格最小值4，且大小能被4整除。') }}</p>
+          <p>
+            {{
+              $t(
+                '规则: S{n} (n = 0, 1, 2, ..., 50), S{n} = S1 * n, 比如 S0, S1, S3 等'
+              )
+            }}
+          </p>
+          <div id="config-app">
+            <div>
+              <div class="config-stage" id="config-stage">
+                <div class="config-demo" id="config-demo">
+                  <div class="config-section">
+                    <div class="body">
+                      <div class="size-demo">
+                        <div class="content">
+                          <div class="box-wrapper">
+                            <div class="box size-demo-1"></div>
+                            <span>s-1</span>
+                          </div>
+                          <div class="box-wrapper">
+                            <div class="box size-demo-2"></div>
+                            <span>s-2</span>
+                          </div>
+                          <div class="box-wrapper">
+                            <div class="box size-demo-3"></div>
+                            <span>s-3</span>
+                          </div>
+                          <div class="box-wrapper">
+                            <div class="box size-demo-4"></div>
+                            <span>s-4</span>
+                          </div>
+                          <div class="box-wrapper">
+                            <div class="box size-demo-5"></div>
+                            <span>s-5</span>
+                          </div>
+                          <div class="box-wrapper">
+                            <div class="box size-demo-6"></div>
+                            <span>s-6</span>
+                          </div>
+                          <div class="box-wrapper">
+                            <div class="box size-demo-7"></div>
+                            <span>s-7</span>
+                          </div>
+                          <div class="box-wrapper">
+                            <div class="box size-demo-8"></div>
+                            <span>s-8</span>
+                          </div>
+                          <div class="box-wrapper">
+                            <div class="box size-demo-9"></div>
+                            <span>s-9</span>
+                          </div>
+                          <div class="box-wrapper">
+                            <div class="box size-demo-10"></div>
+                            <span>s-10</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

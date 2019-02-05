@@ -1,0 +1,431 @@
+.next-menu-item-inner {
+  font-size: 0;
+}
+.next-menu-item-text {
+  font-size: 12px;
+}
+.next-tabs-wrapped.next-tabs-top > .next-tabs-bar .next-tabs-tab.active:before {
+  width: 100%;
+  left: 0;
+}
+#config-app,
+.config-stage {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.config-stage {
+  color: #333;
+}
+.config-demo {
+  padding: 0px;
+}
+.config-demo-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px 0 20px;
+  height: 32px;
+}
+.config-demo-head h2 {
+  flex: 1;
+  font-size: 32px;
+  margin: 0;
+  font-weight: 400;
+}
+.config-demo-body .hide {
+  display: none;
+}
+.config-editor {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  color: #666;
+  border-left: 1px solid #dcdee3;
+}
+.config-editor .empty-notice {
+  text-align: center;
+  padding: 50% 0 0;
+}
+.config-editor-switch {
+  position: absolute;
+  width: 16px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #dcdee3;
+  left: -16px;
+  top: 50%;
+  margin-top: -20px;
+  text-align: center;
+  cursor: pointer;
+  color: #666;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.config-editor-switch:hover {
+  background-color: #a0a2ad;
+}
+.config-section {
+  margin-bottom: 16px;
+  border-bottom: 1px solid #dcdee3;
+}
+.config-section .head {
+  padding-bottom: 0px !important;
+  padding-top: 20px;
+  font-size: 16px;
+}
+.config-section .body {
+  padding: 0px;
+}
+.config-section:last-child {
+  border: none;
+}
+.config-stage-component .iframe-container {
+  font-size: 0;
+  line-height: 1;
+  overflow: hidden;
+}
+.config-stage-component .iframe-container iframe {
+  margin: 0;
+}
+.config-stage-component .config-demo-body {
+  position: relative;
+}
+.config-stage-component .config-demo-bg-editor {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #dcdee3;
+  border-radius: 3px;
+}
+.config-stage-component .config-demo-bg-editor-panel {
+  position: absolute;
+  right: 0;
+  top: 24px;
+  z-index: 2;
+}
+.config-stage-component .selection-mark {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid #5584ff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  display: none;
+}
+.config-stage-component .selection-mark.marked {
+  background-color: transparent;
+  border: none;
+  box-shadow: 0 0 3px 2px #5584ff;
+}
+.config-stage-component .loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #333;
+  background-color: hsla(0, 0%, 100%, 0.8);
+}
+.config-stage-component .loading-box {
+  position: fixed;
+  top: calc(50% - 25px);
+  left: calc(50% - 105px);
+}
+.config-stage-component .loading-text {
+  padding: 0 0 0 12px;
+  font-size: 16px;
+}
+.size-demo {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.size-demo .label {
+  width: 80px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: right;
+}
+.size-demo .label span {
+  color: #999;
+}
+.size-demo .content {
+  flex: 1;
+  cursor: pointer;
+  height: 100px;
+  border: 1px dashed #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.size-demo .content:hover {
+  border-color: #5584ff;
+}
+.size-demo .content .box-wrapper {
+  margin-right: 12px;
+  text-align: center;
+  min-width: 60px;
+}
+.size-demo .content .box-wrapper span {
+  display: inline-block;
+  margin-top: 8px;
+}
+.size-demo .content .box-wrapper .box {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
+.shadow-demo {
+  margin-bottom: 20px;
+  padding: 0 0 12px;
+  cursor: pointer;
+  border: 1px dashed #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.shadow-demo:last-child {
+  margin: 0;
+}
+.shadow-demo:hover {
+  border-color: #5584ff;
+}
+.shadow-demo .shadow-box {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+}
+.shadow-demo .shadow-box .label {
+  padding: 12px 0;
+}
+.shadow-demo .shadow-box .box {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.line-demo {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.line-demo .label {
+  width: 80px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: right;
+}
+.line-demo .label span {
+  color: #999;
+}
+.line-demo .content {
+  flex: 1;
+  cursor: pointer;
+  margin-left: 40px;
+  height: 100px;
+  line-height: 100px;
+  border: 1px dashed #fff;
+}
+.line-demo .content:hover {
+  border-color: #5584ff;
+}
+.line-demo .content .box {
+  display: inline-block;
+  width: 100%;
+  background: #000;
+}
+.icon-size-section .body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.icon-size-demo {
+  box-sizing: border-box;
+  margin-right: 20px;
+  text-align: center;
+  width: 100%;
+  border: 1px dashed #fff;
+  cursor: pointer;
+}
+.icon-size-demo:hover {
+  border-color: #5584ff;
+}
+.icon-size-demo-label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+}
+.icon-size-demo .box {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.icon-size-demo .box:after {
+  content: '\FF0B';
+}
+.icon-type-section .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon-type-group .label {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.icon-type-group .content {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+.icon-type-demo {
+  box-sizing: border-box;
+  width: 120px;
+  height: 80px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+.icon-type-demo .box {
+  width: 120px;
+  height: 60px;
+  line-height: 60px;
+}
+.icon-type-demo .box:after {
+  font-size: 36px;
+}
+.icon-type-demo-label {
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  color: #666;
+}
+.font-demo {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.font-demo:last-child {
+  margin: 0;
+}
+.font-demo .label {
+  width: 80px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: right;
+}
+.font-demo .label span {
+  color: #999;
+}
+.font-demo .box {
+  flex: 1;
+  margin-left: 40px;
+  border: 1px solid #fff;
+  padding: 12px;
+  cursor: pointer;
+}
+.font-demo .box textarea {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  margin: 0;
+  padding: 4px 12px;
+  vertical-align: middle;
+}
+.font-demo .box:hover {
+  border: 1px dashed #5584ff;
+}
+.corner-demo {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.corner-demo .label {
+  width: 80px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: right;
+}
+.corner-demo .label span {
+  color: #999;
+}
+.corner-demo .box {
+  flex: 1;
+  cursor: pointer;
+  margin-left: 40px;
+  height: 100px;
+  line-height: 100px;
+  border: 1px solid #ccc;
+}
+.corner-demo .box:hover {
+  border-color: #5584ff;
+}
+.config-demo-color {
+  width: 100%;
+  margin: 0;
+}
+.color-section {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e7eb;
+  color: #333;
+  line-height: 1;
+}
+.color-section:last-child {
+  border: none;
+}
+.color-section .head {
+  font-size: 16px;
+  margin: 0;
+}
+.color-section .color-sequence {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.color-section .color-sequence-label {
+  color: #999;
+  margin: 8px 0;
+}
+.color-section .color-sequence-content {
+  display: flex;
+}
+.color-section .color-item {
+  margin-right: 16px;
+  min-width: 80px;
+}
+.color-section .color-item .color-box {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #c4c6cf;
+}
+.color-section .color-item .color-description {
+  color: #999;
+  margin-top: 4px;
+  height: 20px;
+  line-height: 20px;
+}
+.color-section .color-item .color-value {
+  font-weight: 900;
+  height: 20px;
+  line-height: 20px;
+}
+.color-section .color-item .color-semantic {
+  color: #999;
+  height: 20px;
+  line-height: 20px;
+}
+.home-stage {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>间距</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('间距') }}</h1>
+        </header>
+        <div class="content">
+          <p>
+            {{
+              $t('我们对于整站的间距做了系统性的分层，把网站间距分成下面5种：')
+            }}
+            <br />{{ $t('卡片间距、卡片内间距、横向间距、纵向间距、文字行距') }}
+          </p>
+          <h1>{{ $t('卡片间距') }}</h1>
+          <p>{{ $t('卡片与卡片之间的距离') }}</p>
+          <div class="img-box">
+            <img :src="imageList['image35']" alt="" />
+          </div>
+
+          <h1>{{ $t('卡片内间距') }}</h1>
+          <p>{{ $t('卡片边缘与内部信息的距离') }}</p>
+          <div class="img-box">
+            <img :src="imageList['image36']" alt="" />
+          </div>
+
+          <h1>{{ $t('纵向间距') }}</h1>
+          <p>{{ $t('纵向元素间的距离') }}</p>
+          <div class="img-box">
+            <img :src="imageList['image37']" alt="" />
+          </div>
+
+          <h1>{{ $t('横向间距') }}</h1>
+          <p>{{ $t('横向元素间的距离') }}</p>
+          <div class="img-box">
+            <img :src="imageList['image38']" alt="" />
+          </div>
+
+          <h1>{{ $t('文字行距') }}</h1>
+          <p>{{ $t('单行文字之间的距离') }}</p>
+          <div class="img-box">
+            <img :src="imageList['image39']" alt="" />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

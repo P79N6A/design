@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>色彩</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('色彩') }}</h1>
+          <el-tabs v-model="activeName" @tab-click="handleTabClick">
+            <el-tab-pane :label="$t('颜色概览')" name="tab1"></el-tab-pane>
+            <el-tab-pane :label="$t('渐变色')" name="tab2"></el-tab-pane>
+          </el-tabs>
+        </header>
+        <transition name="el-fade-in-linear">
+          <div
+            id="colorOverview"
+            class="content"
+            key="colorOverview"
+            v-if="activeName === 'tab1'"
+          >
+            <p>
+              {{
+                $t(
+                  '色彩对于网站的整体定位、风格、用户最初的感受都起着至关重要的作用，色彩不仅能给用户带来感官上的刺激，同时在实际网站设计中，能让信息层级更明确、更能把握页面的可读性。alibaba.com的品牌色，从色彩饱和度、一致性、可读性、颜色场景分类等维度，对颜色进行了定义。'
+                )
+              }}
+            </p>
+            <div
+              class="item"
+              v-for="(item, index) of colorOverview"
+              :key="index"
+            >
+              <div class="title">
+                {{ item.title }}
+                <span class="subtitle">{{ item.subtitle }}</span>
+              </div>
+              <ul>
+                <li v-for="(i, index) of item.list" :key="index">
+                  <div
+                    class="fill"
+                    :style="{
+                              background: i.color,
+                            }"
+                  >
+                    <span
+                      class="copy"
+                      :style="{
+                                color: (item.list.length - 1 - index) > 2 && '#fff',
+                              }"
+                      @click="copyColor(i.color)"
+                      >Copy</span
+                    >
+                  </div>
+                  <div class="name">{{ `${item.title}-${index}` }}</div>
+                  <div class="color">{{ i.color }}</div>
+                  <div class="scale">{{ i.scale }}</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            id="promotionColors"
+            class="content"
+            key="promotionColors"
+            v-else-if="activeName === 'tab2'"
+          >
+            <p>
+              {{
+                $t(
+                  '渐变色在颜色的使用上，并不是指具体使用什么颜色，而是从色彩本身的描述角度出发将渐变大致分为色相之间的渐变、明度之间的渐变、饱和度之间渐变、综合渐变，渐变色最常使用的是综合渐变。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '在众多的渐变方式中，我们用双色渐变和明度渐变，来制定我们推荐的渐变色板。'
+                )
+              }}
+              <br />{{
+                $t('渐变角度：对角渐变（45度角），这样的渐变更加自然。')
+              }}
+            </p>
+            <div class="img-box">
+              <img :src="imageList['image21']" alt="" />
+            </div>
+            <h1>{{ $t('行业渐变色推荐') }}</h1>
+            <div
+              class="item"
+              v-for="(item, index) of promotionColors"
+              :key="index"
+            >
+              <div class="title">
+                {{ item.title }}
+                <span class="subtitle">{{ item.subtitle }}</span>
+              </div>
+              <ul>
+                <li v-for="(i, index) of item.list" :key="index">
+                  <div class="name">
+                    {{ `00${index + 1}`.slice(-3) }} {{ item.title }}
+                  </div>
+                  <div
+                    class="fill"
+                    :style="{
+                              backgroundImage: `linear-gradient(45deg, ${i.from}, ${i.to})`,
+                          }"
+                  ></div>
+                  <div class="color">{{ `${i.from} > ${i.to}` }}</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </transition>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="./color.js"></script>
+    <script src="./index.js"></script>
+    <script src="../../assets/js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>导航</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('导航') }}</h1>
+        </header>
+
+        <div class="content">
+          <h2>{{ $t('定义') }}</h2>
+          <p>
+            {{
+              $t('导航位于页面固定的位置，提供用户指引并引导用户浏览每个页面。')
+            }}
+          </p>
+          <h2>{{ $t('规则') }}</h2>
+          <p>
+            {{ $t('· 在导航覆盖的范围内，内容样式一定要完全一致。') }}<br />
+            {{
+              $t(
+                '· 一级导航是展示当前页面的重要同层级页面的页面名称 (导航名称数需大于等于2)。'
+              )
+            }}<br />
+            {{ $t('· 避免多重导航和多个滚动条。') }}<br />
+            {{
+              $t(
+                '· 顶部导航和侧边栏导航可单独使用，也可组合使用：当顶部导航为主导航时，侧边导航为二级导航。侧边导航为主导航时，顶部导航为二级导航。'
+              )
+            }}<br />
+            {{ $t('· 类目建议数量（2-8个以内）字符数建议英文4-15个中文2-6个。')
+            }}<br />
+          </p>
+          <h2>{{ $t('尺寸和标注') }}</h2>
+          <div class="img-box">
+            <img :src="imageList['image60']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image61']" alt="" />
+          </div>
+          <h2>{{ $t('分类与样式') }}</h2>
+          <p>
+            {{
+              $t(
+                'Alibaba.com根据导航的功能和交互效果，一般可分为全局导航和副导航。根据导航的布局结构，一般可分为水平导航（常用于顶部）和垂直导航（常用于侧边）。两类导航可单独使用，也可组合使用：水平导航为全局导航时，垂直导航为副导航。垂直导航为全局导航时，水平导航为副导航。局部导航是全局导航的延伸，它展示当前页面与父级、子级、子子级页面之间的关系。'
+              )
+            }}
+          </p>
+          <p>
+            <b>{{ $t('水平导航：') }}</b
+            ><br />
+            <b>{{ $t('顶部通栏导航：') }}</b>
+            {{
+              $t(
+                '主要展示首页的次级页面。主导航中的链接一般指向站内页面，其行为方式保持一致。'
+              )
+            }}
+          </p>
+          <p>
+            <b>{{ $t('垂直导航：') }}</b
+            ><br />
+            <b>{{ $t('侧边导航：') }}</b>
+            {{
+              $t(
+                '侧边栏导航通常位于左侧，它位于F式布局的最左侧，作为信息主干，也符合用户的浏览习惯。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image62']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image63']" alt="" />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+  </body>
+</html>

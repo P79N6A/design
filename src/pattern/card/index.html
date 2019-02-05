@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>卡片</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('卡片') }}</h1>
+        </header>
+
+        <div class="content">
+          <h2>{{ $t('定义') }}</h2>
+          <p>
+            {{
+              $t(
+                '卡片可以包含一个主题的照片、文字和链接。它们可以显示包含不同尺寸的元素的内容，例如有可变长度标题的照片。卡片集是多个卡片在同一平面上的布局结构。'
+              )
+            }}
+          </p>
+          <h2>{{ $t('构成') }}</h2>
+          <p>
+            {{ $t('· 卡片容器尺寸') }}<br />
+            {{ $t('· 卡片容器圆角') }}<br />
+            {{ $t('· 卡片容器投影') }}<br />
+          </p>
+          <h2>{{ $t('规则') }}</h2>
+          <p>
+            {{ $t('· 单个容器内需是相同属性、类型的内容') }}<br />
+            {{ $t('· 多个容器嵌套不宜过于复杂，建议Card嵌套不超过三层') }}<br />
+          </p>
+          <h2>{{ $t('基础样式') }}</h2>
+          <div class="img-box">
+            <img :src="imageList['image64']" alt="" />
+          </div>
+          <div class="img-box">
+            <img :src="imageList['image65']" alt="" />
+          </div>
+          <h2>{{ $t('可扩展样式') }}</h2>
+          <p>{{ $t('· 彩色卡片') }}</p>
+          <div class="img-box">
+            <img :src="imageList['image66']" alt="" />
+          </div>
+          <h2>{{ $t('用法案例') }}</h2>
+          <p>
+            {{
+              $t(
+                '卡片是用来显示由不同元素组成的内容的便捷方式，也适合用来展示拥有不同尺寸和操作的元素。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image67']" alt="" />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+  </body>
+</html>

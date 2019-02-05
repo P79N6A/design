@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>邮件</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="0">
+        <header>
+          <h1>{{ $t('邮件') }}</h1>
+          <el-tabs v-model="activeName" @tab-click="handleTabClick">
+            <el-tab-pane :label="$t('策略')" name="tab1"></el-tab-pane>
+            <el-tab-pane :label="$t('设计指导')" name="tab2"></el-tab-pane>
+            <el-tab-pane :label="$t('设计')" name="tab3"></el-tab-pane>
+          </el-tabs>
+        </header>
+        <transition name="el-fade-in-linear">
+          <div class="content" key="Strategy" v-if="activeName === 'tab1'">
+            <h1>{{ $t('策略: 邮件规划与发送策略') }}</h1>
+            <p>
+              {{ $t('1. 基于用户生命周期的全链路邮件规划') }} <br />{{
+                $t('2. 单封邮件的发送策略')
+              }}
+              <br />{{ $t('3. 各类邮件具体策略参考') }}
+            </p>
+            <div class="subtitle">
+              {{ $t('1. 基于用户生命周期的全链路邮件规划') }}
+            </div>
+            <div class="img-box"><img :src="imageList['image1']" alt="" /></div>
+
+            <div class="subtitle">
+              {{ $t('2. 单封邮件的发送策略：时间选择参考') }}
+            </div>
+            <div class="img-box"><img :src="imageList['image2']" alt="" /></div>
+            <p>
+              {{ $t('单封邮件的发送策略：频次/对象选择') }} <br />{{
+                $t('细分人群，多种频次测试疲劳度阈值')
+              }}
+              <br />
+              <bold>{{
+                $t('未来Alibaba邮件发送策略将根据数据做智能化判断')
+              }}</bold>
+            </p>
+
+            <div class="subtitle">{{ $t('3. 各类邮件具体策略参考') }}</div>
+            <div class="item">
+              <div>
+                <div class="left">
+                  <div class="img-box">
+                    <img
+                      src="https://img.alicdn.com/tfs/TB1b3RAESzqK1RjSZFjXXblCFXa-384-425.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="right">
+                  <p class="three">
+                    <a
+                      class="a3"
+                      href="https://www.sendwithus.com/resources/guide"
+                      target="_blank"
+                    >
+                      https://www.sendwithus.com/resources/guide</a
+                    >
+                    <br /><a
+                      class="a3"
+                      href="http://blog.getvero.com/guides/lifecycle-marketing"
+                      target="_blank"
+                    >
+                      http://blog.getvero.com/guides/lifecycle-marketing</a
+                    >
+                    <br /><a
+                      class="a3"
+                      href="https://www.sendwithus.com/resources/templates"
+                      target="_blank"
+                    >
+                      https://www.sendwithus.com/resources/templates</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content" key="Guidelines" v-if="activeName === 'tab2'">
+            <h1>{{ $t('内容: 邮件信息撰写规范') }}</h1>
+            <p>
+              {{ $t('1. 发件人/发件邮箱') }} <br />{{
+                $t('2. 标题和预览文案')
+              }}
+              <br />{{ $t('3. 邮件内容') }}
+            </p>
+            <div class="subtitle">
+              {{ $t('1. 好的开始，是统一、专业的发件人/发件邮箱') }}
+            </div>
+            <div class="img-box">
+              <img :src="imageList['image3']" alt="" />
+            </div>
+            <div class="subtitle">
+              {{ $t('2.清晰有趣的主题和邮件预览对于收件人点击和阅读至关重要') }}
+            </div>
+            <div class="img-box">
+              <img :src="imageList['image4']" alt="" />
+            </div>
+            <div class="subtitle">{{ $t('3.邮件内容格式统一') }}</div>
+            <div class="img-box">
+              <img :src="imageList['image5']" alt="" />
+            </div>
+          </div>
+          <div class="content" key="Design" v-if="activeName === 'tab3'">
+            <h1>{{ $t('设计: 邮件设计特殊注意事项') }}</h1>
+            <p>
+              {{ $t('1.快速获取所需要的信息') }} <br />{{
+                $t('2. 顺利阅读和操作邮件')
+              }}
+              <br />{{ $t('3. 对品牌身份有效识别') }}
+            </p>
+            <div class="subtitle">
+              {{ $t('1. 重要信息和核心行动点在打开邮件一瞬间就看到') }}
+            </div>
+            <div class="img-box">
+              <img
+                src="https://img.alicdn.com/tfs/TB1Dl88EMHqK1RjSZFEXXcGMXXa-622-394.png"
+                alt=""
+              />
+            </div>
+            <div class="subtitle">
+              {{ $t('2. 核心行动点在长邮件中建议重复出现。') }}
+            </div>
+            <div class="em">{{ $t('“重要的话要说三遍!!!”') }}</div>
+            <div class="img-box">
+              <img
+                src="https://img.alicdn.com/tfs/TB1DzFSESrqK1RjSZK9XXXyypXa-492-695.png"
+                alt=""
+              />
+            </div>
+            <div class="subtitle">
+              {{
+                $t(
+                  '2. 要做移动端适配，但做不到复杂响应，所以设计一定要尽量简单！'
+                )
+              }}
+            </div>
+            <p>{{ $t('48% + 的移动端打开率') }}</p>
+            <div class="img-box">
+              <img
+                src="https://img.alicdn.com/tfs/TB1sL47EMHqK1RjSZJnXXbNLpXa-491-258.png"
+                alt=""
+              />
+            </div>
+            <p>
+              <bold>{{ $t('但是，') }}</bold
+              ><br />{{
+                $t('除Apple邮件客户端，其他邮件端均不支持Responsive！')
+              }}
+            </p>
+            <div class="img-box">
+              <img :src="imageList['image6']" alt="" />
+            </div>
+            <div class="subtitle">
+              {{ $t('4. 视觉设计要考虑不支持CSS时的极端样式是否可行') }}
+            </div>
+            <p>
+              {{ $t('不支持:') }}<br />
+              {{ $t('视频格式、图层覆盖、PNG格式、阴影、圆角') }} <br />
+              <bold>{{ $t('各客户端CSS支持列表') }}</bold>
+            </p>
+            <div class="img-box">
+              <img :src="imageList['image7']" alt="" />
+            </div>
+            <div class="subtitle">
+              {{ $t('5. 邮件未正常展示时的三大补救') }}
+            </div>
+            <div class="img-box">
+              <img :src="imageList['image8']" alt="" />
+            </div>
+            <div class="subtitle">
+              {{
+                $t(
+                  '6. 统一的邮件模板及DPL使用（查看具体规范），保证全链路的一致的体验'
+                )
+              }}
+            </div>
+            <div class="img-box">
+              <img
+                src="https://img.alicdn.com/tfs/TB1AD4YESzqK1RjSZPxXXc4tVXa-650-384.png"
+                alt=""
+              />
+            </div>
+            <h1>{{ $t('EDM效果监控指标') }}</h1>
+            <div class="img-box">
+              <img :src="imageList['image9']" alt="" />
+            </div>
+          </div>
+        </transition>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

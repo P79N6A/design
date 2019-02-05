@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>图片</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('图片') }}</h1>
+        </header>
+        <div class="content">
+          <p>
+            {{
+              $t(
+                '图片作为一种感性的表达，能与用户产生共鸣，适合传递情感，渲染氛围。在图片的选择上，我们考虑三个因素：'
+              )
+            }}
+            <br />{{ $t('1. 真实的用户') }} <br />{{ $t('2. 在真实的场景') }}
+            <br />{{ $t('3. 使用真实的产品') }}
+          </p>
+          <h1>{{ $t('真实的用户') }}</h1>
+          <p>
+            {{
+              $t(
+                '使用真实的用户有助于帮助用户更加准确地定位自己是否为该产品受众，并且使用户能够相信：你了解我，了解我的现状，可以更好地和用户建立联系。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1fMx7ESzqK1RjSZFjXXblCFXa-768-489.png"
+              alt=""
+            />
+          </div>
+          <div class="img-box02">
+            <img
+              src="https://img.alicdn.com/tfs/TB12Hh4EHPpK1RjSZFFXXa5PpXa-770-453.png"
+              alt=""
+            />
+          </div>
+          <h1>{{ $t('在真实的场景') }}</h1>
+          <p>
+            {{
+              $t(
+                '使用真实的场景有助于帮助用户更加准确地定位产品功能的范围，使用户更好地了解在何种情况下使用该产品。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1TNqbEQzoK1RjSZFlXXai4VXa-766-511.png"
+              alt=""
+            />
+          </div>
+          <div class="img-box02">
+            <img
+              src="https://img.alicdn.com/tfs/TB1NuScEMHqK1RjSZFEXXcGMXXa-766-1148.png"
+              alt=""
+            />
+          </div>
+          <h1>{{ $t('真实的产品') }}</h1>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB17Z5dEIfpK1RjSZFOXXa6nFXa-766-489.png"
+              alt=""
+            />
+          </div>
+          <div class="one">
+            {{ $t('我们提供多个版权图片网站供同学们使用：') }}
+          </div>
+          <p class="three">
+            <a class="a3" href="https://sucai.alibaba-inc.com/" target="_blank">
+              https://sucai.alibaba-inc.com/</a
+            >
+            <br /><a class="a3" href="https://unsplash.com/" target="_blank">
+              https://unsplash.com/</a
+            >
+            <br /><a
+              class="a3"
+              href="https://premier.shutterstock.com/"
+              target="_blank"
+            >
+              https://premier.shutterstock.com/</a
+            >
+          </p>
+          <p>{{ $t('如果需要下载账号请联系：yihui.xieyh@alibaba-inc.com') }}</p>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

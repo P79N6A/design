@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>栅格</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('栅格') }}</h1>
+        </header>
+        <div class="content">
+          <h1>{{ $t('静态栅格') }}</h1>
+          <h2>W = 20 * N</h2>
+          <p>
+            {{
+              $t(
+                '此为新版静态栅格。如果设计环境中不存在30N的老式框架，同时也暂时不需要做响应式，便可以使用此栅格系统。'
+              )
+            }}
+          </p>
+          <p>
+            <bold>{{ $t('静态栅格') }}</bold> <br />{{
+              $t(
+                '全新的静态栅格模组，在响应式设计中与响应式栅格一起被使用，也可被单独使用，从而提高页面设计的自由度和适配性，主要用来呈现响应式框架中不需要被响应的部分。静态栅格的宽度必须为20的倍数，且最大宽度不超过320，最小宽度为20。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image31']" alt="" />
+          </div>
+          <h1>{{ $t('静态栅格的宽度极限') }}</h1>
+          <h2>{{ $t('Max = 320 Min = 20px (页面宽度小于720)') }}</h2>
+          <p>
+            {{
+              $t(
+                '在响应式框架中，当页面宽度不小于720时，单一固定模块的宽度不得大于320，且不得小于20。当页面宽度小于720时则没有这个限制，但所有模块必须是响应模块（R％）。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image32']" alt="" />
+          </div>
+          <h1>{{ $t('响应式栅格的分割') }}</h1>
+          <h2>1/2/3/4/5/6</h2>
+          <p>
+            <bold>{{ $t('响应式栅格') }}</bold> <br />{{
+              $t(
+                '响应式栅格在响应式设计中与静态栅格一起被使用，也可被单独使用。响应式栅格没有既定的宽度限制，其宽度按百分比进行计算。响应式栅格可至多被6等分，以满足不同页面的设计需求。每个被等分的栅格仍可以被再次等分，至多6等分，以此类推。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1W3x2ESzqK1RjSZPxXXc4tVXa-960-241.png"
+              alt=""
+            />
+          </div>
+          <h1>{{ $t('响应式页面的外、内边距：') }}</h1>
+          <h2>16, 12</h2>
+          <p>
+            <bold>{{ $t('外边距') }}</bold> <br />{{
+              $t(
+                '当页面的理论宽度不小于720时，16（两侧共计32）的外边距会被添加到设计稿中。外边距会被计算在页面理论宽度之外，即在页面的理论宽度上额外增加32的两侧留白，才为当前页面的实际宽度。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image33']" alt="" />
+          </div>
+          <p>
+            <bold>{{ $t('内边距') }}</bold> <br />{{
+              $t(
+                '在页面理论宽度小于720时，页面的实际宽度＝理论宽度，但是会被额外扣除24像素（两侧各12）的内边距。在设计时请注意区分。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image34']" alt="" />
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

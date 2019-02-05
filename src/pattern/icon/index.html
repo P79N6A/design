@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>图标</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_881657_2ai0p94pspw.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./config.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="2">
+        <header>
+          <h1>{{ $t('图标') }}</h1>
+        </header>
+        <div class="content">
+          <p>
+            {{
+              $t(
+                '图标是图形界面的重要组成部分，具有指导和标识性质的图形，它具有高度浓缩并快捷传达、便于记忆的特性。'
+              )
+            }}
+            <br />
+            {{
+              $t(
+                '好的图标应该是引用现实中的物品，简化图形元素，具有隐喻,能帮助用户理解，具有指示和引导用户顺利的完成操作，通过提炼具有品牌辨识度的视觉元素，传达品牌特性.'
+              )
+            }}
+          </p>
+          <h2>{{ $t('图标尺寸') }}</h2>
+          <p>
+            {{
+              $t(
+                '在常规使用中，为避免图标个数过多，选择8(最小尺寸)、12、16、20、24、32、48、64(最大尺寸)作为主要图标尺寸。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB12Op8EFzqK1RjSZFCXXbbxVXa-1099-368.png"
+              alt=""
+            />
+          </div>
+          <h2>{{ $t('图标颜色') }}</h2>
+          <p>
+            {{
+              $t(
+                '图标的颜色可根据页面的整体色彩比例和信息强调的层级来搭配。可使用品牌色、中立色和功能色，详见颜色文档。'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image25']" alt="" />
+          </div>
+          <h2>{{ $t('视角') }}</h2>
+          <p>
+            {{
+              $t(
+                '始终保持简洁、平面的风格,不要让图标具有多维度空间感，或者充满了细节。'
+              )
+            }}
+          </p>
+          <h2>{{ $t('视觉面积') }}</h2>
+          <p>
+            {{
+              $t(
+                '为了保持整体图形占比的和体量感的统一，图形设计时保持整体图形视觉面积基本一致，以64×64为例，相应的图形区域供参考：'
+              )
+            }}
+          </p>
+          <div class="img-box">
+            <img :src="imageList['image26']" alt="" />
+          </div>
+          <div id="config-app">
+            <div>
+              <div class="config-stage" id="config-stage">
+                <div class="config-demo" id="config-demo">
+                  <div class="config-section icon-size-section">
+                    <h3 class="head">{{ $t('图标尺寸') }}</h3>
+                    <div class="body">
+                      <div class="icon-size-demo">
+                        <div class="box icon-size-demo-xxs"></div>
+                        <div class="icon-size-demo-label">xxs</div>
+                      </div>
+                      <div class="icon-size-demo">
+                        <div class="box icon-size-demo-xs"></div>
+                        <div class="icon-size-demo-label">xs</div>
+                      </div>
+                      <div class="icon-size-demo">
+                        <div class="box icon-size-demo-s"></div>
+                        <div class="icon-size-demo-label">s</div>
+                      </div>
+                      <div class="icon-size-demo">
+                        <div class="box icon-size-demo-m"></div>
+                        <div class="icon-size-demo-label">m</div>
+                      </div>
+                      <div class="icon-size-demo">
+                        <div class="box icon-size-demo-l"></div>
+                        <div class="icon-size-demo-label">l</div>
+                      </div>
+                      <div class="icon-size-demo">
+                        <div class="box icon-size-demo-xl"></div>
+                        <div class="icon-size-demo-label">xl</div>
+                      </div>
+                      <div class="icon-size-demo">
+                        <div class="box icon-size-demo-xxl"></div>
+                        <div class="icon-size-demo-label">xxl</div>
+                      </div>
+                      <div class="icon-size-demo">
+                        <div class="box icon-size-demo-xxxl"></div>
+                        <div class="icon-size-demo-label">xxxl</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="config-section icon-type-section">
+                    <h3 class="head">
+                      <span>{{ $t('图标类型') }}</span>
+                    </h3>
+                    <div class="body">
+                      <div class="icon-type-group">
+                        <div class="label">{{ $t('基础图标') }}</div>
+                        <div class="content">
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-smile"></div>
+                            <div class="icon-label">smile</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-cry"></div>
+                            <div class="icon-label">cry</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-success"></div>
+                            <div class="icon-label">success</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-warning"></div>
+                            <div class="icon-label">warning</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-prompt"></div>
+                            <div class="icon-label">prompt</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-error"></div>
+                            <div class="icon-label">error</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-help"></div>
+                            <div class="icon-label">help</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-clock"></div>
+                            <div class="icon-label">clock</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div
+                              class="box iconfont icon-success-filling"
+                            ></div>
+                            <div class="icon-label">success-filling</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-delete-filling"></div>
+                            <div class="icon-label">delete-filling</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div
+                              class="box iconfont icon-favorites-filling"
+                            ></div>
+                            <div class="icon-label">favorites-filling</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-add"></div>
+                            <div class="icon-label">add</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-minus"></div>
+                            <div class="icon-label">minus</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-arrow-up"></div>
+                            <div class="icon-label">arrow-up</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-arrow-down"></div>
+                            <div class="icon-label">arrow-down</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-arrow-left"></div>
+                            <div class="icon-label">arrow-left</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-arrow-right"></div>
+                            <div class="icon-label">arrow-right</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div
+                              class="box iconfont icon-arrow-double-left"
+                            ></div>
+                            <div class="icon-label">arrow-double-left</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div
+                              class="box iconfont icon-arrow-double-right"
+                            ></div>
+                            <div class="icon-label">arrow-double-right</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-switch"></div>
+                            <div class="icon-label">switch</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-sorting"></div>
+                            <div class="icon-label">sorting</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-descending"></div>
+                            <div class="icon-label">descending</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-ascending"></div>
+                            <div class="icon-label">ascending</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-select"></div>
+                            <div class="icon-label">select</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-semi-select"></div>
+                            <div class="icon-label">semi-select</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-loading"></div>
+                            <div class="icon-label">loading</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-search"></div>
+                            <div class="icon-label">search</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-close"></div>
+                            <div class="icon-label">close</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-ellipsis"></div>
+                            <div class="icon-label">ellipsis</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-picture"></div>
+                            <div class="icon-label">picture</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-calendar"></div>
+                            <div class="icon-label">calendar</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-ashbin"></div>
+                            <div class="icon-label">ashbin</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-upload"></div>
+                            <div class="icon-label">upload</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-download"></div>
+                            <div class="icon-label">download</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-set"></div>
+                            <div class="icon-label">set</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-edit"></div>
+                            <div class="icon-label">edit</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-refresh"></div>
+                            <div class="icon-label">refresh</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-filter"></div>
+                            <div class="icon-label">filter</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-attachment"></div>
+                            <div class="icon-label">attachment</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-account"></div>
+                            <div class="icon-label">account</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-email"></div>
+                            <div class="icon-label">email</div>
+                          </div>
+                          <div class="icon-type-demo">
+                            <div class="box iconfont icon-atm"></div>
+                            <div class="icon-label">atm</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

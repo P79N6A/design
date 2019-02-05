@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>设计原则</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="0">
+        <header>
+          <h1>{{ $t('设计原则') }}</h1>
+          <el-tabs v-model="activeName" @tab-click="handleTabClick">
+            <el-tab-pane :label="$t('总览')" name="tab1"></el-tab-pane>
+            <el-tab-pane :label="$t('重要性及场景')" name="tab2"></el-tab-pane>
+          </el-tabs>
+        </header>
+        <transition name="el-fade-in-linear">
+          <div class="content" key="Overview" v-if="activeName === 'tab1'">
+            <p>
+              {{
+                $t(
+                  '设计原则使Alibaba.com的体验与众不同；它体现了我们的设计观，且让我们对Alibaba.com的体验保有⼀致的愿景。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '设计原则并不是⼀组严格的法则，它是⼀个设计的基础指引，帮助你在需要做设计决，策时降低不确定性。'
+                )
+              }}
+            </p>
+            <div class="item">
+              <div>
+                <div class="left">
+                  <h1 class="h1">{{ $t('安全 & 信任') }}</h1>
+                  <div class="subtitle">
+                    {{ $t('打造安全与可信的贸易平台') }}
+                  </div>
+                  <p>
+                    <bold>{{ $t('安全&信任指的是:') }}</bold> <br />{{
+                      $t(
+                        '我们需要在贸易的各个场景，以透明的内容展示、符合认知和隐私的任务设计、具备安全感的视觉表达，为⽤户构建安全可信的贸易环境，建⽴⽤户信任。'
+                      )
+                    }}
+                    <br />{{ $t('1. 杜绝⽆安全感的设计;') }} <br />{{
+                      $t('2. 构建安全信任的体验;')
+                    }}
+                  </p>
+                </div>
+                <div class="right">
+                  <div class="img-box">
+                    <img
+                      src="https://img.alicdn.com/tfs/TB1anFyEPTpK1RjSZKPXXa3UpXa-470-234.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <div class="left">
+                  <h1 class="h1">{{ $t('品质感') }}</h1>
+                  <div class="subtitle">
+                    {{ $t('打磨设计细节以提升⽤户体验') }}
+                  </div>
+                  <p>
+                    <bold>{{ $t('品质感指的是:') }}</bold> <br />{{
+                      $t(
+                        '在符合⼤众审美和设计趋势的前提下，通过⻚⾯视觉设计的精细度和美观、交互设计的直观性和易⽤性、⽤户⽣成内容的规范性、创造性和美感，向⽤户传达⾼品质的⽤户体验。'
+                      )
+                    }}
+                  </p>
+                </div>
+                <div class="right">
+                  <div class="img-box">
+                    <img
+                      src="https://img.alicdn.com/tfs/TB1FT4xESzqK1RjSZFLXXcn2XXa-470-234.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://img.alicdn.com/tfs/TB167FzESzqK1RjSZFHXXb3CpXa-44-44.png"
+                alt=""
+              />
+              <div>
+                <div class="left">
+                  <h1 class="h1">{{ $t('清晰 & 简洁') }}</h1>
+                  <div class="subtitle">
+                    {{ $t('让设计在准确表达的基础上尽量简单') }}
+                  </div>
+                  <p>
+                    {{
+                      $t(
+                        '⽤户能清楚准确地感知和认知到⽬标信息，并拥有正确的预期；不受到⼲扰'
+                      )
+                    }}
+                  </p>
+                </div>
+                <div class="right">
+                  <div class="img-box">
+                    <img
+                      src="https://img.alicdn.com/tfs/TB1oeVJENYaK1RjSZFnXXa80pXa-470-234.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://img.alicdn.com/tfs/TB10wpJENYaK1RjSZFnXXa80pXa-44-44.png"
+                alt=""
+              />
+              <div>
+                <div class="left">
+                  <h1 class="h1">{{ $t('⽤户成⻓') }}</h1>
+                  <div class="subtitle">
+                    {{ $t('通过设计帮助⽤户稳步成⻓') }}
+                  </div>
+                  <p>
+                    <bold>{{ $t('⽤户成⻓意味着:') }}</bold> <br />{{
+                      $t(
+                        '帮助⽤户熟悉产品的流程和操作、将专业的知识以⽤户更易理解的⽅式进⾏表达，降低⽤户在使⽤过程中产⽣的挫折；予以适当⿎励，增强⽤户成就感。帮助⽤户从初级成⻓为资深⽤户，从⽽提升留存和忠诚度。'
+                      )
+                    }}
+                  </p>
+                </div>
+                <div class="right">
+                  <div class="img-box">
+                    <img
+                      src="https://img.alicdn.com/tfs/TB1lM0uEHPpK1RjSZFFXXa5PpXa-470-234.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img
+                src="https://img.alicdn.com/tfs/TB1c58sEMTqK1RjSZPhXXXfOFXa-44-44.png"
+                alt=""
+              />
+              <div>
+                <div class="left">
+                  <h1 class="h1">{{ $t('无距离感') }}</h1>
+                  <div class="subtitle">
+                    {{ $t('减少跨境贸易带来的疏离感') }}
+                  </div>
+                  <p>
+                    {{ $t('⽆距离感指的是') }} <br />{{
+                      $t('地理上⽆距离，在服务和产品层⾯符合⽤户的本地化⼼智。')
+                    }}
+                    <br />{{
+                      $t('⼼理上⽆距离，在⽤户⼼理上建⽴⼀种贴⼼，可靠的感觉。')
+                    }}
+                  </p>
+                </div>
+                <div class="right">
+                  <div class="img-box">
+                    <img
+                      src="https://img.alicdn.com/tfs/TB1HIXvESzqK1RjSZPxXXc4tVXa-470-234.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content" v-else-if="activeName === 'tab2'">
+            <h1 class="h1">{{ $t('安全 & 信任') }}</h1>
+            <p>
+              <bold>{{ $t('重要性：') }}</bold> <br />{{
+                $t(
+                  '商业环境下竞争性强，涉及到资⾦流转和商业隐私；且B类贸易的成本和投⼊⾼，贸易过程中变数很多。对于商业信息隐私、资⾦财产安全、交易售后保障等的需求，是⽤户在B类贸易中最基础且必要的。同时⽤户在贸易各环节/场景，会因为对Alibaba.com/对贸易合作伙伴的信任感缺失⽽⽌步，导致贸易进程中断及在平台流失。'
+                )
+              }}
+              <br /><br />
+              <bold>{{ $t('可能覆盖的场景：') }}</bold> <br />{{
+                $t(
+                  '1. 买家侧，买家留存及采购决策相关的各环节，该原则优先级⾼。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '2. Landing-各landing场景有能为买家提供安全感的信息外透（如⽼⽤户评价、平台交易保障等等），增强新买家继续浏览的信⼼,找商找品-卖家能⼒客观公允、商品信息真实可信，买家能够放⼼做决策。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '3. 沟通：沟通内容的隐私保护，⽹站交易保障服务透传，买家能够增强下单信⼼，下单及后续_付款安全有保障，后续贸易进程中遇到问题时能有效引导并帮助⽤户解决卖家侧，卖家与Alibaba.com建⽴信任的各个环节，该原则优先级⾼。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '4. 通知触达：重要的公告/产品逻辑调整，尤其是涉及到卖家资⾦、交易信息、客户信息相关的部分必须要⾜够清楚地触达到卖家。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '5. 隐私保护：涉及到卖家资⾦、交易信息、客户信息相关的敏感内容，卖家能够知悉其保密且安全，不受Alibaba.com、第三⽅等任何途径获取。'
+                )
+              }}
+            </p>
+
+            <h1 class="h1">{{ $t('品质感') }}</h1>
+            <p>
+              <bold>{{ $t('重要性：') }}</bold> <br />{{
+                $t(
+                  '1. 供应商⾃身审美能⼒、设计能⼒、线上贸易能⼒不⾜，难以对⾃身品牌、店铺、产品等进⾏⾼品质的包装和塑造。买家在Alibaba.com进⾏采购时，会根据供应商产品图⽚、店铺装修等因素判断供应商能⼒。低品质的产品图⽚、店铺设计很难吸引买家，难以让买家对供应商能⼒产⽣认可，进⽽可能造成买家对整个平台认可度降低。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '2. Alibaba.com买卖家各端（PC Site、PC客户端、M站、MobileAPP）部分场景的⻚⾯由于⻓时间未进⾏设计迭代、设计质量不够、前端还原较差等原因，在⻚⾯视觉精致程度、交互合理性等⽅⾯存在较多问题，影响整体⽤户体验。⾼品质的⽤户体验设计，会极⼤提升⽤户愉悦度、信任感，增强⽤户对Alibaba.com的信任和使⽤黏性。'
+                )
+              }}
+              <br /><br />
+              <bold>{{ $t('可能覆盖的场景：') }}</bold> <br />{{
+                $t(
+                  '1. 在Alibaba.com全站各端的全链路设计中，品质感都是基本的设计要求之⼀，都需要通过有品质感的设计保证优良的⽤户体验。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '2. 供应商发布商品-通过设计⼿段，为供应商发布产品、建设旺铺等场景提供帮助/指导，提升商品、旺铺中各类物料的品质感，从⽽增强对买家的吸引⼒，提升供应商在平台中的竞争⼒。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '3. 找商找品-在买家使⽤平台的过程中，通过提升⻚⾯视觉&交互设计质量、展现商品和店铺品质感，帮助⽤户识别⾼质量的产品和供应商。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '4. 运营活动-通过设计提升活动⻚⾯的视觉美感，增强活动⻚⾯对买家的吸引⼒。'
+                )
+              }}
+            </p>
+            <h1 class="h1">{{ $t('清晰 & 简单') }}</h1>
+            <p>
+              <bold>{{ $t('重要性：') }}</bold> <br />{{
+                $t(
+                  '⽤户的最终⽬标是在Alibaba.com上完成订单，⽽很多时候，⽤户会不清楚接下来能在Alibaba.com上做什么、他们处在什么阶段、他们做了某个操作后会发⽣什么。通过清晰且简单的设计，我们可以尽可能地消除任何会造成⽤户混淆或怀疑的情形，帮助⽤户快速找到⽬标信息，确保⽤户对贸易流程的每⼀步都有充分的了解和信⼼。'
+                )
+              }}
+              <br />
+              <br />
+              <bold>{{ $t('可能覆盖的场景：') }}</bold> <br />{{
+                $t(
+                  '基础原则。⼩到⼀个图标的释义，⼤到整个贸易链路，它是所有设计都需要思考到的原则。'
+                )
+              }}
+            </p>
+            <h1 class="h1">{{ $t('⽤户成⻓') }}</h1>
+            <p>
+              <bold>{{ $t('重要性：') }}</bold> <br />{{
+                $t(
+                  '1. 我们的⽤户群体中，有⼤量新⽤户以及刚刚进⼊B类外贸领域的⽤户。由于贸易链路⻓、任务复杂，在使⽤Alibaba.com以及开展跨境贸易的过程中，⽤户容易因为不熟悉服务、不理解产品等挫折⽽流失。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '2. ⽤户成⻓需要我们在设计的过程中，时刻考虑到⽤户群体的诉求和⼼智，通过适当的教育引导，⿎励和帮助⽤户熟悉产品并达成⾃我实现。促使⽤户在⽹站成⻓为资深⽤户，同时积累在平台上的使⽤粘性。'
+                )
+              }}
+              <br />
+              <br />
+              <bold>{{ $t('可能覆盖的场景：') }}</bold> <br />{{
+                $t(
+                  '1. 找商找品：通俗易懂的设计模式，针对专业信息和图形有通俗易懂的解释，从⽽降低使⽤和理解⻔槛，帮助⽤户辨别并找到合适的供应商。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '2. 交易环节：不同的⽤户分层可以给⽤户不同的内容引导和任务设定，通过任务完成程度给予⼀定的权益激励。'
+                )
+              }}
+            </p>
+            <h1 class="h1">{{ $t('⽆距离感') }}</h1>
+            <p>
+              <bold>{{ $t('重要性：') }}</bold> <br />{{
+                $t(
+                  'Alibaba.com是⼀个全球化⽹站，⽤户来⾃于不同的地区，拥有着不同的⽂化和使⽤习惯。同时,Alibaba.com作为B类贸易平台，本质上提供着严肃和专业的服务，容易给⽤户带来⼼理上的梳理。所以我们应该：'
+                )
+              }}
+              <br />{{
+                $t(
+                  '1. 建⽴地理上的⽆距离感，⼜可以称为本地化的产品/设计/服务/⼴告，针对不同国家、不同背景的⽤户，都可以感受到⾃⼰与Alibaba.com并不遥远，就在身边。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '2. 建⽴⼼理上的⽆距离感，通过内容表达，贴⼼的服务等，让⽤户从⼼理上认同Alibaba.com可依赖，亲近感。体现出 Alibaba.com始终是⽤户的朋友和后盾，能够帮助⽤户达成⽬标。'
+                )
+              }}
+              <br /><br />
+              <bold>{{ $t('可能覆盖的场景：') }}</bold> <br />{{
+                $t('1. 引流：本地化的⽂化传递，可以更加吸引⽤户群体。')
+              }}
+              <br />{{
+                $t(
+                  '2. 找商找品：提供本地化的服务，例如本地仓，即刻退款等等，可以减少⽤户因距离产⽣的忧虑，增加⽤户安全感，助于他们做出决定。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '3. 洽谈：⽤便捷的功能拉近买卖家之间的距离感。⽐如视频验货等，增加买卖家之间的信任度。'
+                )
+              }}
+              <br />{{
+                $t(
+                  '4. 履约：亲切的流程引导，客户服务。在⽤户遇到问题的时候能够积极正确地解决。'
+                )
+              }}
+            </p>
+          </div>
+        </transition>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>产品</title>
+    <link rel="stylesheet" href="../../assets/css/_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_719179_rmp9wa6m5l.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/element-ui.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon.ico"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="../../assets/css/docsearch.css" />
+    <script src="../../assets/js/plugins/vue.min.js"></script>
+    <script src="../../assets/js/plugins/vue-i18n.min.js"></script>
+    <script src="../../assets/js/plugins/element-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <layout-page :lang="lang" active="0">
+        <header>
+          <h1>{{ $t('产品') }}</h1>
+        </header>
+        <div class="content">
+          <p>
+            {{ $t('请遵循这些重要提示，以帮助您更好地产出产品文案。') }}
+          </p>
+          <h1>{{ $t('不要想的太大') }}</h1>
+          <p class="p4">{{ $t('你用来表达你的观点的词越少越好。') }}</p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1qvRMENjaK1RjSZFAXXbdLFXa-767-80.png"
+              alt=""
+            />
+          </div>
+          <h1>{{ $t('争取简单') }}</h1>
+          <p>
+            {{
+              $t(
+                '避免复杂的句子和动词，使用简单的词汇和一致的写作风格来表达你需要说的话。'
+              )
+            }}
+          </p>
+          <h1>{{ $t('保持真实') }}</h1>
+          <p>
+            {{
+              $t(
+                '用真实的关于我们的服务和功能的信息来帮助人们。 如果不是这样，我们可能不应该用言语表达。'
+              )
+            }}
+          </p>
+          <h1>{{ $t('不要想太多') }}</h1>
+          <p class="p4">
+            {{ $t('不要在一页中铺陈很多卖点， 而是以独特的卖点来打动客户。') }}
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1f18zEOrpK1RjSZFhXXXSdXXa-767-80.png"
+              alt=""
+            />
+          </div>
+          <h1>{{ $t('清楚地链接') }}</h1>
+          <p class="p4">{{ $t('短链接和标准CTA按钮。') }}</p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1P10yEFzqK1RjSZFvXXcB7VXa-767-80.png"
+              alt=""
+            />
+          </div>
+          <h1>{{ $t('本地化不仅仅是翻译') }}</h1>
+          <p class="p4">
+            {{ $t('将内容本地化为英文时，保持文化上的适当性。') }}
+          </p>
+          <div class="img-box">
+            <img
+              src="https://img.alicdn.com/tfs/TB1JadyEFYqK1RjSZLeXXbXppXa-768-80.png"
+              alt=""
+            />
+          </div>
+          <h2>{{ $t('当有疑问时，请检查你的内容') }}</h2>
+          <p>
+            {{ $t('有几种方法可以确认UX内容的质量。') }} <br />{{
+              $t('语法和词汇测试：')
+            }}
+            <br />
+            <a href="https://Grammerly.com" target="_blank">Grammerly.com</a>
+            <br />
+            <br />{{ $t('简单测试：') }} <br />
+            <a href="http://www.hemingwayapp.com" target="_blank"
+              >http://www.hemingwayapp.com</a
+            ><br />
+            <br />{{ $t('人工测试：') }} <br />{{
+              $t(
+                '请向我们的一位出色的内容策略师寻求建议。我们通常在PRS提交后的7天内作出回应。'
+              )
+            }}
+          </p>
+        </div>
+      </layout-page>
+    </div>
+    <script src="../../assets/js/plugins/docsearch.min.js"></script>
+    <script src="../../assets/js/plugins/utils.js"></script>
+    <script src="../../assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="./locale.js"></script>
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
