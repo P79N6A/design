@@ -723,22 +723,22 @@ Vue.component('layout-header', {
         )
       }
     },
-    handleLogoClick: function handleLogoClick() {
-      var pre = ''
+    handleLogoClick: function() {
+      var url = ''
 
       switch (this.layer) {
         case 0:
-          pre = './'
+          url = './'
           break
         case 1:
-          pre = '../'
+          url = '../'
           break
         case 2:
-          pre = '../../'
+          url = '../../'
           break
       }
 
-      window.location.href = `${pre}/index.html`
+      window.location.href = `${url}`
     },
   },
   template: `
@@ -1016,6 +1016,25 @@ var vm = new Vue({
     if (window.Viewer) {
       new Viewer(document.querySelector('#app .content'))
     }
+
+    !(function(e, t, n, g, i) {
+      ;(e[i] =
+        e[i] ||
+        function() {
+          ;(e[i].q = e[i].q || []).push(arguments)
+        }),
+        (n = t.createElement('script')),
+        (tag = t.getElementsByTagName('script')[0]),
+        (n.async = 1),
+        (n.src =
+          ('https:' == document.location.protocol ? 'https://' : 'http://') +
+          g),
+        tag.parentNode.insertBefore(n, tag)
+    })(window, document, 'script', 'assets.growingio.com/2.1/gio.js', 'gio')
+
+    gio('init', '96befec86c2dc9ca', {})
+
+    gio('send')
 
     document.title = i18n.t(document.title)
   },
